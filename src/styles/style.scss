@@ -1,0 +1,27 @@
+$maincolor : #12a19a;
+
+body{
+    margin: 0 auto;
+    padding: 0;
+
+    #root {
+        .RoutesMain{
+            .MainNav{
+                padding: 1rem 1rem;
+                display: flex;
+                gap: 1%;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 600;
+                }
+                .active{
+                    color: $maincolor;
+                }
+            }
+        }
+        .PageStudioRental,.PageAbout,.PageContact,.PageCreative,.HomePage,.PagePortfolio,.PageStudioRental{
+            padding: 1rem 1rem;
+        }
+    }
+}

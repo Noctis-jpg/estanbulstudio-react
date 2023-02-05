@@ -1,0 +1,10 @@
+
+// Bootstrapi ezmek için kullanıcağım overrides SCSS
+@import './bootstrap_overrides.scss';
+// Bootstrap içirisinden gelen componentler
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+// Özel SCSS KODLARIM
+@import './style.scss';
+// Responsive SCSS KODLARIM
+@import './responsive.scss';
+
