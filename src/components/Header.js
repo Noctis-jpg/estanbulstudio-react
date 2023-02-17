@@ -1,43 +1,34 @@
 import React from 'react'
-import { Routes, Route, Link, NavLink, Await } from "react-router-dom";
-import { useState, useEffect } from "react";
-
+import { NavLink } from "react-router-dom";
+import useFetch from '../hooks/useFetch';
 
 export default function Header() {
-const [isLoading, setIsLoading] = useState(true);
-const [error, setError] = useState(null);
-const [data, setDate] = useState (null);
 
-useEffect(() =>{
-  const fetchData = async () => {
-    setIsLoading(true);
-    try{
-      const res = await fetch("http://localhost:1337/api/header-menus");
-      const data = await res.json();
-      setDate(data);
-    }catch (error) {
-    setError(error);
-}
-setIsLoading(false);
-};
-  fetchData();
-}, []);
+const {isLoading, error, data} =  useFetch(
+  "http://localhost:1337/api/header-menus"
+  );
   
-if (isLoading) return <h1>Loading...</h1>
-if (error) return <h1>Error: {error.message}</h1>;
+if (isLoading) return <h1>Yükleniyor...</h1>
+if (error) return <h1>Hata: {error.message}</h1>;
  
 console.log(data);
 
-  return <nav className='MainNav'>
-         
+  return (
+          <div className='container-fluid'>
+            <div className='row CapsulLogoandNav'>
+              <div className='col-lg-2'>
+            <div className='Logo'>
+              <img width={"35%"} className='img-fluid' src='http://localhost:1337/uploads/Estanbul_Studyo_1873fab4d6.png?updated_at=2023-02-11T17:37:56.140Z'></img>
+            </div>
+            </div>
+            <div className='col-lg-10 d-flex align-items-center'>
+         <nav className='MainNav'>         
           {data.data.map(item => (
             <NavLink key={item.id} to={item.attributes.link}>{item.attributes.item}</NavLink>
-          ))}
-       
-  </nav>
+          ))}</nav></div></div></div>
 
 
-}
+)}
 
 
 
