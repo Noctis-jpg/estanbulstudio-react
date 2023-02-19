@@ -1,0 +1,150 @@
+$whitecolor : #fffc;
+$maincolor : #12a19a;
+$blackcolor : black;
+$yellowcolor : #ffc107;
+$FontFamily :'Lato',
+sans-serif;
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: $FontFamily;
+
+    #root {
+        .RoutesMain {
+            .CapsulLogoandNav {
+                background-color: #000000e6;
+
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .MainNav {
+                    padding: 1rem 1rem;
+                    display: flex;
+                    gap: 6%;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+
+                    a {
+                        text-decoration: none;
+                        color: $whitecolor;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+
+                    .active {
+                        color: $yellowcolor;
+                    }
+                }
+
+                .MobileBtn {
+                    cursor: pointer;
+                    display: none;
+                    svg {
+                        color: white;
+                        font-size: 30px;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+
+        .PageStudioRental,
+        .PageAbout,
+        .PageContact,
+        .PageCreative,
+        .HomePage,
+        .PagePortfolio,
+        .PageStudioRental {
+            padding: 1rem 1rem;
+        }
+    }
+    /*Right*/
+.modal.right.fade .modal-dialog {
+    right: 0px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+            transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+        -ms-transform: translate3d(0%, 0, 0);
+         -o-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+            right: -320px;
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+
+
+
+
+
+        
+        .modal-content {
+            border-radius: 0;
+            border: none;
+            height: 100%;
+            overflow-y: auto;
+            .modal-header {
+                .MobileNavBtn{
+                    display: none;
+                }
+                .ModalCloseBtn {
+                    cursor: pointer;
+                    font-size: 20px;
+                    transition: .3s all;
+
+                    &:hover {
+                        color: $yellowcolor;
+                    }
+                }
+
+            }
+            .modal-body{
+                .MainNav{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: start;
+                    padding: 1rem 0;
+
+                    a{
+                        padding: 1rem 0;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .active {
+                        color: $yellowcolor;
+                    }
+                }
+            }
+        }
+       
+    
+}

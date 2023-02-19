@@ -1,0 +1,113 @@
+@media only screen and (max-width: 1400px) and (min-width: 1043px){
+    body{
+        
+    #root {
+        .RoutesMain {
+            .CapsulLogoandNav {
+                background-color: #000000e6;
+
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .MainNav {
+                    padding: 1rem 1rem;
+                    display: flex;
+                    gap: 4%;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+
+                    a {
+                        text-decoration: none;
+                        color: $whitecolor;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-size: 14px;
+                    }
+
+                    .active {
+                        color: $yellowcolor;
+                    }
+                }
+
+                .MobileBtn {
+                    cursor: pointer;
+                    display: none;
+                    svg {
+                        color: white;
+                        font-size: 30px;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+
+        .PageStudioRental,
+        .PageAbout,
+        .PageContact,
+        .PageCreative,
+        .HomePage,
+        .PagePortfolio,
+        .PageStudioRental {
+            padding: 1rem 1rem;
+        }
+    }
+    }
+}
+
+
+
+@media screen and (max-width:1042px) {
+    body {
+
+        #root {
+            .RoutesMain {
+                .CapsulLogoandNav {
+                    background-color: #000000e6;
+    
+                    .logo {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .DesktopNav {
+                        display: none;              
+                    }
+                    .MobileBtn {
+                        cursor: pointer;
+                        display: block;
+                        svg {
+                            color: white;
+                            font-size: 30px;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+    
+            .PageStudioRental,
+            .PageAbout,
+            .PageContact,
+            .PageCreative,
+            .HomePage,
+            .PagePortfolio,
+            .PageStudioRental {
+                padding: 1rem 1rem;
+            }
+        }
+
+
+
+        .modal-content {
+            .modal-header {
+                .MobileNavBtn {
+                    display: block;
+                }
+            }
+        }
+    }
+}
