@@ -30,7 +30,7 @@ export default function Header() {
           <div className="Logo">
             <img
               className="img-fluid"
-              src="http://localhost:1337/uploads/Estanbul_Studyo200x_74db50977a.png?updated_at=2023-02-19T10:44:57.399Z"
+              src="http://localhost:1337/uploads/Estanbul_Studyo_1_29e6f06845.png?updated_at=2023-02-25T10:30:38.987Z"
             ></img>
           </div>
         </div>

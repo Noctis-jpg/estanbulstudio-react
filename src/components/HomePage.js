@@ -15,9 +15,9 @@ const HomePage = () => {
     <section className='HomePage'>
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-lg-6'>
+          <div className='col-lg-12'>
           <Swiper
-      spaceBetween={10}
+      spaceBetween={0}
       slidesPerView={1}
 
       onSwiper={(swiper) => console.log(swiper)}

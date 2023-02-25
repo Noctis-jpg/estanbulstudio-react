@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1400px) and (min-width: 1043px){
+@media only screen and (max-width: 1500px) and (min-width: 1043px){
     body{
         
     #root {
@@ -15,7 +15,6 @@
                 .MainNav {
                     padding: 1rem 1rem;
                     display: flex;
-                    gap: 4%;
                     width: 100%;
                     align-items: center;
                     justify-content: center;
@@ -50,7 +49,6 @@
         .PageAbout,
         .PageContact,
         .PageCreative,
-        .HomePage,
         .PagePortfolio,
         .PageStudioRental {
             padding: 1rem 1rem;

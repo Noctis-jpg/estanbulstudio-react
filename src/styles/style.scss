@@ -58,10 +58,15 @@ body {
         .PageAbout,
         .PageContact,
         .PageCreative,
-        .HomePage,
         .PagePortfolio,
         .PageStudioRental {
             padding: 2rem 2rem;
+        }
+        .HomePage{
+            padding: 0;
+            .container-fluid{
+                padding: 0;
+            }
         }
     }
     /*Right*/
