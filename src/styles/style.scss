@@ -1,19 +1,29 @@
 $whitecolor : #fffc;
+$graycolor :#a0a0a0;
 $maincolor : #12a19a;
 $blackcolor : black;
 $yellowcolor : #ffc107;
-$FontFamily :'Lato',
+$bgcolorBlack : #191919;
+$FontFamily :'Poppins',
 sans-serif;
 
 body {
     margin: 0 auto;
     padding: 0;
     font-family: $FontFamily;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: $bgcolorBlack;
+
+    .swiper-pagination-bullet-active {
+        background-color: $yellowcolor !important;
+    }
 
     #root {
         .RoutesMain {
             .CapsulLogoandNav {
-                background-color: #000000e6;
+                background-color: $bgcolorBlack;
 
                 .logo {
                     display: flex;
@@ -22,12 +32,11 @@ body {
                 }
 
                 .MainNav {
-                    padding: 1rem 1rem;
                     display: flex;
-                    gap: 6%;
+                    /* gap: 6%; */
                     width: 100%;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: space-evenly;
 
                     a {
                         text-decoration: none;
@@ -45,6 +54,7 @@ body {
                 .MobileBtn {
                     cursor: pointer;
                     display: none;
+
                     svg {
                         color: white;
                         font-size: 30px;
@@ -62,124 +72,385 @@ body {
         .PageStudioRental {
             padding: 2rem 2rem;
         }
-        .HomePage{
+
+        .HomePage {
             padding: 0;
-            .container-fluid{
+            position: relative;
+
+            .container-fluid {
                 padding: 0;
             }
         }
     }
+
     /*Right*/
-.modal.right.fade .modal-dialog {
-    right: 0px;
-    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-       -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-         -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-            transition: opacity 0.3s linear, right 0.3s ease-out;
-}
+    .modal.right.fade .modal-dialog {
+        right: 0px;
+        -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+        -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+        transition: opacity 0.3s linear, right 0.3s ease-out;
+    }
 
-.modal.right.fade.in .modal-dialog {
-    right: 0;
-}
-.modal.right .modal-dialog {
-    position: fixed;
-    margin: auto;
-    width: 320px;
-    height: 100%;
-    -webkit-transform: translate3d(0%, 0, 0);
+    .modal.right.fade.in .modal-dialog {
+        right: 0;
+    }
+
+    .modal.right .modal-dialog {
+        position: fixed;
+        margin: auto;
+        width: 320px;
+        height: 100%;
+        -webkit-transform: translate3d(0%, 0, 0);
         -ms-transform: translate3d(0%, 0, 0);
-         -o-transform: translate3d(0%, 0, 0);
-            transform: translate3d(0%, 0, 0);
-            right: -320px;
-}
+        -o-transform: translate3d(0%, 0, 0);
+        transform: translate3d(0%, 0, 0);
+        right: -320px;
+    }
 
-.modal.left .modal-content,
-.modal.right .modal-content {
-    height: 100%;
-    overflow-y: auto;
-}
+    .modal.left .modal-content,
+    .modal.right .modal-content {
+        height: 100%;
+        overflow-y: auto;
+    }
 
-.modal.left .modal-body,
-.modal.right .modal-body {
-    padding: 15px 15px 80px;
-}
-
-
+    .modal.left .modal-body,
+    .modal.right .modal-body {
+        padding: 15px 15px 80px;
+    }
 
 
 
 
-        
-        .modal-content {
-            border-radius: 0;
-            border: none;
-            height: 100%;
-            overflow-y: auto;
-            .modal-header {
-                .MobileNavBtn{
-                    display: none;
-                }
-                .ModalCloseBtn {
-                    cursor: pointer;
-                    font-size: 20px;
-                    transition: .3s all;
 
-                    &:hover {
-                        color: $yellowcolor;
-                    }
-                }
 
+
+    .modal-content {
+        border-radius: 0;
+        border: none;
+        height: 100%;
+        overflow-y: auto;
+
+        .modal-header {
+            .MobileNavBtn {
+                display: none;
             }
-            .modal-body{
-                .MainNav{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: start;
-                    padding: 1rem 0;
 
-                    a{
-                        padding: 1rem 0;
-                        font-size: 20px;
-                        font-weight: 600;
-                    }
-                    .active {
-                        color: $yellowcolor;
-                    }
+            .ModalCloseBtn {
+                cursor: pointer;
+                font-size: 20px;
+                transition: .3s all;
+
+                &:hover {
+                    color: $yellowcolor;
                 }
             }
+
         }
-       
 
-        .swiper-container{
-            width: 100%;
-            max-width: 100%;
-            overflow: auto;
-
-            .swiper-list{
+        .modal-body {
+            .MainNav {
                 display: flex;
-                flex-direction: row;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                min-width: 100%;
-                
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: start;
+                padding: 1rem 0;
 
-                .swiper-item{
-                    width: 100%;
-                    flex-shrink: 0;
+                a {
+                    padding: 1rem 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
 
-                    .swiper-img{
-                        max-width: 100%;
-                        height: auto;
-                        user-select: none;
-                    }
+                .active {
+                    color: $yellowcolor;
                 }
             }
         }
-        
-    .HomePage{
+    }
 
+
+    .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: auto;
+
+        .swiper-list {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            min-width: 100%;
+
+
+            .swiper-item {
+                width: 100%;
+                flex-shrink: 0;
+
+                .swiper-img {
+                    max-width: 100%;
+                    height: auto;
+                    user-select: none;
+                }
+            }
+        }
+    }
+
+    .HomePage {
+        position: relative;
+
+        .verticalLine {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border: 1px solid #242424;
+                z-index: 10;
+
+            }
+        }
+
+        .HomeSlide {
+            width: 100%;
+            height: 100%;
+            will-change: transform;
+            background-color: $bgcolorBlack;
+            padding: 4rem 0;
+
+
+
+            .swiper-slide {
+                &:hover {
+                    .PictureText {
+                        opacity: 1;
+                        color: $whitecolor;
+
+                    }
+
+                    .Slidelayer {
+                        &::after {
+                            opacity: .3;
+                        }
+                    }
+                }
+
+                .myHomeSlideimg {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 15px;
+
+
+                }
+
+
+                .PictureText {
+                    position: absolute;
+                    font-size: 3rem;
+                    bottom: -20px;
+                    letter-spacing: 5px;
+                    opacity: 0;
+                    transition: .3s ease-in-out;
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: $yellowcolor;
+                    z-index: 9;
+                }
+
+                .Slidelayer {
+
+                    &::after {
+                        content: "";
+                        background-color: black;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        opacity: 0;
+                        transition: .3s ease-in-out;
+                    }
+                }
+
+            }
+
+            .swiper-slide-next {
+                .Slidelayer {
+
+                    &::after {
+                        content: "";
+                        background-color: black;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        opacity: .3 !important;
+                        transition: .3s ease-in-out;
+                    }
+                }
+
+                .PictureText {
+                    position: absolute;
+                    font-size: 3rem;
+                    bottom: -20px;
+                    letter-spacing: 5px;
+                    opacity: 1 !important;
+                    transition: .3s ease-in-out;
+                    font-weight: bold;
+                    cursor: pointer;
+                    color: $yellowcolor;
+                    z-index: 9;
+                }
+            }
+
+            .swiper-pagination {
+                bottom: 0px !important;
+                color: white !important;
+            }
+        }
+
+        .verticalLine {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border: 1px solid #242424;
+                z-index: 10;
+                top: 1rem;
+            }
+        }
+
+        .TextSlogan {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 3rem 0;
+            background-color: $bgcolorBlack;
+
+            h6 {
+                color: $graycolor;
+                font-size: 14px;
+                line-height: 1em;
+                letter-spacing: .10em;
+                font-weight: 600;
+                padding-top: 3rem;
+            }
+
+            h2 {
+                margin-top: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $whitecolor;
+                font-size: 32px;
+                line-height: 1em;
+                letter-spacing: .10em;
+            }
+        }
+
+        .servicesSection {
+            display: flex;
+            padding: 3rem 0 !important;
+            width: 45% !important;
+
+            .card {
+                background-color: transparent;
+                border: none;
+                transition: .3s ease-in-out;
+                margin-top: 2rem;
+                .card-body {
+                    padding-left: 0;
+
+                    .card-title {
+                        color: $whitecolor;
+                        font-size: 1.5rem;
+                        position: relative;
+                        padding-top: 1.5rem;
+                        font-weight: 600;
+                        letter-spacing: 3px;
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 25%;
+                            height: 100%;
+                            border-top: 4px solid $yellowcolor;
+                            top: 0.5rem;
+                        }
+
+                    }
+
+                    .card-text {
+                        font-size: 14px;
+                        color: $graycolor !important;
+                        line-height: 1.7;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-8px);
+
+                    img {
+                        filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+                    }
+                }
+
+                img {
+                    filter: brightness(100%) contrast(100%) saturate(60%) blur(0px) hue-rotate(0deg);
+                    transition: .3s ease-in-out;
+                }
+
+                .ymServicesimg {
+                    height: 630px;
+                    object-fit: cover;
+                }
+                .ymServicesimg2{
+                    height: inherit !important;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .Footer{
+        padding: 2rem;
+        .verticalLine{
+            position: relative;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                border: 1px solid #242424;
+                z-index: 10;
+                top: -30px;
+            }
+        }
+            .FooterMain{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                .Copyright{
+                    color: $whitecolor;
+                    font-size: 12px;
+                    letter-spacing: 1.7;
+                    padding-bottom: 1rem;
+                }
+                .TwoCopy{
+                    color: $whitecolor;
+                    font-size: 15px;
+                    padding-bottom: 1rem;
+                }
+            }
     }
 }

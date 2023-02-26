@@ -9,6 +9,8 @@ export default function useFetch(url) {
     const fetchData = async () => {
 
         setIsloading(true);
+        setError(null);
+        setData([]);
 
     try{
         const res = await fetch(url);
@@ -29,3 +31,7 @@ export default function useFetch(url) {
   return{isLoading, error, data };
 
 }
+
+
+
+

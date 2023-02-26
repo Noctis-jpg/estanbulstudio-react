@@ -4,7 +4,7 @@
     #root {
         .RoutesMain {
             .CapsulLogoandNav {
-                background-color: #000000e6;
+
 
                 .logo {
                     display: flex;
@@ -17,7 +17,6 @@
                     display: flex;
                     width: 100%;
                     align-items: center;
-                    justify-content: center;
 
                     a {
                         text-decoration: none;
@@ -54,6 +53,70 @@
             padding: 1rem 1rem;
         }
     }
+    .HomePage{
+        .servicesSection {
+            display: flex;
+            padding: 3rem 0 !important;
+            width: 75% !important;
+
+            .card {
+                background-color: transparent;
+                border: none;
+                transition: .3s ease-in-out;
+                margin-top: 2rem;
+                .card-body {
+                    padding-left: 0;
+
+                    .card-title {
+                        color: $whitecolor;
+                        font-size: 1.5rem;
+                        position: relative;
+                        padding-top: 1.5rem;
+                        font-weight: 600;
+                        letter-spacing: 3px;
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 25%;
+                            height: 100%;
+                            border-top: 4px solid $yellowcolor;
+                            top: 0.5rem;
+                        }
+
+                    }
+
+                    .card-text {
+                        font-size: 14px;
+                        color: $graycolor !important;
+                        line-height: 1.7;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-8px);
+
+                    img {
+                        filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+                    }
+                }
+
+                img {
+                    filter: brightness(100%) contrast(100%) saturate(60%) blur(0px) hue-rotate(0deg);
+                    transition: .3s ease-in-out;
+                }
+
+                .ymServicesimg {
+                    height: 630px;
+                    object-fit: cover;
+                }
+                .ymServicesimg2{
+                    height: inherit !important;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
     }
 }
 
@@ -65,8 +128,10 @@
         #root {
             .RoutesMain {
                 .CapsulLogoandNav {
-                    background-color: #000000e6;
-    
+
+                    .justify-content-end{
+                        justify-content: center !important;
+                    }
                     .logo {
                         display: flex;
                         align-items: center;
@@ -91,7 +156,6 @@
             .PageAbout,
             .PageContact,
             .PageCreative,
-            .HomePage,
             .PagePortfolio,
             .PageStudioRental {
                 padding: 1rem 1rem;
@@ -107,5 +171,220 @@
                 }
             }
         }
+
+        .HomePage{
+            .servicesSection {
+                display: flex;
+                padding: 3rem 0 !important;
+                width: 75% !important;
+    
+                .card {
+                    background-color: transparent;
+                    border: none;
+                    transition: .3s ease-in-out;
+                    margin-top: 2rem;
+                    .card-body {
+                        padding-left: 0;
+    
+                        .card-title {
+                            color: $whitecolor;
+                            font-size: 1.5rem;
+                            position: relative;
+                            padding-top: 1.5rem;
+                            font-weight: 600;
+                            letter-spacing: 3px;
+    
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                width: 25%;
+                                height: 100%;
+                                border-top: 4px solid $yellowcolor;
+                                top: 0.5rem;
+                            }
+    
+                        }
+    
+                        .card-text {
+                            font-size: 14px;
+                            color: $graycolor !important;
+                            line-height: 1.7;
+                        }
+                    }
+    
+                    &:hover {
+                        transform: translateY(-8px);
+    
+                        img {
+                            filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+                        }
+                    }
+    
+                    img {
+                        filter: brightness(100%) contrast(100%) saturate(60%) blur(0px) hue-rotate(0deg);
+                        transition: .3s ease-in-out;
+                    }
+    
+                    .ymServicesimg {
+                        height: 630px;
+                        object-fit: cover;
+                    }
+                    .ymServicesimg2{
+                        height: inherit !important;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
     }
+}
+
+@media screen and (max-width:720px){
+    body{
+        .HomePage{
+            .HomeSlide {
+                width: 100%;
+                height: 100%;
+                will-change: transform;
+                background-color: $bgcolorBlack;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+    
+    
+    
+                .swiper-slide {
+                    &:hover{
+                        .PictureText{
+                            opacity: 1;
+                            color: $whitecolor;
+                        }
+                    }
+                    .myHomeSlideimg {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 15px;
+    
+    
+                    }
+    
+    
+                    .PictureText {
+                        position: absolute;
+                        font-size: 1.5rem;
+                        bottom: -20px;
+                        letter-spacing: 5px;
+                        opacity: 0;
+                        transition: .3s ease-in-out;
+                        font-weight: bold;
+                        cursor: pointer;
+                        color: $yellowcolor;
+                    }
+    
+                }
+    
+            }
+            .TextSlogan{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 3rem 0;
+                
+                h6{
+                    color: #848484;
+                    font-size: 12px;
+                    line-height: 1em;
+                    letter-spacing: 0.1em;
+                    font-weight: 600;
+                    padding-top: 0rem;
+                }
+                h2{
+                    margin-top: 1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $whitecolor;
+                    font-size: 25px;
+                    line-height: 1em;
+                    letter-spacing: 0.1em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px){
+    body{
+        .HomePage{
+            .HomeSlide {
+                width: 100%;
+                height: 100%;
+                will-change: transform;
+                background-color: $bgcolorBlack;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+    
+    
+    
+                .swiper-slide {
+                    &:hover{
+                        .PictureText{
+                            opacity: 1;
+                            color: $whitecolor;
+                        }
+                    }
+                    .myHomeSlideimg {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 15px;
+    
+    
+                    }
+    
+    
+                    .PictureText {
+                        position: absolute;
+                        font-size: 1.5rem;
+                        bottom: -20px;
+                        letter-spacing: 5px;
+                        opacity: 0;
+                        transition: .3s ease-in-out;
+                        font-weight: bold;
+                        cursor: pointer;
+                        color: $yellowcolor;
+                    }
+    
+                }
+    
+            }
+            .TextSlogan{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 3rem 0;
+                
+                h6{
+                    color: #848484;
+                    font-size: 12px;
+                    line-height: 1em;
+                    letter-spacing: 0.1em;
+                    font-weight: 600;
+                    padding-top: 0rem;
+                }
+                h2{
+                    margin-top: 1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: $whitecolor;
+                    font-size: 15px;
+                    line-height: 1em;
+                    letter-spacing: 0.1em;
+                }
+            }
+        }
+    } 
 }
