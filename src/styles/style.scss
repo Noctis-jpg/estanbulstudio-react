@@ -357,9 +357,9 @@ body {
         }
 
         .servicesSection {
-            display: flex;
-            padding: 3rem 0 !important;
-            width: 45% !important;
+            // display: flex;
+            padding: 1rem 0 !important;
+            width: 95% !important;
 
             .card {
                 background-color: transparent;
@@ -416,6 +416,13 @@ body {
                     height: inherit !important;
                     object-fit: cover;
                 }
+            }
+            .ServisSlide {
+                position: static;
+            }
+            .swiper-pagination-fraction{
+                bottom: 0;
+                color: white;
             }
         }
     }
