@@ -23,18 +23,18 @@ const HomePage = () => {
         <div className="row">
           <div className="col-lg-12">
             <Swiper 
-                    // autoplay={{
-                    //   delay: 10500,
-                    //   pauseOnMouseEnter: true,
-                    //   disableOnInteraction: false
-                    // }}
+                     autoplay={{
+                       delay: 10500,
+                       pauseOnMouseEnter: true,
+                       disableOnInteraction: false
+                     }}
               className="HomeSlide"
               pagination={{          type: "fraction",
               }}
               modules={[Pagination]}
               spaceBetween={30}
               slidesPerView={3}
-
+              grabCursor ={true}
               breakpoints={{
                 320: {
                   slidesPerView: 1,
