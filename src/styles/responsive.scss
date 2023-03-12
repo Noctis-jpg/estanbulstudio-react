@@ -310,6 +310,15 @@
                     letter-spacing: 0.1em;
                 }
             }
+            .ymBefore {
+                margin-bottom: 5rem;
+                &::before{
+       
+                }
+                .CounterHome{
+                    width: 100%;
+                }
+            }
         }
     }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
 import Slogan from "../components/section_components/Slogan.js";
-import Services from "../components/section_components/ServicesSection.js";
+import Counter from "../components/section_components/Counter.js";
 import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
@@ -74,7 +74,7 @@ const HomePage = () => {
         </div>
       </div>
       <Slogan />
-      <Services />
+      <Counter />
     </section>
   );
 };

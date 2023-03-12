@@ -7,6 +7,8 @@ $bgcolorBlack : #191919;
 $FontFamily :'Poppins',
 sans-serif;
 $FontsizeH1 : 35px;
+$FontsizeH2 :30px;
+$FontsizeP: 15px;
 body {
     margin: 0 auto;
     padding: 0;
@@ -350,7 +352,7 @@ body {
                 font-weight: 700;
                 text-transform: uppercase;
                 color: $whitecolor;
-                font-size: 32px;
+                font-size: $FontsizeH2;
                 line-height: 1em;
                 letter-spacing: .10em;
             }
@@ -425,6 +427,84 @@ body {
                 color: white;
             }
         }
+
+.ymBefore{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: "";
+        background-color: $yellowcolor;
+        width: 100%;
+        height: 40%;
+        z-index: 0;
+        bottom: 35px;
+    }
+        .CounterHome{
+            z-index: 9;
+            margin-top: 2rem;
+            width: 1250px;
+            margin: 0 auto;
+            position: relative;
+         
+            .HeaderAndText{
+                margin: 1rem 0;
+                h2{
+                    margin: 1rem 0;
+                    font-size: $FontsizeH2;
+                    color: white;
+                }
+                p{
+                    margin: 1rem 0;
+                    color: white;
+                    font-size: $FontsizeP;
+                }
+            }
+            .IconBox{
+                background-color: white;
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 0.7rem 0.7rem;
+                text-align: center;
+                .IconImg{
+                    margin-bottom:  0.7rem;
+                    
+
+                    img{
+                        width: 70px;
+                    }
+                }
+                .Number{
+                    font-size: 35px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom:  0.7rem;
+                    border-bottom: 5px solid $yellowcolor;
+                    .Yellow{
+                        font-size: 25px;
+                        color:  $yellowcolor;
+                        font-weight: bolder;
+                    }
+                }
+                .NumberText{
+                    p{
+                        font-size: $FontsizeP;
+                    }
+                }
+            }
+            .AboutSlide{
+                position: static;
+
+                .swiper-pagination-fraction{
+                    bottom: -40px;
+                    color: white;
+                }
+            }
+        }
+    }
     }
 
     .Footer{
