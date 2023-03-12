@@ -1,18 +1,18 @@
-import React from 'react'
-
+import React from "react";
+import { Helmet } from "react-helmet";
 const StudioRental = () => {
   return (
-    <section className='PageStudioRental'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-lg-12'>
-        StudioRental
+    <section className="PageStudioRental">
+      <Helmet>
+        <title>StudioRental</title>
+      </Helmet>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">StudioRental</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  );
+};
 
-  )
-}
-
-export default StudioRental
+export default StudioRental;

@@ -1,18 +1,18 @@
-import React from 'react'
-
+import React from "react";
+import { Helmet } from "react-helmet";
 const FuaCreative = () => {
   return (
-    <section className='PageCreative'>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-lg-12'>
-        PageCreative
+    <section className="PageCreative">
+      <Helmet>
+        <title>PageCreative</title>
+      </Helmet>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">PageCreative</div>
         </div>
       </div>
-    </div>
-  </section>
-   
-  )
-}
+    </section>
+  );
+};
 
-export default FuaCreative
+export default FuaCreative;
