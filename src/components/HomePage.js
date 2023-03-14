@@ -7,16 +7,17 @@ import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
+ 
+
 const HomePage = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/home-page-main-sliders",
-    "http://localhost:1337/api/slide-alti-slogans"
+    "http://localhost:1337/api/home-page-main-sliders?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;
   SwiperCore.use([Autoplay]);
-  console.log(data);
+ 
   return (
     <section className="HomePage">
       <Helmet>
@@ -55,6 +56,8 @@ const HomePage = () => {
                   slidesPerView: 3,
                 },
               }}
+
+              
             >
               {data.data.map((item) => (
                 <SwiperSlide
@@ -63,8 +66,9 @@ const HomePage = () => {
                 >
                   <img
                     className="img-fluid myHomeSlideimg"
-                    src={item.attributes.Mainsliderlink}
+                    src={item.attributes.mainSlider.data[0].attributes.formats.large.url}
                   ></img>
+                  
                   <h1 className="PictureText">{item.attributes.SlideText}</h1>
                   <div className="Slidelayer"></div>
                 </SwiperSlide>
