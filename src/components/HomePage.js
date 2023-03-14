@@ -7,7 +7,7 @@ import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
- 
+
 
 const HomePage = () => {
   const { isLoading, error, data } = useFetch(
