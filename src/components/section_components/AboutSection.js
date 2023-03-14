@@ -5,9 +5,10 @@ import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 
+
 const AboutSection = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/abouts?populate=*"
+    "http://localhost:1337/api/abouts"
   );
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;
@@ -55,7 +56,7 @@ const AboutSection = () => {
           >
             {data.data.map((item) => ( 
               <SwiperSlide key={item.id}>
-<img src={item.attributes.AboutSlide.url} />
+<img src={item.attributes.AboutSlide} />
 
               </SwiperSlide>
              ))}

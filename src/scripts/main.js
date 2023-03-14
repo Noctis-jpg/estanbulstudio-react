@@ -1,6 +1,8 @@
-import $ from "jquery";
+import React from 'react';
+
+const FireBase = "localhost:1337";
+
+console.log(FireBase);
 
 
-export const myGlobalImage = 'http://localhost:1337';
-
-console.log(myGlobalImage);
+export default FireBase

@@ -10,7 +10,6 @@ import ContactPage from "../components/ContactPage"
 import StudioRental from '../components/StudioRental'
 
 
-
 const AppRouter = () => {
   return (
 <div className='RoutesMain'>

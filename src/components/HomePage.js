@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
 
 
+
 const HomePage = () => {
   const { isLoading, error, data } = useFetch(
     "http://localhost:1337/api/home-page-main-sliders?populate=*"
@@ -19,7 +20,7 @@ const HomePage = () => {
   SwiperCore.use([Autoplay]);
  
   return (
-    <section className="HomePage">
+    <section className="HomePage"> 
       <Helmet>
         <title>Anasayfa</title>
         <meta name="description" content="Anasayfa description" />
@@ -67,8 +68,8 @@ const HomePage = () => {
                   <img
                     className="img-fluid myHomeSlideimg"
                     src={item.attributes.mainSlider.data[0].attributes.formats.large.url}
+                     onLoad={() => console.log(item.attributes.mainSlider.data[0].attributes.formats.large.url)}
                   ></img>
-                  
                   <h1 className="PictureText">{item.attributes.SlideText}</h1>
                   <div className="Slidelayer"></div>
                 </SwiperSlide>
