@@ -31,18 +31,18 @@ export default function Header() {
             ></img>
           </div>
         </div>
-        <div className="col-lg-10 col-6 d-flex align-items-center justify-content-end">
-          <nav className="MainNav DesktopNav">
+        <div className="col-lg-10 col-6 d-flex align-items-center justify-content-center ymDesk">
+          {/* <nav className="MainNav DesktopNav">
             {data.data.map((item) => (
               <NavLink key={item.id} to={item.attributes.link}>
                 {item.attributes.item}
               </NavLink>
             ))}
-          </nav>
+          </nav> */}
           <Button onClick={handleShow} className="MobileBtn">
             <FontAwesomeIcon icon={faBars} />
           </Button>
-          <Modal className="ymModal right" show={show} onHide={handleClose}>
+          <Modal className="ymModal right FreeConsRight" show={show} onHide={handleClose}>
             <Modal.Header className="modal-header">
               <Modal.Title>Menus</Modal.Title>
               <FontAwesomeIcon

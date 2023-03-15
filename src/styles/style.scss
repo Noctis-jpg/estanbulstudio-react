@@ -25,8 +25,10 @@ body {
     #root {
         .RoutesMain {
             .CapsulLogoandNav {
-                background-color: $bgcolorBlack;
-
+                background-color: transparent;
+                position: absolute;
+                z-index: 99;
+                width: 100%;
                 .logo {
                     display: flex;
                     align-items: center;
@@ -55,13 +57,26 @@ body {
 
                 .MobileBtn {
                     cursor: pointer;
-                    display: none;
-
+                    background-color: white;
+                    border-left: none;
+                    border: none;
                     svg {
-                        color: white;
+                        color: black;
                         font-size: 30px;
                         font-weight: 800;
+                        border: none;
                     }
+                }
+                .ymDesk{
+
+
+
+    width: 84px;
+    text-align: center;
+    background: #fff;
+    position: absolute;
+    right: 90px;
+    padding: 1rem 0;
                 }
             }
         }
@@ -78,7 +93,7 @@ body {
         .HomePage {
             padding: 0;
             position: relative;
-
+            padding: 0 90px;
             .container-fluid {
                 padding: 0;
             }
@@ -86,40 +101,38 @@ body {
     }
 
     /*Right*/
-    .modal.right.fade .modal-dialog {
-        right: 0px;
-        -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
-        -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
-        -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-        transition: opacity 0.3s linear, right 0.3s ease-out;
-    }
+    // .modal.right.fade .modal-dialog {
+    //     right: 0px;
+    //     -webkit-transition: opacity 0.3s linear, right 0.3s ease-out !important;
+    //     -moz-transition: opacity 0.3s linear, right 0.3s ease-out !important;
+    //     -o-transition: opacity 0.3s linear, right 0.3s ease-out !important;
+    //     transition: opacity 0.3s linear, right 0.3s ease-out !important;
+    // }
 
-    .modal.right.fade.in .modal-dialog {
-        right: 0;
-    }
+    // .modal.right.fade.in .modal-dialog {
+    //     right: 0;
+    // }
 
-    .modal.right .modal-dialog {
-        position: fixed;
-        margin: auto;
-        width: 320px;
-        height: 100%;
-        -webkit-transform: translate3d(0%, 0, 0);
-        -ms-transform: translate3d(0%, 0, 0);
-        -o-transform: translate3d(0%, 0, 0);
-        transform: translate3d(0%, 0, 0);
-        right: -320px;
-    }
+    // .modal.right .modal-dialog {
+    //     position: fixed !important;
+    //     margin: auto !important;
+    //     width: 320px !important;
+    //     height: 100% !important;
+    //     -webkit-transform: translate3d(0%, 0, 0) !important;
+    //     -ms-transform: translate3d(0%, 0, 0) !important;
+    //     -o-transform: translate3d(0%, 0, 0) !important;
+    //     transform: translate3d(0%, 0, 0) !important;
+    //     right: -320px !important;
+    // }
 
-    .modal.left .modal-content,
-    .modal.right .modal-content {
-        height: 100%;
-        overflow-y: auto;
-    }
+    // .modal.right .modal-content {
+    //     height: 100%;
+    //     overflow-y: auto;
+    // }
 
-    .modal.left .modal-body,
-    .modal.right .modal-body {
-        padding: 15px 15px 80px;
-    }
+    // .modal.right .modal-body {
+    //     padding: 15px 15px 80px;
+    // }
 
 
 
@@ -127,48 +140,125 @@ body {
 
 
 
-    .modal-content {
-        border-radius: 0;
-        border: none;
-        height: 100%;
-        overflow-y: auto;
+    // .modal-content {
+    //     border-radius: 0;
+    //     border: none;
+    //     height: 100%;
+    //     overflow-y: auto;
 
-        .modal-header {
-            .MobileNavBtn {
-                display: none;
-            }
+    //     .modal-header {
+    //         .MobileNavBtn {
+    //             display: none;
+    //         }
 
-            .ModalCloseBtn {
-                cursor: pointer;
-                font-size: 20px;
-                transition: .3s all;
+    //         .ModalCloseBtn {
+    //             cursor: pointer;
+    //             font-size: 20px;
+    //             transition: .3s all;
 
-                &:hover {
-                    color: $yellowcolor;
-                }
-            }
+    //             &:hover {
+    //                 color: $yellowcolor;
+    //             }
+    //         }
 
+    //     }
+
+    //     .modal-body {
+    //         .MainNav {
+    //             display: flex;
+    //             flex-direction: column;
+    //             align-items: center;
+    //             justify-content: center;
+    //             text-align: start;
+    //             padding: 1rem 0;
+
+    //             a {
+    //                 padding: 1rem 0;
+    //                 font-size: 20px;
+    //                 font-weight: 600;
+    //             }
+
+    //             .active {
+    //                 color: $yellowcolor;
+    //             }
+    //         }
+    //     }
+    // }
+
+
+    .FreeConsRight {
+        .modal-dialog {
+            position: fixed;
+            margin: auto;
+            width: 700px;
+            height: 100%;
+            -webkit-transform: translate3d(0%, 0, 0) !important;
+            -ms-transform: translate3d(0%, 0, 0) !important;
+            -o-transform: translate3d(0%, 0, 0) !important;
+            transform: translate3d(0%, 0, 0) !important;
+        }
+
+        .modal-content {
+            height: 100%;
+            overflow-y: auto;
         }
 
         .modal-body {
-            .MainNav {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: start;
-                padding: 1rem 0;
+            padding: 15px 15px 80px;
+        }
+        .modal-dialog {
+            right: -320px;
+            -webkit-transition: opacity 0.3s linear, right 0.3s ease-out !important;
+            -moz-transition: opacity 0.3s linear, right 0.3s ease-out !important;
+            -o-transition: opacity 0.3s linear, right 0.3s ease-out !important;
+            transition: opacity 0.3s linear, right 0.3s ease-out !important;
+        }
+        .modal-content {
+            border-radius: 0;
+            border: none;
+        }
+        .modal-header {
+            // border-bottom-color: $border-bottom-color_1;
+            // background-color: $background-color_1;
+            color: white;
+            border-radius: inherit;
 
-                a {
-                    padding: 1rem 0;
-                    font-size: 20px;
-                    font-weight: 600;
+            .close{
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .FreeConsRight.show {
+        .modal-dialog {
+            right: 0;
+        }
+    }
+
+
+
+
+
+
+    .FreeConsRight{
+        .modal-body{
+            .headFormText{
+                h2{
+                    font-size: 18px;
+                    line-height: 1.5;
+                    font-family: "Poppins", sans-serif;
+                    margin-top: .2rem;
                 }
-
-                .active {
-                    color: $yellowcolor;
+                p{
+                margin-bottom: 1.5rem;
+                font-size: 14px;
                 }
             }
+
         }
     }
 
@@ -205,7 +295,7 @@ body {
 
         .verticalLine {
             position: relative;
-
+            display: none;
             &::after {
                 position: absolute;
                 content: "";
@@ -221,8 +311,7 @@ body {
             width: 100%;
             height: 100%;
             will-change: transform;
-            background-color: $bgcolorBlack;
-            padding: 4rem 0;
+            // background-color: $bgcolorBlack;
 
 
 
@@ -230,7 +319,7 @@ body {
                 &:hover {
                     .PictureText {
                         opacity: 1;
-                        color: $whitecolor;
+                        // color: $whitecolor;
 
                     }
 
@@ -261,7 +350,7 @@ body {
                     transition: .3s ease-in-out;
                     font-weight: bold;
                     cursor: pointer;
-                    color: $yellowcolor;
+                    // color: $yellowcolor;
                     z-index: 9;
                 }
 

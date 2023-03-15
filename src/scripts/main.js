@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from "react";
 
-const FireBase = "localhost:1337";
+function LocalComponent() {
+  const [myVariable, setMyVariable] = useState("http://localhost:1337");
 
-console.log(FireBase);
+  return (
+    <div>
+      <p>{myVariable}</p>
+    </div>
+  );
+}
 
-
-export default FireBase
+export default LocalComponent;

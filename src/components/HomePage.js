@@ -7,7 +7,7 @@ import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
-
+const locabase ="http://localhost:1337";
 
 
 const HomePage = () => {
@@ -21,6 +21,7 @@ const HomePage = () => {
  
   return (
     <section className="HomePage"> 
+
       <Helmet>
         <title>Anasayfa</title>
         <meta name="description" content="Anasayfa description" />
@@ -39,7 +40,7 @@ const HomePage = () => {
               pagination={{ type: "fraction" }}
               modules={[Pagination]}
               spaceBetween={30}
-              slidesPerView={3}
+              slidesPerView={1}
               grabCursor={true}
               breakpoints={{
                 320: {
@@ -51,10 +52,10 @@ const HomePage = () => {
                 },
                 // when window width is >= 768px
                 768: {
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 1500: {
-                  slidesPerView: 3,
+                  slidesPerView: 1,
                 },
               }}
 
@@ -67,8 +68,7 @@ const HomePage = () => {
                 >
                   <img
                     className="img-fluid myHomeSlideimg"
-                    src={item.attributes.mainSlider.data[0].attributes.formats.large.url}
-                     onLoad={() => console.log(item.attributes.mainSlider.data[0].attributes.formats.large.url)}
+                    src={locabase + item.attributes.mainSlider.data[0].attributes.formats.large.url}
                   ></img>
                   <h1 className="PictureText">{item.attributes.SlideText}</h1>
                   <div className="Slidelayer"></div>
@@ -81,7 +81,8 @@ const HomePage = () => {
       <Slogan />
       <Counter />
     </section>
+
   );
 };
-
+console.log(locabase)
 export default HomePage;
