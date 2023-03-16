@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
-function LocalComponent() {
-  const [myVariable, setMyVariable] = useState("http://localhost:1337");
+$("button[href^='#']").click(function(e) {
+	e.preventDefault();
+	
+	var position = $($(this).attr("href")).offset().top;
 
-  return (
-    <div>
-      <p>{myVariable}</p>
-    </div>
-  );
-}
-
-export default LocalComponent;
+	$("body, html").animate({
+		scrollTop: position
+	} /* speed */ );
+});

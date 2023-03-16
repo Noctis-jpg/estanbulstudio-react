@@ -1,12 +1,15 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
+import AboutHome from "../components/AboutHome";
 import Slogan from "../components/section_components/Slogan.js";
 import Counter from "../components/section_components/Counter.js";
 import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 const locabase ="http://localhost:1337";
 
 
@@ -21,7 +24,6 @@ const HomePage = () => {
  
   return (
     <section className="HomePage"> 
-
       <Helmet>
         <title>Anasayfa</title>
         <meta name="description" content="Anasayfa description" />
@@ -29,7 +31,7 @@ const HomePage = () => {
       <div className="verticalLine"></div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-12 ymRelative">
             <Swiper
               autoplay={{
                 delay: 10500,
@@ -75,9 +77,13 @@ const HomePage = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+            <div className="Discover">
+              <h2>KEŞFEDİN <FontAwesomeIcon className="frameYm" icon={faCircleArrowDown} /></h2>
+            </div>
           </div>
         </div>
       </div>
+      <AboutHome />
       <Slogan />
       <Counter />
     </section>

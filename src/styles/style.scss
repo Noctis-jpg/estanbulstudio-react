@@ -9,6 +9,17 @@ sans-serif;
 $FontsizeH1 : 35px;
 $FontsizeH2 :30px;
 $FontsizeP: 15px;
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
 body {
     margin: 0 auto;
     padding: 0;
@@ -29,6 +40,7 @@ body {
                 position: absolute;
                 z-index: 99;
                 width: 100%;
+
                 .logo {
                     display: flex;
                     align-items: center;
@@ -60,6 +72,7 @@ body {
                     background-color: white;
                     border-left: none;
                     border: none;
+
                     svg {
                         color: black;
                         font-size: 30px;
@@ -67,16 +80,17 @@ body {
                         border: none;
                     }
                 }
-                .ymDesk{
+
+                .ymDesk {
 
 
 
-    width: 84px;
-    text-align: center;
-    background: #fff;
-    position: absolute;
-    right: 90px;
-    padding: 1rem 0;
+                    width: 84px;
+                    text-align: center;
+                    background: #fff;
+                    position: absolute;
+                    right: 90px;
+                    padding: 1rem 0;
                 }
             }
         }
@@ -94,6 +108,7 @@ body {
             padding: 0;
             position: relative;
             padding: 0 90px;
+
             .container-fluid {
                 padding: 0;
             }
@@ -206,6 +221,7 @@ body {
         .modal-body {
             padding: 15px 15px 80px;
         }
+
         .modal-dialog {
             right: -320px;
             -webkit-transition: opacity 0.3s linear, right 0.3s ease-out !important;
@@ -213,17 +229,19 @@ body {
             -o-transition: opacity 0.3s linear, right 0.3s ease-out !important;
             transition: opacity 0.3s linear, right 0.3s ease-out !important;
         }
+
         .modal-content {
             border-radius: 0;
             border: none;
         }
+
         .modal-header {
             // border-bottom-color: $border-bottom-color_1;
             // background-color: $background-color_1;
             color: white;
             border-radius: inherit;
 
-            .close{
+            .close {
                 cursor: pointer;
                 border: none;
                 background-color: transparent;
@@ -244,18 +262,19 @@ body {
 
 
 
-    .FreeConsRight{
-        .modal-body{
-            .headFormText{
-                h2{
+    .FreeConsRight {
+        .modal-body {
+            .headFormText {
+                h2 {
                     font-size: 18px;
                     line-height: 1.5;
                     font-family: "Poppins", sans-serif;
                     margin-top: .2rem;
                 }
-                p{
-                margin-bottom: 1.5rem;
-                font-size: 14px;
+
+                p {
+                    margin-bottom: 1.5rem;
+                    font-size: 14px;
                 }
             }
 
@@ -296,6 +315,7 @@ body {
         .verticalLine {
             position: relative;
             display: none;
+
             &::after {
                 position: absolute;
                 content: "";
@@ -304,6 +324,56 @@ body {
                 border: 1px solid #242424;
                 z-index: 10;
 
+            }
+        }
+
+        .ymRelative {
+            position: relative;
+
+            .Discover {
+                position: absolute;
+                bottom: 0;
+                z-index: 99;
+                background-color: $yellowcolor;
+                width: 15%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.3rem;
+                cursor: pointer;
+
+                h2 {
+                    font-size: 20px;
+                    margin-bottom: 0;
+                    color: white;
+                    font-weight: bolder;
+                    letter-spacing: 2px;
+
+                    .frameYm {
+                        animation-name: frameDownDiscover;
+                        position: relative;
+                        animation-duration: 3s;
+                        top: 0;
+                        animation-iteration-count: infinite;
+                        margin-left: 1.5rem;
+
+                        @include keyframes(frameDownDiscover) {
+                            0% {
+                                top: 0;
+                            }
+
+                            50% {
+                                top: 20px;
+                            }
+
+                            100% {
+                                top: 0;
+                            }
+                        }
+
+
+                    }
+                }
             }
         }
 
@@ -316,6 +386,9 @@ body {
 
 
             .swiper-slide {
+                overflow: hidden;
+                position: relative;
+
                 &:hover {
                     .PictureText {
                         opacity: 1;
@@ -335,7 +408,64 @@ body {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    border-radius: 15px;
+                    animation: ymEffect 20s ease;
+                    -ms-animation: ymEffect 20s ease;
+                    -webkit-animation: ymEffect 20s ease;
+                    -moz-animation: ymEffect 20s ease;
+                    position: relative;
+                    top: 0;
+                    animation-iteration-count: infinite;
+                    @include keyframes(ymEffect) {
+                        0% {
+                            -webkit-transform-origin: bottom right;
+                            -moz-transform-origin: bottom right;
+                            -ms-transform-origin: bottom right;
+                            -o-transform-origin: bottom right;
+                            transform-origin: bottom right;
+                            transform: scale(1.0);
+                            -ms-transform: scale(1.0);
+                            /* IE 9 */
+
+                            -webkit-transform: scale(1.0);
+                            /* Safari and Chrome */
+
+                            -o-transform: scale(1.0);
+                            /* Opera */
+
+                            -moz-transform: scale(1.0);
+                            /* Firefox */
+                        }
+
+
+                        50% {
+                            transform: scale(1.1);
+                            -ms-transform: scale(1.1);
+                            /* IE 9 */
+
+                            -webkit-transform: scale(1.1);
+                            /* Safari and Chrome */
+
+                            -o-transform: scale(1.1);
+                            /* Opera */
+
+                            -moz-transform: scale(1.1);
+                            /* Firefox */
+                        }
+                        100% {
+                            transform: scale(1.0);
+                            -ms-transform: scale(1.0);
+                            /* IE 9 */
+
+                            -webkit-transform: scale(1.0);
+                            /* Safari and Chrome */
+
+                            -o-transform: scale(1.0);
+                            /* Opera */
+
+                            -moz-transform: scale(1.0);
+                            /* Firefox */
+                        }
+                    }
 
 
                 }
@@ -352,6 +482,7 @@ body {
                     cursor: pointer;
                     // color: $yellowcolor;
                     z-index: 9;
+                    display: none;
                 }
 
                 .Slidelayer {
@@ -363,7 +494,7 @@ body {
                         width: 100%;
                         height: 100%;
                         left: 0;
-                        opacity: 0;
+                        opacity: .3;
                         transition: .3s ease-in-out;
                     }
                 }
@@ -457,6 +588,7 @@ body {
                 border: none;
                 transition: .3s ease-in-out;
                 margin-top: 2rem;
+
                 .card-body {
                     padding-left: 0;
 
@@ -503,104 +635,130 @@ body {
                     height: 630px;
                     object-fit: cover;
                 }
-                .ymServicesimg2{
+
+                .ymServicesimg2 {
                     height: inherit !important;
                     object-fit: cover;
                 }
             }
+
             .ServisSlide {
                 position: static;
             }
-            .swiper-pagination-fraction{
+
+            .swiper-pagination-fraction {
                 bottom: 0;
                 color: white;
             }
         }
 
-.ymBefore{
-    position: relative;
-    &::before{
-        position: absolute;
-        content: "";
-        background-color: $yellowcolor;
-        width: 100%;
-        height: 40%;
-        z-index: 0;
-        bottom: 35px;
-    }
-        .CounterHome{
-            z-index: 9;
-            margin-top: 2rem;
-            width: 1250px;
-            margin: 0 auto;
+        .ymBefore {
             position: relative;
-         
-            .HeaderAndText{
-                margin: 1rem 0;
-                h2{
-                    margin: 1rem 0;
-                    font-size: $FontsizeH2;
-                    color: white;
-                }
-                p{
-                    margin: 1rem 0;
-                    color: white;
-                    font-size: $FontsizeP;
-                }
-            }
-            .IconBox{
-                background-color: white;
-                border-radius: 25px;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                padding: 0.7rem 0.7rem;
-                text-align: center;
-                .IconImg{
-                    margin-bottom:  0.7rem;
-                    
 
-                    img{
-                        width: 70px;
+            &::before {
+                position: absolute;
+                content: "";
+                background-color: $yellowcolor;
+                width: 100%;
+                height: 40%;
+                z-index: 0;
+                bottom: 35px;
+            }
+
+            .CounterHome {
+                z-index: 9;
+                margin-top: 2rem;
+                width: 1250px;
+                margin: 0 auto;
+                position: relative;
+
+                .HeaderAndText {
+                    margin: 1rem 0;
+
+                    h2 {
+                        margin: 1rem 0;
+                        font-size: $FontsizeH2;
+                        color: white;
                     }
-                }
-                .Number{
-                    font-size: 35px;
-                    font-weight: 600;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-bottom:  0.7rem;
-                    border-bottom: 5px solid $yellowcolor;
-                    .Yellow{
-                        font-size: 25px;
-                        color:  $yellowcolor;
-                        font-weight: bolder;
-                    }
-                }
-                .NumberText{
-                    p{
+
+                    p {
+                        margin: 1rem 0;
+                        color: white;
                         font-size: $FontsizeP;
                     }
                 }
-            }
-            .AboutSlide{
-                position: static;
 
-                .swiper-pagination-fraction{
-                    bottom: -40px;
-                    color: white;
+                .IconBox {
+                    background-color: white;
+                    border-radius: 25px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 0.7rem 0.7rem;
+                    text-align: center;
+
+                    .IconImg {
+                        margin-bottom: 0.7rem;
+
+
+                        img {
+                            width: 70px;
+                        }
+                    }
+
+                    .Number {
+                        font-size: 35px;
+                        font-weight: 600;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 0.7rem;
+                        border-bottom: 5px solid $yellowcolor;
+
+                        .Yellow {
+                            font-size: 25px;
+                            color: $yellowcolor;
+                            font-weight: bolder;
+                        }
+                    }
+
+                    .NumberText {
+                        p {
+                            font-size: $FontsizeP;
+                        }
+                    }
+                }
+
+                .AboutSlide {
+                    position: static;
+
+                    .swiper-pagination-fraction {
+                        bottom: -40px;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .AboutHome{
+            padding-top: 5rem;
+            .pad-0{
+                padding: 0;
+            }
+            .RightTwoPicture{
+                .Ust{
+                    margin-bottom: 1rem;
                 }
             }
         }
     }
-    }
 
-    .Footer{
+    .Footer {
         padding: 2rem;
-        .verticalLine{
+
+        .verticalLine {
             position: relative;
-            &::after{
+
+            &::after {
                 position: absolute;
                 content: "";
                 width: 100%;
@@ -610,39 +768,44 @@ body {
                 top: -30px;
             }
         }
-            .FooterMain{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
 
-                .Copyright{
-                    color: $whitecolor;
-                    font-size: 12px;
-                    letter-spacing: 1.7;
-                    padding-bottom: 1rem;
-                }
-                .TwoCopy{
-                    color: $whitecolor;
-                    font-size: 15px;
-                    padding-bottom: 1rem;
-                }
+        .FooterMain {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .Copyright {
+                color: $whitecolor;
+                font-size: 12px;
+                letter-spacing: 1.7;
+                padding-bottom: 1rem;
             }
+
+            .TwoCopy {
+                color: $whitecolor;
+                font-size: 15px;
+                padding-bottom: 1rem;
+            }
+        }
     }
-    .headerGorseli{
+
+    .headerGorseli {
         position: relative;
-        background: rgb(25,25,25);
-        background: linear-gradient(66deg, rgba(25,25,25,1) 51%, rgba(145,114,20,1) 85%, rgba(255,193,7,1) 100%);
+        background: rgb(25, 25, 25);
+        background: linear-gradient(66deg, rgba(25, 25, 25, 1) 51%, rgba(145, 114, 20, 1) 85%, rgba(255, 193, 7, 1) 100%);
         height: 25vh;
-        .headerBaslik{
+
+        .headerBaslik {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100%;
-            h1{
+
+            h1 {
                 color: white;
                 font-size: $FontsizeH1;
-                letter-spacing:4px;
+                letter-spacing: 4px;
             }
         }
     }
