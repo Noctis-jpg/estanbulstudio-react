@@ -23,6 +23,7 @@ const HomePage = () => {
   SwiperCore.use([Autoplay]);
  
   return (
+    <div>
     <section className="HomePage"> 
       <Helmet>
         <title>Anasayfa</title>
@@ -85,9 +86,10 @@ const HomePage = () => {
       </div>
       <AboutHome />
       <Slogan />
-      <Counter />
+ 
     </section>
-
+    <Counter />
+    </div>
   );
 };
 console.log(locabase)
