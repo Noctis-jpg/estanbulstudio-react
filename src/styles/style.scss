@@ -22,6 +22,7 @@ $FontsizeP: 15px;
 
 body {
 
+
     margin: 0 auto;
     padding: 0;
     font-family: $FontFamily;
@@ -416,6 +417,7 @@ body {
                     position: relative;
                     top: 0;
                     animation-iteration-count: infinite;
+
                     @include keyframes(ymEffect) {
                         0% {
                             -webkit-transform-origin: bottom right;
@@ -452,6 +454,7 @@ body {
                             -moz-transform: scale(1.1);
                             /* Firefox */
                         }
+
                         100% {
                             transform: scale(1.0);
                             -ms-transform: scale(1.0);
@@ -654,21 +657,25 @@ body {
         }
 
 
-        .AboutHome{
+        .AboutHome {
             padding-top: 5rem;
-            .pad-0{
+
+            .pad-0 {
                 padding: 0;
             }
-            .RightTwoPicture{
-                .Ust{
+
+            .RightTwoPicture {
+                .Ust {
                     margin-bottom: 1rem;
                 }
             }
         }
     }
+
     .ymBefore {
         position: relative;
         padding: 0;
+
         &::before {
             position: absolute;
             content: "";
@@ -681,7 +688,7 @@ body {
 
         .CounterHome {
             z-index: 9;
-            margin-top: 2rem;
+            margin-top: 5rem;
             width: 1250px;
             margin: 0 auto;
             position: relative;
@@ -692,7 +699,8 @@ body {
                 h2 {
                     margin: 1rem 0;
                     font-size: $FontsizeH2;
-                    color: white;
+                    color: $yellowcolor;
+                    font-weight: 600;
                 }
 
                 p {
@@ -753,6 +761,7 @@ body {
             }
         }
     }
+
     .Footer {
         padding: 2rem;
 
@@ -810,34 +819,132 @@ body {
             }
         }
     }
-    .AboutHome{
-        .Global{
-            img{
+
+    .AboutHome {
+        .Global {
+            &:hover {
+                .LeftHeading {
+
+                    &::before {
+                        transition: .5s ease-in-out;
+                        width: 250px;
+                    }
+                }
+            }
+
+
+            img {
                 margin-bottom: 1rem;
             }
-            .LeftHeading{
+
+            .LeftHeading {
                 padding: 1.5rem 0;
                 position: relative;
-                &::before{
+
+                &::before {
                     content: "";
                     top: 10px;
                     background-color: $yellowcolor;
-                    width: 150px;
+                    width: 70px;
                     height: 5px;
                     position: absolute;
+                    transition: .5s ease-in-out;
                 }
-                h2{
+
+                h2 {
                     font-size: $FontsizeH2;
                     color: $whitecolor;
-                    
+
                 }
-                p{
+
+                p {
                     color: $whitecolor;
                     font-size: $FontsizeP;
                     padding-bottom: 0.5rem;
-   
+
                 }
             }
         }
     }
+
+    .FooterTop{
+        margin-top: 5rem;
+        .pad-0{
+            padding: 0;
+        }
+        .player-wrapper {
+            position: relative;
+            padding-top: 20.25%;
+          }
+          
+          .react-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            video{
+                width: 100%;
+                position: relative;
+                object-fit: cover;
+                height: 100%;
+                object-position: top;
+            }
+
+          }
+          .LayerVideo{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: .5;
+        }
+        .Contact{
+            position: absolute;
+            top: 0;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .Text{
+                color: $whitecolor;
+                font-size: $FontsizeH1;
+                font-weight: 600;
+            }
+            .ButtonDiv{
+                margin-top: 2rem;
+                width: 10%;
+                transition: .3s ease-in-out;
+                &:hover{
+                    .ymButton{
+                        background-color: white;
+                        color: black;
+                        -webkit-box-shadow: -8px 3px 15px -5px rgba(255,193,7,1);
+                        -moz-box-shadow: -8px 3px 15px -5px rgba(255,193,7,1);
+                        box-shadow: -8px 3px 15px -5px rgba(255,193,7,1);
+                        transition: .3s ease-in-out;
+                        border-color: white;
+                    }
+                }
+                .ymButton{
+                    font-size: 23px;
+                    color:#3a3a3a;
+                    font-weight: 600;
+                    border: 1px solid $yellowcolor;
+                    width: 100%;
+                    background-color: $yellowcolor;
+                    border-radius: 15px;
+                    padding: 10px;
+                    transition: .3s ease-in-out;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+        }   
 }

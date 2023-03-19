@@ -1,16 +1,18 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import useFetch from "../hooks/useFetch";
-import AboutHome from "../components/AboutHome";
+import AboutHome from "../components/section_components/AboutHome";
 import Slogan from "../components/section_components/Slogan.js";
 import Counter from "../components/section_components/Counter.js";
+import FooterTopVideo from "../components/section_components/FooterTopVideo";
 import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
-const locabase ="http://localhost:1337";
+
+const locabase = "http://localhost:1337";
 
 
 const HomePage = () => {
@@ -89,6 +91,9 @@ const HomePage = () => {
  
     </section>
     <Counter />
+
+    <FooterTopVideo />            
+
     </div>
   );
 };
