@@ -1,0 +1,302 @@
+@media only screen and (max-width: 1500px) and (min-width: 1043px) {
+  body #root .RoutesMain .CapsulLogoandNav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .MainNav {
+    padding: 1rem 1rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .MainNav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .MainNav .active {
+    color: #ffc107;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .MobileBtn {
+    cursor: pointer;
+    display: none;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .MobileBtn svg {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  body #root .PageStudioRental,
+  body #root .PageAbout,
+  body #root .PageContact,
+  body #root .PageCreative,
+  body #root .PagePortfolio,
+  body #root .PageStudioRental {
+    padding: 1rem 1rem;
+  }
+  body .HomePage .servicesSection {
+    padding: 0rem 0 !important;
+    width: 95% !important;
+  }
+  body .HomePage .servicesSection .card {
+    background-color: transparent;
+    border: none;
+    transition: 0.3s ease-in-out;
+    margin-top: 2rem;
+  }
+  body .HomePage .servicesSection .card .card-body {
+    padding-left: 0;
+  }
+  body .HomePage .servicesSection .card .card-body .card-title {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    position: relative;
+    padding-top: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+  body .HomePage .servicesSection .card .card-body .card-title::before {
+    position: absolute;
+    content: "";
+    width: 25%;
+    height: 100%;
+    border-top: 4px solid #ffc107;
+    top: 0.5rem;
+  }
+  body .HomePage .servicesSection .card .card-body .card-text {
+    font-size: 14px;
+    color: #a0a0a0 !important;
+    line-height: 1.7;
+  }
+  body .HomePage .servicesSection .card:hover {
+    transform: translateY(-8px);
+  }
+  body .HomePage .servicesSection .card:hover img {
+    filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+  }
+  body .HomePage .servicesSection .card img {
+    filter: brightness(100%) contrast(100%) saturate(60%) blur(0px) hue-rotate(0deg);
+    transition: 0.3s ease-in-out;
+  }
+  body .HomePage .servicesSection .card .ymServicesimg {
+    height: 630px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .HomePage .servicesSection .card .ymServicesimg2 {
+    height: inherit !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 1042px) {
+  body #root .RoutesMain .CapsulLogoandNav .justify-content-end {
+    justify-content: center !important;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .DesktopNav {
+    display: none;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .MobileBtn {
+    cursor: pointer;
+    display: block;
+  }
+  body #root .RoutesMain .CapsulLogoandNav .MobileBtn svg {
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  body #root .PageStudioRental,
+  body #root .PageAbout,
+  body #root .PageContact,
+  body #root .PageCreative,
+  body #root .PagePortfolio,
+  body #root .PageStudioRental {
+    padding: 1rem 1rem;
+  }
+  body .modal-content .modal-header .MobileNavBtn {
+    display: block;
+  }
+  body .HomePage .servicesSection {
+    padding: 0rem 0 !important;
+    width: 95% !important;
+  }
+  body .HomePage .servicesSection .card {
+    background-color: transparent;
+    border: none;
+    transition: 0.3s ease-in-out;
+    margin-top: 2rem;
+  }
+  body .HomePage .servicesSection .card .card-body {
+    padding-left: 0;
+  }
+  body .HomePage .servicesSection .card .card-body .card-title {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    position: relative;
+    padding-top: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+  body .HomePage .servicesSection .card .card-body .card-title::before {
+    position: absolute;
+    content: "";
+    width: 25%;
+    height: 100%;
+    border-top: 4px solid #ffc107;
+    top: 0.5rem;
+  }
+  body .HomePage .servicesSection .card .card-body .card-text {
+    font-size: 14px;
+    color: #a0a0a0 !important;
+    line-height: 1.7;
+  }
+  body .HomePage .servicesSection .card:hover {
+    transform: translateY(-8px);
+  }
+  body .HomePage .servicesSection .card:hover img {
+    filter: brightness(100%) contrast(100%) saturate(100%) blur(0px) hue-rotate(0deg);
+  }
+  body .HomePage .servicesSection .card img {
+    filter: brightness(100%) contrast(100%) saturate(60%) blur(0px) hue-rotate(0deg);
+    transition: 0.3s ease-in-out;
+  }
+  body .HomePage .servicesSection .card .ymServicesimg {
+    height: 630px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .HomePage .servicesSection .card .ymServicesimg2 {
+    height: inherit !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 720px) {
+  body .HomePage .HomeSlide {
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    background-color: #191919;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  body .HomePage .HomeSlide .swiper-slide:hover .PictureText {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  body .HomePage .HomeSlide .swiper-slide .myHomeSlideimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  body .HomePage .HomeSlide .swiper-slide .PictureText {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: -20px;
+    letter-spacing: 5px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffc107;
+  }
+  body .HomePage .TextSlogan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+  body .HomePage .TextSlogan h6 {
+    color: #848484;
+    font-size: 12px;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    padding-top: 0rem;
+  }
+  body .HomePage .TextSlogan h2 {
+    margin-top: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 25px;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+  }
+  body .HomePage .ymBefore {
+    margin-bottom: 5rem;
+  }
+  body .HomePage .ymBefore .CounterHome {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  body .HomePage .HomeSlide {
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    background-color: #191919;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  body .HomePage .HomeSlide .swiper-slide:hover .PictureText {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  body .HomePage .HomeSlide .swiper-slide .myHomeSlideimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+  }
+  body .HomePage .HomeSlide .swiper-slide .PictureText {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: -20px;
+    letter-spacing: 5px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffc107;
+  }
+  body .HomePage .TextSlogan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+  body .HomePage .TextSlogan h6 {
+    color: #848484;
+    font-size: 12px;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    padding-top: 0rem;
+  }
+  body .HomePage .TextSlogan h2 {
+    margin-top: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+  }
+}/*# sourceMappingURL=responsive.css.map */

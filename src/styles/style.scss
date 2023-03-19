@@ -21,6 +21,7 @@ $FontsizeP: 15px;
 }
 
 body {
+
     margin: 0 auto;
     padding: 0;
     font-family: $FontFamily;
@@ -806,6 +807,24 @@ body {
                 color: white;
                 font-size: $FontsizeH1;
                 letter-spacing: 4px;
+            }
+        }
+    }
+    .AboutHome{
+        .LeftPicture{
+            .LeftHeading{
+                padding-top: 2rem;
+                h2{
+                    font-size: $FontsizeH2;
+                    color: $whitecolor;
+                    
+                }
+                p{
+                    color: $whitecolor;
+                    font-size: $FontsizeP;
+                    padding-bottom: 0.5rem;
+   
+                }
             }
         }
     }
