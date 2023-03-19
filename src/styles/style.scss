@@ -811,9 +811,21 @@ body {
         }
     }
     .AboutHome{
-        .LeftPicture{
+        .Global{
+            img{
+                margin-bottom: 1rem;
+            }
             .LeftHeading{
-                padding-top: 2rem;
+                padding: 1.5rem 0;
+                position: relative;
+                &::before{
+                    content: "";
+                    top: 10px;
+                    background-color: $yellowcolor;
+                    width: 150px;
+                    height: 5px;
+                    position: absolute;
+                }
                 h2{
                     font-size: $FontsizeH2;
                     color: $whitecolor;
