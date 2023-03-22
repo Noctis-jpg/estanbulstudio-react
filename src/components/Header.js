@@ -3,7 +3,10 @@ import { useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faBars, faClose, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
+
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
@@ -43,14 +46,10 @@ export default function Header() {
             <FontAwesomeIcon icon={faBars} />
           </Button>
           <Modal className="ymModal right FreeConsRight" show={show} onHide={handleClose}>
-            <Modal.Header className="modal-header">
-              <Modal.Title>Menus</Modal.Title>
-              <FontAwesomeIcon
-                className="ModalCloseBtn"
-                icon={faClose}
-                onClick={handleClose}
-              />
-            </Modal.Header>
+          <div className="row myH100">
+              <div className="col-md-7 col-12 LeftMenu">
+
+
             <Modal.Body>
               <nav className="MainNav MobileNav">
                 {data.data.map((item) => (
@@ -64,6 +63,39 @@ export default function Header() {
                 ))}
               </nav>
             </Modal.Body>
+            </div>
+            <div className="col-md-5 col-12 RightMenu">
+                     
+            <Modal.Header className="modal-header">
+              <Modal.Title></Modal.Title>
+              <div className="CloseBtnpad">
+              <FontAwesomeIcon
+                className="ModalCloseBtn"
+                icon={faClose}
+                onClick={handleClose}
+              />
+              </div>
+            </Modal.Header>
+            <Modal.Body>
+                <div className="infoAddres">
+                  <h2 className="InfoCompany">Estanbul Studio - Estanbul Adworks</h2>
+                  <h4 className="SmallAdress">Seyrantepe, Nato Cd. No:15 Kat:5, 34418 Kâğıthane/İstanbul</h4>
+                  <h4 className="Mail">info@estanbuladworks.com</h4>
+
+                  <div className="telephone" >                <FontAwesomeIcon icon={faPhone} /> 
+0549 549 30 45</div>
+                  <div className="SocialMedia">
+                  <FontAwesomeIcon icon={faFacebook} /> 
+                <FontAwesomeIcon icon={faTwitter} /> 
+          
+ 
+    </div>
+                
+                </div>
+       
+            </Modal.Body>
+            </div>
+            </div>
           </Modal>
         </div>
       </div>
