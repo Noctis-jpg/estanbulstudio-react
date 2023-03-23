@@ -30,6 +30,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     background-color: $bgcolorBlack;
+    
 
     .swiper-pagination-bullet-active {
         background-color: $yellowcolor !important;
@@ -702,7 +703,7 @@ body {
             flex-direction: column;
             padding: 3rem 0;
             background-color: $bgcolorBlack;
-
+            margin-bottom: 3rem;
             h6 {
                 color: $graycolor;
                 font-size: 14px;
@@ -824,9 +825,20 @@ body {
             width: 100%;
             height: 40%;
             z-index: 0;
-            bottom: 35px;
+            bottom: 20px;
         }
-
+        &::after{
+            content: "";
+            position: absolute;
+            background-image: url(http://localhost:1337/uploads/ads_7da6081bf6.png?updated_at=2023-03-23T20:59:14.886Z);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 100%;
+            top: 10%;
+            left: 80%;
+            
+        }
         .CounterHome {
             z-index: 9;
             margin-top: 5rem;
@@ -839,9 +851,9 @@ body {
 
                 h2 {
                     margin: 1rem 0;
-                    font-size: $FontsizeH2;
                     color: $yellowcolor;
                     font-weight: 600;
+                    font-size: 40px;
                 }
 
                 p {
@@ -903,40 +915,104 @@ body {
         }
     }
 
-    .Footer {
-        padding: 2rem;
-
-        .verticalLine {
-            position: relative;
-
-            &::after {
-                position: absolute;
-                content: "";
-                width: 100%;
-                height: 100%;
-                border: 1px solid #242424;
-                z-index: 10;
-                top: -30px;
-            }
+    .FooterNew {
+        padding-top: 2.5rem;
+        position: relative;
+        &::after{
+            background-repeat: no-repeat;
+            top: 22%;
+            object-fit: cover;
+            height: 126px;
+            width: 156px;
+            content: "";
+            position: absolute;
+            background-image: url(http://localhost:1337/uploads/Estanbul_Studyo_1_c983ba05b1.png?updated_at=2023-02-25T12:16:52.879Z);
+            left: 5%;
+        }
+        .Line{
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            border: 1px solid #ffc107;
+            left: 0;
+            bottom: 90px;
+            opacity: .2;
         }
 
-        .FooterMain {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-
-            .Copyright {
-                color: $whitecolor;
-                font-size: 12px;
-                letter-spacing: 1.7;
-                padding-bottom: 1rem;
+        .FooterMain{
+            .HeadingFooter{
+                color: $yellowcolor;
+                font-size: 20px;
+                margin-bottom: 1rem;
+                font-weight: 600;
             }
-
-            .TwoCopy {
+            .FooterText{
                 color: $whitecolor;
                 font-size: 15px;
-                padding-bottom: 1rem;
+                margin-bottom: 1rem;
+                width: 65%;
+            }
+            .svg-inline--fa{
+                color: white;
+                font-size: 25px;
+                margin: 1rem .5rem;
+            
+            }
+        }
+        .RigthFooter{
+            .HeadingFooterRight{
+                color: $yellowcolor;
+                font-size: 20px;
+                margin-bottom: 1rem;
+                font-weight: 600;
+                letter-spacing: 1.2px;
+            }
+            .CompanyFooter{
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                color: $yellowcolor;
+                letter-spacing: 1.5px;
+            }
+            .FooterIcon{
+                margin-top: 1rem;
+                color: $whitecolor;
+                font-size: 15px;
+
+                .svg-inline--fa{
+                    color: white;
+                    font-size: 18px;
+                    margin-right: 1rem;
+                    
+                }
+            }
+        }
+        .copyLeft{
+            padding: 2.5rem 0;
+            .CopyrightLeft{
+                ul{
+                    display: flex;
+                    gap: 5%;
+
+                    li{
+                        color: $whitecolor;
+                        font-size: 13px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .pad0{
+            padding: 0;
+        }
+        .copyRight{
+            padding: 2.5rem 0;
+            .CopyrightRight{
+                span{
+                    color: $whitecolor;
+                    font-size: 13px;
+                    letter-spacing: 1.2px;
+                }
             }
         }
     }
@@ -1082,14 +1158,14 @@ body {
                 }
 
                 .ymButton {
-                    font-size: 23px;
+                    font-size: 18px;
                     color: #3a3a3a;
                     font-weight: 600;
                     border: 1px solid $yellowcolor;
-                    width: 100%;
+                    width: 90%;
                     background-color: $yellowcolor;
                     border-radius: 15px;
-                    padding: 10px;
+                    padding: 7px;
                     transition: .3s ease-in-out;
                     letter-spacing: 1px;
                 }

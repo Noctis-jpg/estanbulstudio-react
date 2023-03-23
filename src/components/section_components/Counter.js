@@ -77,7 +77,7 @@ const Counter = () => {
                   </div>
                   <div className="NumberText">
             
-                     <p>{item.attributes.NumberText}</p> 
+                     {/* <p>{item.attributes.NumberText}</p>  */}
                   </div>
                 </div>
               </div>
