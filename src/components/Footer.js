@@ -18,7 +18,12 @@ const Footer = () => {
       <div className="container">
         <div className="verticalLine"></div>
         <div className="row">
-          <div className="col-lg-6 pad0">
+          <div className="col-lg-4 d-flex align-items-center">
+             <div className="estanbulimg">
+              <img width="40%" className="img-fluid" src="http://localhost:1337/uploads/Estanbul_Studyo_4a55841c70.png?updated_at=2023-03-23T22:14:35.455Z"></img>
+            </div> 
+          </div>
+          <div className="col-lg-4 pad0">
             <div className="FooterMain">
               <h3 className="HeadingFooter">Lorem Ipsum</h3>
               <p className="FooterText">
@@ -34,7 +39,7 @@ const Footer = () => {
               <FontAwesomeIcon icon={faInstagram} />
             </div>
           </div>
-          <div className="col-lg-6 pad0">
+          <div className="col-lg-4 pad0">
             <div className="RigthFooter">
               <h3 className="HeadingFooterRight">Bizimle iletişime geçin.</h3>
               <h5 className="CompanyFooter">EstanbulStudyo</h5>

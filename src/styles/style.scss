@@ -918,17 +918,17 @@ body {
     .FooterNew {
         padding-top: 2.5rem;
         position: relative;
-        &::after{
-            background-repeat: no-repeat;
-            top: 22%;
-            object-fit: cover;
-            height: 126px;
-            width: 156px;
-            content: "";
-            position: absolute;
-            background-image: url(http://localhost:1337/uploads/Estanbul_Studyo_1_c983ba05b1.png?updated_at=2023-02-25T12:16:52.879Z);
-            left: 5%;
-        }
+        // &::after{
+        //     background-repeat: no-repeat;
+        //     top: 22%;
+        //     object-fit: cover;
+        //     height: 126px;
+        //     width: 156px;
+        //     content: "";
+        //     position: absolute;
+        //     background-image: url(http://localhost:1337/uploads/Estanbul_Studyo_1_c983ba05b1.png?updated_at=2023-02-25T12:16:52.879Z);
+        //     left: 5%;
+        // }
         .Line{
             position: absolute;
             width: 100%;
@@ -1008,6 +1008,7 @@ body {
         .copyRight{
             padding: 2.5rem 0;
             .CopyrightRight{
+                text-align: center;
                 span{
                     color: $whitecolor;
                     font-size: 13px;
