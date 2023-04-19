@@ -15,10 +15,18 @@ const FuaCreative = () => {
 
   return (
     
-    <section className="PageCreative">
-      <Helmet>
+    <section className="PageCreative ">
+            <Helmet>
         <title>Backstage</title>
       </Helmet>
+            <section className="headerGorseli">  
+  <div className="headerBaslik">
+     <div className="container">
+     <h1>BACKSTAGE</h1>
+     </div>
+  </div>
+</section>
+
       <TabsHeader />
     
       <Tabs>

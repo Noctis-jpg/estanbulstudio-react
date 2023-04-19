@@ -4,13 +4,15 @@ const StudioRental = () => {
   return (
     <section className="PageStudioRental">
       <Helmet>
-        <title>StudioRental</title>
+        <title>Stüdyo Kirala</title>
       </Helmet>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">StudioRental</div>
-        </div>
-      </div>
+      <section className="headerGorseli">  
+  <div className="headerBaslik">
+     <div className="container">
+     <h1>Stüdyo Kirala</h1>
+     </div>
+  </div>
+</section>
     </section>
   );
 };

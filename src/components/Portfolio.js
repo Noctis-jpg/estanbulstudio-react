@@ -6,11 +6,13 @@ const Portfolio = () => {
       <Helmet>
         <title>Backstage</title>
       </Helmet>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">Backstage</div>
-        </div>
-      </div>
+      <section className="headerGorseli">  
+  <div className="headerBaslik">
+     <div className="container">
+     <h1>Portfolio</h1>
+     </div>
+  </div>
+</section>
     </section>
   );
 };

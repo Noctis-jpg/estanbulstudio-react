@@ -7,13 +7,13 @@ const ContactPage = () => {
         <title>İletişim</title>
 
       </Helmet>
-    <div className='container'>
-      <div className='row'>
-        <div className='col-lg-12'>
-        ContactPage
-        </div>
-      </div>
-    </div>
+      <section className="headerGorseli">  
+  <div className="headerBaslik">
+     <div className="container">
+     <h1>İletişim</h1>
+     </div>
+  </div>
+</section>
   </section>
 
   )
