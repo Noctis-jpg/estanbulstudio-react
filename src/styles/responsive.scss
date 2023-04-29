@@ -385,7 +385,21 @@ $FontsizeP: 15px;
             .myH100 {
                 .RightMenu {
                     .modal-body{
-                        align-items: start;
+                        align-items: start !important;
+           
+                        .infoAddres {
+                            font-size: 18px !important;
+                            .InfoCompany{
+                            font-size: 20px !important;
+                            line-height: 1.5 !important;
+                        }
+                        }
+                    }
+                }
+                .LeftMenu {
+                    .modal-body{
+                     
+                        padding: 50px 15px 50px;
                     }
                 }
             }
@@ -405,6 +419,8 @@ $FontsizeP: 15px;
                 
                 .allTabs-ym {
                     white-space: nowrap;
+                    
+    font-size: 18px;
                 }
        
             }
@@ -417,9 +433,9 @@ $FontsizeP: 15px;
               }
               .TabsButtonContent::-webkit-scrollbar-thumb {
                 box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-                color:  $bgcolorBlack;
-                background-color: $blackcolor;
-                border-radius: 15px;
+        
+                background-color: $graycolor;
+           
               }
         }
 
@@ -430,6 +446,16 @@ $FontsizeP: 15px;
         .PagePortfolio,
         .PageStudioRental {
             padding: 0rem 0rem !important;
+            &::after{
+                content: "";
+                position: absolute;
+                background-color: $graycolor;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                opacity: .3;
+                display: none;
+            }
         }
 
         .CapsulLogoandNav {
@@ -444,7 +470,10 @@ $FontsizeP: 15px;
 
         .FooterNew {
             padding: 1.5rem 10px;
-
+            .copyRight {
+                padding: 2.5rem 0;
+                padding-bottom: 10px;
+            }
             .copyLeft {
                 padding: 20px;
             }
