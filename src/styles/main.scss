@@ -3,10 +3,10 @@
 @import './bootstrap_overrides.scss';
 // Bootstrap içirisinden gelen componentler
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
 // Özel SCSS KODLARIM
 @import './style.scss';
-// Responsive SCSS KODLARIM
-@import './responsive.scss';
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -14,3 +14,6 @@
 // Swiper Js Css //
 
 @import '../../node_modules/swiper/swiper-bundle.css';
+
+// Responsive SCSS KODLARIM
+@import './responsive.scss';

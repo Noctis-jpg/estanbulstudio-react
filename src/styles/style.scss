@@ -30,7 +30,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     background-color: $bgcolorBlack;
-    
+
 
     .swiper-pagination-bullet-active {
         background-color: $yellowcolor !important;
@@ -270,7 +270,8 @@ body {
                 align-items: center;
                 text-align: start;
                 position: relative;
-                &::before{
+
+                &::before {
                     content: '';
                     position: absolute;
                     left: 30%;
@@ -283,7 +284,8 @@ body {
                     width: 1px;
                     opacity: .2;
                 }
-                &::after{
+
+                &::after {
                     content: '';
                     position: absolute;
                     left: 70%;
@@ -295,6 +297,7 @@ body {
                     -moz-transform: translateX(-50%);
                     width: 1px;
                 }
+
                 .modal-body {
                     display: flex;
                     justify-content: center;
@@ -317,12 +320,13 @@ body {
                     }
                 }
             }
-            
+
             .RightMenu {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 justify-content: center;
+
                 // transform: translateX(50%);
                 //  transition: 2s;
                 //  opacity: 0;
@@ -345,42 +349,46 @@ body {
                         z-index: 99;
                     }
                 }
-                .modal-body{
+
+                .modal-body {
                     display: flex;
                     align-items: center;
                     justify-content: start;
                     width: 100%;
-                    .infoAddres{
+
+                    .infoAddres {
                         position: relative;
                         padding: 0;
                         margin: 0;
                         font-size: 22px;
                         color: white;
                         font-weight: bold;
-            
 
-                        .InfoCompany{
+
+                        .InfoCompany {
                             margin-bottom: 2rem;
                             font-size: 26px;
                             letter-spacing: .1rem;
                         }
-                        .SmallAdress{
+
+                        .SmallAdress {
                             margin-bottom: 0.7rem;
                             line-height: 2.2rem;
                             width: 60%;
                         }
-                        .Mail{
+
+                        .Mail {
                             margin-bottom: .7rem;
                         }
 
-                        .telephone{
+                        .telephone {
                             margin-top: 2rem;
                             gap: 2%;
                             display: flex;
                             align-items: center;
                         }
 
-                        .SocialMedia{
+                        .SocialMedia {
                             display: flex;
                             gap: 4%;
                             font-size: 30px;
@@ -389,9 +397,10 @@ body {
                     }
                 }
             }
-            .Animete{
+
+            .Animete {
                 opacity: 1 !important;
-    transform: none !important;
+                transform: none !important;
             }
         }
     }
@@ -705,6 +714,7 @@ body {
             padding: 3rem 0;
             background-color: $bgcolorBlack;
             margin-bottom: 3rem;
+
             h6 {
                 color: $graycolor;
                 font-size: 14px;
@@ -828,7 +838,8 @@ body {
             z-index: 0;
             bottom: 20px;
         }
-        &::after{
+
+        &::after {
             content: "";
             position: absolute;
             background-image: url(http://localhost:1337/uploads/ads_7da6081bf6.png?updated_at=2023-03-23T20:59:14.886Z);
@@ -838,8 +849,9 @@ body {
             height: 100%;
             top: 10%;
             left: 80%;
-            
+
         }
+
         .CounterHome {
             z-index: 9;
             margin-top: 5rem;
@@ -919,6 +931,7 @@ body {
     .FooterNew {
         padding-top: 2.5rem;
         position: relative;
+
         // &::after{
         //     background-repeat: no-repeat;
         //     top: 22%;
@@ -930,7 +943,7 @@ body {
         //     background-image: url(http://localhost:1337/uploads/Estanbul_Studyo_1_c983ba05b1.png?updated_at=2023-02-25T12:16:52.879Z);
         //     left: 5%;
         // }
-        .Line{
+        .Line {
             position: absolute;
             width: 100%;
             height: 1px;
@@ -940,62 +953,69 @@ body {
             opacity: .2;
         }
 
-        .FooterMain{
-            .HeadingFooter{
+        .FooterMain {
+            .HeadingFooter {
                 color: $yellowcolor;
                 font-size: 20px;
                 margin-bottom: 1rem;
                 font-weight: 600;
             }
-            .FooterText{
+
+            .FooterText {
                 color: $whitecolor;
                 font-size: 15px;
                 margin-bottom: 1rem;
                 width: 65%;
             }
-            .svg-inline--fa{
+
+            .svg-inline--fa {
                 color: white;
                 font-size: 25px;
                 margin: 1rem .5rem;
-            
+
             }
         }
-        .RigthFooter{
-            .HeadingFooterRight{
+
+        .RigthFooter {
+            .HeadingFooterRight {
                 color: $yellowcolor;
                 font-size: 20px;
                 margin-bottom: 1rem;
                 font-weight: 600;
                 letter-spacing: 1.2px;
             }
-            .CompanyFooter{
+
+            .CompanyFooter {
                 font-size: 18px;
                 font-weight: bold;
                 margin-bottom: 1rem;
                 color: $yellowcolor;
                 letter-spacing: 1.5px;
             }
-            .FooterIcon{
+
+            .FooterIcon {
                 margin-top: 1rem;
                 color: $whitecolor;
                 font-size: 15px;
 
-                .svg-inline--fa{
+                .svg-inline--fa {
                     color: white;
                     font-size: 18px;
                     margin-right: 1rem;
-                    
+
                 }
             }
         }
-        .copyLeft{
+
+        .copyLeft {
             padding: 2.5rem 0;
-            .CopyrightLeft{
-                ul{
+
+            .CopyrightLeft {
+                ul {
                     display: flex;
                     gap: 5%;
 
-                    li{
+                    li {
                         color: $whitecolor;
                         font-size: 13px;
                         font-weight: 400;
@@ -1003,14 +1023,18 @@ body {
                 }
             }
         }
-        .pad0{
+
+        .pad0 {
             padding: 0;
         }
-        .copyRight{
+
+        .copyRight {
             padding: 2.5rem 0;
-            .CopyrightRight{
+
+            .CopyrightRight {
                 text-align: center;
-                span{
+
+                span {
                     color: $whitecolor;
                     font-size: 13px;
                     letter-spacing: 1.2px;
@@ -1174,4 +1198,53 @@ body {
             }
         }
     }
+.PageCreative {
+    .TabsButtonContent {
+        display: flex;
+        gap: 2%;
+        padding: 3rem 0;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 15px;
+            background-color:  $graycolor;
+            width: 100%;
+            height: .5px;
+        }
+        .allTabs-ym {
+            color: white;
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 100%;
+                right: -15px;
+                background-color: $graycolor;
+            }
+        }
+        .selected{
+            color: $yellowcolor;
+            position: relative;
+            font-weight: 600;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 3px;
+                height: 100%;
+                right: -15px;
+                background-color: $yellowcolor;
+            }
+        }
+    }
+    .my-class {
+        font-size: 20px;
+        text-align: center;
+        color: $whitecolor;
+        margin-top: 1rem;
+    }
+}
 }
