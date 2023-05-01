@@ -1,25 +1,45 @@
 import React from "react";
-import AboutSection from "./section_components/AboutSection";
+import useFetch from "../hooks/useFetch";
+import AboutPageSlider from "./section_components/seciton_in_components/AboutPageSlider";
 import { Helmet } from "react-helmet";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import SwiperCore, { Autoplay } from "swiper";
+import "swiper/css/pagination";
+
 const AboutPage = () => {
+  const { isLoading, error, data } = useFetch(
+    "http://localhost:1337/api/about-page-slogan-area"
+  );
+
+  if (isLoading) return <h1>Yükleniyor...</h1>;
+  if (error) return <h1>Hata: {error.message}</h1>;
   return (
-    <section className="PageContact">
+    <section className="PageContact OtherPage">
       <Helmet>
         <title>Hakkımızda</title>
       </Helmet>
-      <section className="headerGorseli">  
-  <div className="headerBaslik">
-     <div className="container">
-     <h1>HAKKINDA</h1>
-     </div>
-  </div>
-</section>
-      <div className="container-fluid">
+      <div className="container-fluid padrl">
         <div className="row">
           <div className="col-lg-12">
-    <AboutSection></AboutSection>
+            <div key={data.id} className="OtherPageSloganArea">
+              <h1>{data.data.attributes.AboutPageSlogan}</h1>
+            </div>
           </div>
+
+          <div className="col-lg-12">
+            <AboutPageSlider></AboutPageSlider>
+          </div>
+
         </div>
+      </div>
+      <div className="container">
+      <div className="row">
+      <div className="col-lg-12">
+            <div key={data.id} className="TextArea">
+              <ReactMarkdown>{data.data.attributes.AboutPageTextArea}</ReactMarkdown>
+            </div>
+          </div>
+      </div>
       </div>
     </section>
   );

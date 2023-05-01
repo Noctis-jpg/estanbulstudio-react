@@ -21,7 +21,9 @@ $FontsizeP: 15px;
 }
 
 body {
-
+    // .padrl{
+    //     padding: 0 35rem;
+    // }
 
     margin: 0 auto;
     padding: 0;
@@ -107,7 +109,8 @@ body {
             padding: 0rem 0rem;
             padding-bottom: 5rem;
             position: relative;
-            &::after{
+
+            &::after {
                 content: "";
                 position: absolute;
                 background-color: $graycolor;
@@ -322,10 +325,11 @@ body {
                         position: relative;
 
                         a {
-                            line-height: 1.91;
+                            line-height: 2.5;
                             letter-spacing: -0.68px;
                             color: #324250;
                             font-weight: bold;
+                            font-size: 30px;
                         }
                     }
                 }
@@ -1208,56 +1212,223 @@ body {
             }
         }
     }
-.PageCreative {
-    .TabsButtonContent {
-        display: flex;
-        gap: 3%;
-        padding: 3rem 0;
-        position: relative;
-        &::after{
-            content: "";
-            position: absolute;
-            bottom: 15px;
-            background-color:  $graycolor;
-            width: 100%;
-            height: .5px;
-        }
-        .allTabs-ym {
-            color: white;
-            font-size: 25px;
-            font-weight: 500;
+
+    .PageCreative {
+        .TabsButtonContent {
+            display: flex;
+            gap: 3%;
+            padding: 3rem 0;
             position: relative;
-            &::after{
-                position: absolute;
+
+            &::after {
                 content: "";
-                width: 1px;
-                height: 100%;
-                right: -25px;
+                position: absolute;
+                bottom: 15px;
                 background-color: $graycolor;
+                width: 100%;
+                height: .5px;
+            }
+
+            .allTabs-ym {
+                color: white;
+                font-size: 25px;
+                font-weight: 500;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 100%;
+                    right: -25px;
+                    background-color: $graycolor;
+                }
+            }
+
+            .selected {
+                color: $yellowcolor;
+                position: relative;
+                font-weight: 600;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 3px;
+                    height: 100%;
+                    right: -25px;
+                    background-color: $yellowcolor;
+                }
             }
         }
-        .selected{
-            color: $yellowcolor;
+
+        .my-class {
+            font-size: 20px;
+            text-align: center;
+            color: $whitecolor;
+            margin-top: 1rem;
+
+            h2 {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .OtherPage {
+        .OtherPageSloganArea {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 0;
             position: relative;
-            font-weight: 600;
-            &::after{
-                position: absolute;
-                content: "";
-                width: 3px;
-                height: 100%;
-                right: -25px;
-                background-color: $yellowcolor;
+
+
+            h1 {
+                color: $whitecolor;
+                position: relative;
+                font-size: 50px;
+                max-width: 750px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -30px;
+                    width: 55%;
+                    height: 1px;
+                    background-color: $graycolor;
+                    opacity: .5;
+                    left: 25%;
+                }
+
+            }
+        }
+
+        .TextArea {
+            padding: 3rem 0;
+
+            p {
+                color: white;
+                font-size: 20px;
+                margin: 1.5rem 0;
+            }
+        }
+
+        .OtherPageSlide {
+            .ymOtherPageSlide {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 70%;
+                    background-color: $yellowcolor;
+                    height: 70%;
+                    bottom: -50px;
+                    z-index: -1;
+                    opacity: .8;
+                }
             }
         }
     }
-    .my-class {
-        font-size: 20px;
-        text-align: center;
-        color: $whitecolor;
-        margin-top: 1rem;
-        h2{
-            margin-top:1rem;
+
+    .PageContact {
+        padding-top: 8rem !important;
+        padding-bottom: 50px !important;
+        .HeadingPage {
+            h1 {
+                font-weight: 900;
+                font-size: 3.8rem;
+                line-height: 1em;
+                color: $whitecolor;
+                z-index: 999 !important;
+                text-transform: uppercase;
+            }
+
+            span {
+                color: $whitecolor;
+                font-size: 1.5rem;
+                line-height: 4.2rem;
+                font-weight: 600;
+            }
+        }
+
+        .contactContainer {
+            max-width: 1350px;
+
+            .FormCapsul {
+                background-color: white;
+                padding: 7rem 4.5rem;
+                box-shadow: 0px 3px 10px #BABAB9, 0px 0px 4px #ffffff;
+
+                .form-check {
+                    margin: 2rem 0;
+                }
+
+                .FormAllClass {
+                    margin: 2rem 0;
+                    gap: 1rem;
+
+                    .col {
+                        padding: 0;
+                    }
+                }
+                .btn {
+                    width: 30%;
+                    color: black;
+                    --bs-btn-border-color: #000000;
+                    font-size: 18px;
+
+                    &:hover{
+                        background-color: $blackcolor;
+                        color: $whitecolor;
+                
+                    }
+                }
+                
+            }
+
+            .bgimage {
+                position: relative;
+                padding: 0;
+
+                &::after {
+                    content: "";
+                    background-size: cover !important;
+                    background-image: url(https://via.placeholder.com/500x700.png/ebebe1f/000);
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .ContactRightMainCapsul{
+                    z-index: 99;
+                    position: relative;
+                    padding: 5rem 35px;
+                    .Heading{
+                        margin: 1rem 0.4rem;
+                        h3{
+                            font-weight: 800;
+                            font-size: 1.5rem;
+                        }
+                        span{
+                            font-weight: 400;
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .Location{
+                        .FooterIcon{
+                            margin-bottom: 1.5rem;  
+                            font-size: 15px;
+                            svg{
+                                margin: 0 .5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .Maps{
+            margin-top: 3rem;
         }
     }
-}
 }

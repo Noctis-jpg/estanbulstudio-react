@@ -263,6 +263,9 @@ $FontsizeP: 15px;
 
 @media screen and (max-width:720px) {
     body {
+        .padrl{
+            padding: 0;
+        }
         #root {
             .RoutesMain {
                 .CapsulLogoandNav {
@@ -384,26 +387,29 @@ $FontsizeP: 15px;
         .FreeConsRight {
             .myH100 {
                 .RightMenu {
-                    .modal-body{
+                    .modal-body {
                         align-items: start !important;
-           
+
                         .infoAddres {
                             font-size: 18px !important;
-                            .InfoCompany{
-                            font-size: 20px !important;
-                            line-height: 1.5 !important;
-                        }
+
+                            .InfoCompany {
+                                font-size: 20px !important;
+                                line-height: 1.5 !important;
+                            }
                         }
                     }
                 }
+
                 .LeftMenu {
-                    .modal-body{
-                     
+                    .modal-body {
+
                         padding: 50px 15px 50px;
                     }
                 }
             }
         }
+
         .PageCreative {
             .TabsButtonContent {
                 overflow-x: scroll;
@@ -413,30 +419,34 @@ $FontsizeP: 15px;
                 scrollbar-width: thin;
                 scrollbar-color: $bgcolorBlack $bgcolorBlack;
                 scrollbar-width: thin;
-                &::after{
+
+                &::after {
                     display: none;
                 }
-                
+
                 .allTabs-ym {
                     white-space: nowrap;
-                    
-    font-size: 18px;
+
+                    font-size: 18px;
                 }
-       
+
             }
+
             .TabsButtonContent::-webkit-scrollbar {
                 width: 5px;
-                color:  $bgcolorBlack;
-              }
-              .TabsButtonContent::-webkit-scrollbar-track {
+                color: $bgcolorBlack;
+            }
+
+            .TabsButtonContent::-webkit-scrollbar-track {
                 background-color: $yellowcolor;
-              }
-              .TabsButtonContent::-webkit-scrollbar-thumb {
+            }
+
+            .TabsButtonContent::-webkit-scrollbar-thumb {
                 box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        
+
                 background-color: $graycolor;
-           
-              }
+
+            }
         }
 
         .PageStudioRental,
@@ -446,7 +456,8 @@ $FontsizeP: 15px;
         .PagePortfolio,
         .PageStudioRental {
             padding: 0rem 0rem !important;
-            &::after{
+
+            &::after {
                 content: "";
                 position: absolute;
                 background-color: $graycolor;
@@ -470,10 +481,12 @@ $FontsizeP: 15px;
 
         .FooterNew {
             padding: 1.5rem 10px;
+
             .copyRight {
                 padding: 2.5rem 0;
                 padding-bottom: 10px;
             }
+
             .copyLeft {
                 padding: 20px;
             }
