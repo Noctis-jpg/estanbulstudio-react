@@ -1,6 +1,7 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 import StudyoRentalSlider from "./section_components/seciton_in_components/StudyoRentalSlider";
+import CardsStudio from "./section_components/seciton_in_components/StudioCards";
 import { Helmet } from "react-helmet";
 const StudioRental = () => {
   const { isLoading, error, data } = useFetch(
@@ -27,7 +28,11 @@ const StudioRental = () => {
 
         </div>
       </div>
-      
+      <div className="container">
+        <div className="row">
+    <CardsStudio />
+    </div>
+    </div>
     </section>
   );
 };
