@@ -28,10 +28,10 @@ const StudioRental = () => {
                 <h2 className="header">
                   {item.attributes.StudyoEkipmanBaslik}
                 </h2>
-                <ul>
-                  <li>{item.attributes.StudyoEkipmanicerik}</li>
-            <li>      {item.attributes.ListItems}</li>
+              <ul>
+                <li>{item.attributes.StudyoEkipmanicerik}</li>
                 </ul>
+              
               </div>
             </div>
           ))}
