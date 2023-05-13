@@ -1316,15 +1316,19 @@ body {
             .ymOtherPageSlide {
                 position: relative;
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 70%;
-                    background-color: $yellowcolor;
-                    height: 70%;
-                    bottom: -50px;
-                    z-index: -1;
-                    opacity: .8;
+                // &::after {
+                //     content: "";
+                //     position: absolute;
+                //     width: 70%;
+                //     background-color: $yellowcolor;
+                //     height: 70%;
+                //     bottom: -50px;
+                //     z-index: -1;
+                //     opacity: .8;
+                // }
+
+                .RentalSlide{
+                    width: 100%;
                 }
             }
         }
@@ -1439,6 +1443,13 @@ body {
         }
         .Maps{
             margin-top: 3rem;
+        }
+    }
+
+
+    .PageStudioRental{
+        .pad-0{
+            padding: 0;
         }
     }
 }

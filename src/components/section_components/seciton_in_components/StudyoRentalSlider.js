@@ -56,8 +56,8 @@ const StudyoRentalSlider = () => {
                   key={item.id}
                 >
                   <img
-                    className="img-fluid myHomeSlideimg"
-                    src={locabase + item.attributes.RentalCarousel.data[0].attributes.formats.large.url}
+                    className="img-fluid RentalSlide"
+                    src={locabase + item.attributes.RentalCarousel.data[0].attributes.url}
                     
                     
                   ></img>
