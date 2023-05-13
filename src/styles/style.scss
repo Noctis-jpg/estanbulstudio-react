@@ -1451,5 +1451,23 @@ body {
         .pad-0{
             padding: 0;
         }
+        .HeadingRental{
+            padding: 2rem;
+
+            .header{
+                color: $whitecolor;
+                font-weight: 600;
+                font-size: $FontsizeH2;
+
+            }
+            ul{
+                li{
+                    font-size: 15px;
+                    color: white;
+                    
+
+                }
+            }
+        }
     }
 }
