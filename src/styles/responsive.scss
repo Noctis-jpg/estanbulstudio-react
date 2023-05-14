@@ -379,6 +379,56 @@ $FontsizeP: 15px;
 
             }
         }
+
+
+        .marEsta {
+            margin-top: 5rem !important;
+            .MainBox {
+                height: auto;
+
+            }
+        }
+        .colAft {
+            position: relative;
+            margin-top: 5rem;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 2px;
+                height: 100%;
+                background-color: #ffc1072b;
+            }
+
+            .HeadingRental {
+                padding: 0rem !important;
+
+                .header {
+                    color: $whitecolor;
+                    font-weight: 600;
+                    font-size: 22px !important;
+                    margin-bottom: 2rem;
+                    border-bottom: 1px solid #7a7a7a;
+                    text-align: center;
+                    padding-bottom: 1rem;
+                }
+
+                ul {
+                    list-style: circle;
+                    padding-left: 20px;
+
+                    li {
+                        font-size: 15px;
+                        color: white;
+                        margin: 1rem 0;
+
+                    }
+                }
+            }
+        }
+
     }
 }
 
