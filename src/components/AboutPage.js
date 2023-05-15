@@ -36,7 +36,8 @@ const AboutPage = () => {
       <div className="row">
       <div className="col-lg-12">
             <div key={data.id} className="TextArea">
-              <ReactMarkdown>{data.data.attributes.AboutPageTextArea}</ReactMarkdown>
+            <p dangerouslySetInnerHTML={{ __html: data.data.attributes.AboutPageTextArea.replace(/"/g, '') }}></p>
+       
             </div>
           </div>
       </div>
