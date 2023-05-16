@@ -33,6 +33,9 @@ body {
     overflow-x: hidden;
     background-color: $bgcolorBlack;
 
+    .collapse {
+        visibility: visible;
+    }
 
     .swiper-pagination-bullet-active {
         background-color: $yellowcolor !important;
@@ -1608,28 +1611,56 @@ body {
                 }
             }
 
-            .DDs {
+            #accordion {
+                margin-top: 2rem;
 
-                margin-top: .5rem;
+                .FAQtitle {
+                    margin: 1.5rem 0;
 
-
-                .accordion {
-                    .accordion__item {
-                        margin-top: 5px;
-                        .accordion__button{
-                            border: 1px solid $yellowcolor;
-                            font-size: 16px;
+                    .smalltitle {
+                        font-size: 16px;
+                        color: $yellowcolor;
+                        font-weight: bolder;
+                        margin: .5rem 0;
+                        letter-spacing: 1.2px;
                     }
-                    .accordion-panel {
-                        padding: 1rem;
-                        color: white;
-                        border: 1px solid #343434;
-                        background-color: #343434;
-                        font-size: 14px;
-                    }
+
+                    h2 {
+                        font-size: 35px;
+                        color: $whitecolor;
+                        font-weight: bolder;
+                        margin: .5rem 0;
                     }
                 }
 
+                .card-header {
+                    h5 {
+                        button {
+                            text-decoration: none;
+                            padding: 0;
+                            width: 100%;
+                            text-align: start;
+                            position: relative;
+
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                font-size: 30px;
+                                color: #eca300;
+                                background-color: black;
+                                width: 60px;
+                                height: 40px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 5px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
