@@ -12,8 +12,42 @@ $FontsizeP: 15px;
 
 @media only screen and (max-width: 1500px) and (min-width: 1043px) {
     body {
+        .HomePage{
+            .AboutHome{
+                .pad-0{
+    padding: 15px;
+                }
+            }
+        }  
+         .FooterTop{
+            .Contact{
+                .ButtonDiv{
+                    width: 15%;
+                }
+            }
+         }  
+    .ymBefore{
 
+        &::before{
+            height: 37%;
+            bottom: 14px;
+        }
+        .CounterHome{
+            width: 890px;
+
+            .IconBox{
+                .IconImg{
+                    img{
+                        width: 55px;
+                    }
+                }
+            }
+        }
+    } 
         #root {
+            .HomePage{
+                padding: 0;
+            }
             .RoutesMain {
                 .CapsulLogoandNav {
 
@@ -46,10 +80,9 @@ $FontsizeP: 15px;
 
                     .MobileBtn {
                         cursor: pointer;
-                        display: none;
 
                         svg {
-                            color: white;
+                            color: black;
                             font-size: 30px;
                             font-weight: 800;
                         }
@@ -63,7 +96,7 @@ $FontsizeP: 15px;
             .PageCreative,
             .PagePortfolio,
             .PageStudioRental {
-                padding: 1rem 1rem;
+                padding: 0rem 0rem;
             }
         }
 
