@@ -22,7 +22,7 @@ const AboutHome = () => {
   console.log(data);
 
   return (
-    <div className="AboutHome">
+    <div id='targetElement' className="AboutHome">
         <div className='container'>
     <div className="row">
       <div className="col-lg-6 pad-0">

@@ -68,11 +68,7 @@ const Counter = () => {
                     ></img>
                   </div>
                   <div className="Number">
-                  <CounterHook> <span>
-                      {item.attributes.Number}
-                      
-                      <span className="Yellow">+</span>
-                    </span></CounterHook>
+                  <CounterHook targetNumber={item.attributes.Number} />
                    
                   </div>
                   <div className="NumberText">

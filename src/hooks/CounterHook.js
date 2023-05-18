@@ -1,29 +1,19 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-function CounterHook() {
+const CounterHook = ({ targetNumber }) => {
   const [count, setCount] = useState(0);
-  let intervalId;
 
   useEffect(() => {
-    intervalId = setInterval(() => {
+    const interval = setInterval(() => {
       setCount((prevCount) => prevCount + 1);
-    }, 1000);
-    // componentWillUnmount'ta çalışacak olan temizleme fonksiyonu
-    return () => clearInterval(intervalId);
+    }, 20);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
-  useEffect(() => {
-    if (count >= 2) {
-              // 5 saniye sonra sayacı durdur
-      clearInterval(intervalId);
-    }
-  }, [count]);
-
-  return (
-    <div>
-      <h1> {count}</h1>
-    </div>
-  );
-}
+  return <span>{count <= targetNumber ? count : targetNumber}+</span>;
+};
 
 export default CounterHook;

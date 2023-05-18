@@ -15,7 +15,12 @@ const ContactPage = () => {
         <title>İletişim</title>
 
       </Helmet>
-
+      <section className="headerGorseli">  
+  <div className="headerBaslik">
+     <div className="container">
+     </div>
+  </div>
+</section>
   <div className='container contactContainer'>
     <div className='row'>
       <div className='col-lg-12 pad-15'>
