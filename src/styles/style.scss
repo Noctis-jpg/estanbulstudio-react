@@ -33,6 +33,16 @@ body {
     overflow-x: hidden;
     background-color: $bgcolorBlack;
 
+.whatsapp-button{
+    button{
+        position:fixed; bottom:10px; right:10px; width:50px; z-index:999;
+
+        img{
+            width:100%;
+        }
+    }
+}
+
 
     p {
         font-size: 15px !important;
@@ -754,7 +764,7 @@ body {
                 font-weight: 700;
                 text-transform: uppercase;
                 color: $whitecolor;
-                font-size: $FontsizeH2;
+                font-size: $FontsizeH1;
                 line-height: 1em;
                 letter-spacing: .10em;
             }
@@ -853,7 +863,7 @@ body {
     .ymBefore {
         position: relative;
         padding: 0;
-
+        display: none;
         &::before {
             position: absolute;
             content: "";
