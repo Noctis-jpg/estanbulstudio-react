@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useFetch from '../hooks/useFetch';
 import {
   faFacebook,
   faTwitter,
@@ -13,6 +14,12 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
+  const { isLoading, error, data } = useFetch(
+    "http://localhost:1337/api/footer"
+  );
+
+  if (isLoading) return <h1>Yükleniyor...</h1>;
+  if (error) return <h1>Hata: {error.message}</h1>;
   return (
     <section className="FooterNew">
       <div className="container">
@@ -25,14 +32,12 @@ const Footer = () => {
           </div>
           <div className="col-lg-4 pad0">
             <div className="FooterMain">
-              <h3 className="HeadingFooter">Lorem Ipsum</h3>
-              <p className="FooterText">
-                {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A earum
-                architecto at. A earum architecto at
+              <h3 className="HeadingFooter" key={data.id}>{data.data.attributes.SolUstBaslik}</h3>
+              <p className="FooterText" key={data.id}>
+              {data.data.attributes.SolUstYazi}
               </p>
-              <h3 className="HeadingFooter">Lorem Ipsum</h3>
-              <p className="FooterText"> Lorem ipsum dolor </p>
+              <h3 className="HeadingFooter" key={data.id}>  {data.data.attributes.SolAltBaslik}</h3>
+              <p className="FooterText" key={data.id}> {data.data.attributes.SolAltYazi} </p>
               <FontAwesomeIcon icon={faFacebook} />
               <FontAwesomeIcon icon={faTwitter} />
               <FontAwesomeIcon icon={faYoutube} />
@@ -41,23 +46,23 @@ const Footer = () => {
           </div>
           <div className="col-lg-4 pad0">
             <div className="RigthFooter">
-              <h3 className="HeadingFooterRight">Bizimle iletişime geçin.</h3>
-              <h5 className="CompanyFooter">EstanbulStudyo</h5>
-              <p className="FooterIcon">
+              <h3 className="HeadingFooterRight" key={data.id}>{data.data.attributes.SagUstBaslik}</h3>
+              <h5 className="CompanyFooter" key={data.id}>{data.data.attributes.SagUstBaslikiki}</h5>
+              <p className="FooterIcon" key={data.id}>
                 <FontAwesomeIcon icon={faLocationDot} />
-                Seyrantepe, Nato Cd. No:15 Kat:5, 34418 Kâğıthane/İstanbul
+                {data.data.attributes.Konum}
               </p>
-              <p className="FooterIcon">
+              <p className="FooterIcon" key={data.id}>
                 <FontAwesomeIcon icon={faEnvelope} />
-                info@estanbuladworks.com
+                {data.data.attributes.Mail}
               </p>
-              <p className="FooterIcon">
+              <p className="FooterIcon" key={data.id}>
                 <FontAwesomeIcon icon={faPhone} />
-                0553 294 61 51
+                {data.data.attributes.Tel}
               </p>
-              <p className="FooterIcon">
+              <p className="FooterIcon" key={data.id}>
                 <FontAwesomeIcon icon={faWhatsapp} />
-                +90 555 565 66 72
+                {data.data.attributes.Whatsapp}
               </p>
             </div>
           </div>

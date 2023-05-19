@@ -9,8 +9,6 @@ import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import ScrollButton from '../components/section_components/seciton_in_components/ScrollButton';
 const locabase = "http://localhost:1337";
 

@@ -6,9 +6,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css/pagination";
 import CounterHook from "../../hooks/CounterHook"
+const locabase = "http://localhost:1337";
 const Counter = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/abouts"
+    "http://localhost:1337/api/abouts?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -64,7 +65,7 @@ const Counter = () => {
                   <div className="IconImg">
                     <img
                       className="img-fluid"
-                      src={item.attributes.IconLink}
+                      src={locabase + item.attributes.Icon.data.attributes.url}
                     ></img>
                   </div>
                   <div className="Number">

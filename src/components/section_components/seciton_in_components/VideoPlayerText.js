@@ -1,33 +1,35 @@
 import React from "react";
 import useFetch from "../../../hooks/useFetch";
-import Button from "../../globamcomponents/Button"
+import Button from "../../globamcomponents/Button";
 
 const VideoPlayerText = () => {
+  const { isLoading, error, data } = useFetch(
+    "http://localhost:1337/api/footer-top-video?populate=*"
+  );
 
-    const { isLoading, error, data } = useFetch(
-        "http://localhost:1337/api/footer-top-video?populate=*"
-      );
+  if (isLoading) return <h1>Yükleniyor...</h1>;
+  if (error) return <h1>Hata: {error.message}</h1>;
 
-      const GoContactClick = '${data.data.attributes.ButtonUrl}';
-const Click = `{data.data.attributes.ButtonUrl}`;
-      if (isLoading) return <h1>Yükleniyor...</h1>;
-      if (error) return <h1>Hata: {error.message}</h1>;
-    
+  const handleClick = () => {
+    // Handle button click logic here
+    // For example, you can navigate to the URL using window.location.href
+    window.location.href = data.data.attributes.ButtonUrl;
+  };
+
   return (
     <div className="Contact">
-        <div className="Text" key={data.id}>
-            <h1>{data.data.attributes.VideoText}</h1>            
-        </div>
-        <div className="ButtonDiv">
-            <Button 
-                onClick={GoContactClick}
-                text={data.data.attributes.ButtonText}
-                className="ymButton"
-                Click={Click}
-            />
-        </div>
+      <div className="Text" key={data.id}>
+        <h1>{data.data.attributes.VideoText}</h1>
+      </div>
+      <div className="ButtonDiv">
+        <Button
+          onClick={handleClick}
+          text={data.data.attributes.ButtonText}
+          className="ymButton"
+        />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default VideoPlayerText
+export default VideoPlayerText;

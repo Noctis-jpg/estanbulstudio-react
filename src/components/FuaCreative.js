@@ -6,7 +6,8 @@ import "react-tabs/style/react-tabs.css";
 import ReactPlayer from "react-player";
 import { Modal, Button } from "react-bootstrap";
 import ModalImage from "react-modal-image";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 const locabase = "http://localhost:1337";
 
 const FuaCreative = () => {
@@ -105,31 +106,30 @@ const FuaCreative = () => {
             <h2>{item.attributes.Baslik}</h2>
             </div>
             ))}
-            {item.attributes.VideoAreaTabs &&
-            item.attributes.VideoAreaTabs.data &&
-            item.attributes.VideoAreaTabs.data.map((video) => {
-            const videoUrl = locabase + video.attributes.url;
-            return (
-            <div
-            className="col-lg-3 col-6 my-class"
-            key={video.id}
-            onClick={() => openModal(videoUrl)}
-            >
-            <div className="player-wrapper">
-            <ReactPlayer
-                                 className="react-player"
-                                 url={videoUrl}
-                                 width="100%"
-                                 height="100%"
-                                 loop={false}
-                                 muted={false}
-                                 playing={false}
-                               />
-            <div className="LayerVideo"></div>
-            </div>
-            </div>
-            );
-            })}
+         {item.attributes.VideoAreaTabs &&
+  item.attributes.VideoAreaTabs.data &&
+  item.attributes.VideoAreaTabs.data.map((video) => {
+    const videoUrl = locabase + video.attributes.url;
+    return (
+      <div className="col-lg-3 col-6 my-class" key={video.id} onClick={() => openModal(videoUrl)}>
+        <div className="player-wrapper">
+          <div className="play-button" onClick={() => openModal(videoUrl)}>
+          <FontAwesomeIcon icon={faPlayCircle} className="play-icon" /> {/* Play butonu */}
+          </div>
+          <ReactPlayer
+            className="react-player"
+            url={videoUrl}
+            width="100%"
+            height="100%"
+            loop={false}
+            muted={false}
+            playing={false}
+          />
+          <div className="LayerVideo"></div>
+        </div>
+      </div>
+    );
+  })}
             </div>
             ))}
             <Modal show={showModal} onHide={closeModal} size="lg">
@@ -140,8 +140,9 @@ const FuaCreative = () => {
                        width="100%"
                        height="100%"
                        loop={false}
-                       muted={false}
+          
                        playing={true}
+                       controls={true}
                      />
             </Modal.Body>
             <Modal.Footer>

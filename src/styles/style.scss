@@ -34,9 +34,10 @@ body {
     background-color: $bgcolorBlack;
 
 
-    p{
+    p {
         font-size: 15px !important;
     }
+
     .collapse {
         visibility: visible;
     }
@@ -96,12 +97,11 @@ body {
                 .ymDesk {
 
 
-
-                    width: 84px;
+                    width: 90px;
                     text-align: center;
                     background: #fff;
                     position: absolute;
-                    right: 0px;
+                    right: 90px;
                     padding: 1rem 0;
                 }
             }
@@ -516,42 +516,43 @@ body {
                 justify-content: center;
                 padding: 1.3rem;
                 cursor: pointer;
-a{
 
-             button {
-                    font-size: 20px;
-                    margin-bottom: 0;
-                    color: white;
-                    font-weight: bolder;
-                    letter-spacing: 2px;
+                a {
 
-                    .frameYm {
-                        animation-name: frameDownDiscover;
-                        position: relative;
-                        animation-duration: 1.5s;
-                        top: 0;
-                        animation-iteration-count: infinite;
-                        margin-left: 1.5rem;
+                    button {
+                        font-size: 20px;
+                        margin-bottom: 0;
+                        color: white;
+                        font-weight: bolder;
+                        letter-spacing: 2px;
 
-                        @include keyframes(frameDownDiscover) {
-                            0% {
-                                top: 0;
+                        .frameYm {
+                            animation-name: frameDownDiscover;
+                            position: relative;
+                            animation-duration: 1.5s;
+                            top: 0;
+                            animation-iteration-count: infinite;
+                            margin-left: 1.5rem;
+
+                            @include keyframes(frameDownDiscover) {
+                                0% {
+                                    top: 0;
+                                }
+
+                                50% {
+                                    top: 10px;
+                                }
+
+                                100% {
+                                    top: 0;
+                                }
                             }
 
-                            50% {
-                                top: 10px;
-                            }
 
-                            100% {
-                                top: 0;
-                            }
                         }
-
-
                     }
                 }
-            }
-   
+
             }
         }
 
@@ -1102,12 +1103,13 @@ a{
 
             img {
                 margin-bottom: 1rem;
+                padding: 0rem 1rem;
             }
 
             .LeftHeading {
                 padding: 1.5rem 0;
                 position: relative;
-
+                padding-left: 1rem;
                 &::before {
                     content: "";
                     top: 10px;
@@ -1225,6 +1227,7 @@ a{
 
     .PageCreative {
         padding-bottom: 4rem;
+
         .TabsButtonContent {
             display: flex;
             gap: 3%;
@@ -1277,9 +1280,81 @@ a{
             text-align: center;
             color: $whitecolor;
             margin-top: 1rem;
+            cursor: pointer;
 
             h2 {
                 margin-top: 1rem;
+            }
+
+            .player-wrapper {
+                position: relative;
+            }
+
+            .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                opacity: 1;
+
+                svg {
+                    font-size: 50px;
+                }
+            }
+
+            @keyframes waveAnimation {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: scale(1.5);
+                    opacity: 0;
+                }
+            }
+
+            .play-button::after {
+                content: '';
+                content: "";
+                position: absolute;
+                transform: translate(-50%, -50%);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                animation: waveAnimation 2s infinite;
+            }
+        }
+
+
+    }
+
+    .modal {
+        .modal-dialog {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+
+            .modal-content {
+                .modal-body {}
+
+                .modal-footer {
+                    button {
+                        color: black;
+
+                        &:hover {
+                            background-color: $bgcolorBlack;
+                            color: $whitecolor;
+                        }
+                    }
+                }
             }
         }
     }
@@ -1326,27 +1401,30 @@ a{
         .OtherPageSlide {
             .ymOtherPageSlide {
                 position: relative;
+                height: 600px;
 
-                // &::after {
-                //     content: "";
-                //     position: absolute;
-                //     width: 70%;
-                //     background-color: $yellowcolor;
-                //     height: 70%;
-                //     bottom: -50px;
-                //     z-index: -1;
-                //     opacity: .8;
-                // }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 70%;
+                    background-color: $yellowcolor;
+                    height: 70%;
+                    bottom: -50px;
+                    z-index: -1;
+                    opacity: .8;
+                }
 
                 .RentalSlide {
                     width: 100%;
+                    object-fit: cover;
+                    overflow: hidden;
                 }
             }
         }
     }
 
     .PageContact {
-
+        padding-bottom: 0 !important;
 
         .HeadingPage {
             h1 {
@@ -1389,7 +1467,7 @@ a{
 
                     .form-label {
                         font-weight: 600;
-                        font-size: 14px;
+                        font-size: 15px;
                     }
 
                     .col {
@@ -1473,11 +1551,38 @@ a{
         .pad-0 {
             padding: 0;
         }
-
+        .Ekipman{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 2rem;
+            margin-top: 3rem;
+            h2{
+                font-size: 35px;
+                color: $yellowcolor;
+                font-weight: 600;
+            }
+        }
+        .Hizmet{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            h2{
+                font-size: 35px;
+                color: $yellowcolor;
+                font-weight: 600;
+            }
+        }
         .colAft {
             position: relative;
             margin-top: 5rem;
+            height: 350px;
+            overflow-y: scroll;
 
+
+            
             &::after {
                 content: "";
                 position: absolute;
@@ -1494,7 +1599,7 @@ a{
                 .header {
                     color: $whitecolor;
                     font-weight: 600;
-                    font-size: 33px;
+                    font-size: 30px;
                     margin-bottom: 2rem;
                     border-bottom: 1px solid #7a7a7a;
                     text-align: center;
@@ -1514,9 +1619,23 @@ a{
                 }
             }
         }
-
+/* Kaydırma çubuğu */
+.colAft::-webkit-scrollbar {
+    width: 5px; /* Kaydırma çubuğunun genişliği */
+  }
+  
+  /* Kaydırma çubuğu izi */
+  .colAft::-webkit-scrollbar-thumb {
+    background-color: $yellowcolor; /* Kaydırma çubuğu rengi */
+    border-radius: 4px; /* Kaydırma çubuğu köşe yarıçapı */
+  }
+  
+  /* Kaydırma çubuğu arka planı */
+  .colAft::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Kaydırma çubuğu arka plan rengi */
+  }
         .marEsta {
-            margin-top: 10rem;
+            margin-top: 5rem;
 
             .MainBox {
                 border: 1px solid rgba(255, 193, 7, 0.7098039216);
@@ -1562,7 +1681,7 @@ a{
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-
+                padding-bottom: 2rem;
                 .swiper-wrapper {
                     .swiper-slide {
                         width: 100%;
@@ -1579,7 +1698,7 @@ a{
                     cursor: pointer;
                     z-index: 10;
                     left: 5%;
-                    bottom: -10px;
+                    bottom: -35px;
                     top: auto;
                     width: 40px;
                     height: 40px;
@@ -1602,7 +1721,7 @@ a{
                     cursor: pointer;
                     z-index: 10;
                     left: -5%;
-                    bottom: 8px;
+                    bottom: -16px;
                     top: auto;
                     width: 40px;
                     height: 40px;
@@ -1650,23 +1769,93 @@ a{
                             position: relative;
 
 
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                right: 0;
-                                top: 0;
-                                font-size: 30px;
-                                color: #eca300;
-                                background-color: black;
-                                width: 60px;
-                                height: 40px;
+                            // &::after {
+                            //     content: "";
+                            //     position: absolute;
+                            //     right: 0;
+                            //     top: 0;
+                            //     font-size: 30px;
+                            //     color: #eca300;
+                            //     background-color: black;
+                            //     width: 60px;
+                            //     height: 40px;
+                            //     display: flex;
+                            //     justify-content: center;
+                            //     align-items: center;
+                            //     border-radius: 5px;
+                            // }
+                        }
+                    }
+                }
+                .card{
+                    margin-top: 1rem;
+                    .card-header{
+                        padding: 1rem;
+                        h5{
+                            button{
+                                color: black;
                                 display: flex;
-                                justify-content: center;
                                 align-items: center;
-                                border-radius: 5px;
+                                justify-content: space-between;
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .ymFormArea {
+            background-color: white;
+            padding: 2rem 3.5rem;
+            box-shadow: 0px 3px 10px #BABAB9, 0px 0px 4px #ffffff;
+
+            .HeaderArea {
+                margin: 2.5rem 0;
+
+                .FormTitle {
+                    font-size: 35px;
+                    color: black;
+                    font-weight: bolder;
+                    margin: 0.5rem 0;
+                }
+
+                .smalltitle {
+                    font-size: 16px;
+                    color: #ffc107;
+                    font-weight: bolder;
+                    margin: 0.5rem 0;
+                    letter-spacing: 1.2px;
+                }
+            }
+
+            .formrow {
+                margin-bottom: 2rem;
+                .form-label{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                .switchDiv{
+                    margin-top: 1.5rem;
+                }
+                input{
+                    padding: 0.5rem;
+                }
+            }
+            
+            button {
+                border: 1px solid #191919;
+                width: 30%;
+                background-color: #191919;
+                color: $yellowcolor;
+                margin-top: 2rem;
+                font-weight: bold;
+                font-size: 16;
+                border-radius: 10px;
+                &:hover {
+                    background-color: transparent;
+                    border-color: #191919;
+                    color: #191919;
+                    
                 }
             }
         }
@@ -1684,11 +1873,101 @@ a{
         align-items: center;
         justify-content: center;
         z-index: 999;
-      }
-      
-      .lightbox-image {
+    }
+
+    .lightbox-image {
         max-width: 100%;
         max-height: calc(100% - 100px);
         border-radius: 5px;
+    }
+
+    .btn-link.active {
+        font-weight: bold;
+        font-size: 18px;
       }
+      
+      .collapse {
+        transition: height 0.3s ease;
+      }
+      
+      .show.collapsing {
+        visibility: visible;
+      }
+      
+      .show.collapse {
+        height: auto;
+      }
+
+
+      // Switch css
+      .switchDiv {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      
+      .switchDiv .form-check-label {
+        margin-left: 10px;
+        position: relative;
+        margin-left: 0;
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        width: 215px;
+        justify-content: center;
+        font-weight: 500;
+        height: 26px;
+      }
+      
+      .switchDiv .form-check-input {
+        display: none;
+      }
+      
+      .switchDiv .form-check-label:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 30px;
+        background-color: #191919;
+        border-radius: 30px;
+        transition: background-color 0.3s;
+      }
+      
+      .switchDiv .form-check-label:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 26px;
+        height: 26px;
+        background-color: $graycolor;
+        border-radius: 50%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+      }
+      
+      .switchDiv .form-check-input:checked+.form-check-label:before {
+        background-color: #191919; /* Değiştirebilirsiniz */
+      }
+      
+      .switchDiv .form-check-input:checked+.form-check-label:after {
+        transform: translateX(30px);
+        background-color: $yellowcolor !important;
+      }
+      
+      
+    //   .switchDiv .form-check-input:focus+.form-check-label:before {
+    //     box-shadow: 0px 0px 3px $yellowcolor; /* Değiştirebilirsiniz */
+    //   }
+      
+    //   .switchDiv .form-check-input:focus+.form-check-label:after {
+    //     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2), 0px 0px 3px $graycolor; /* Değiştirebilirsiniz */
+    //   }
+      .form-switch{
+        padding-left: 0;
+      }      
+      
 }

@@ -17,7 +17,7 @@ const StudyoRentalSlider = () => {
       if (error) return <h1>Hata: {error.message}</h1>;
       SwiperCore.use([Autoplay]);
   return (
-    <div>
+    <div className="HeroRental">
                     <Swiper
               autoplay={{
                 delay: 10500,
@@ -27,8 +27,8 @@ const StudyoRentalSlider = () => {
               className="OtherPageSlide"
               pagination={{ type: "fraction" }}
               modules={[Pagination]}
-              spaceBetween={40}
-              slidesPerView={1}
+              spaceBetween={30}
+              slidesPerView={3}
               grabCursor={true}
               breakpoints={{
                 320: {
@@ -43,7 +43,7 @@ const StudyoRentalSlider = () => {
                   slidesPerView: 1,
                 },
                 1500: {
-                  slidesPerView: 1,
+                  slidesPerView: 3,
                 },
               }}
 

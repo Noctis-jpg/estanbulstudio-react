@@ -23,7 +23,7 @@ import Form from "../components/section_components/seciton_in_components/RentalF
 import { Helmet } from "react-helmet";
 const StudioRental = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/rental-studios"
+    "http://localhost:1337/api/rental-studio"
   );
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;
@@ -41,6 +41,11 @@ const StudioRental = () => {
       </div>
       <div className="container">
         <div className="row">
+          <div className="col-lg-12">
+          <div className="Ekipman" key={data.id}>
+            <h2>{data.data.attributes.RentalStudioSlideAltiBaslik}</h2>
+          </div>
+          </div>
           <div className="col-lg-3 col-6 colAft">
             <div className="HeadingRental">
               <h2 className="header">
@@ -78,6 +83,11 @@ const StudioRental = () => {
       </div>
       <div className="container">
         <div className="row">
+        <div className="col-lg-12">
+          <div className="Hizmet" key={data.id}>
+            <h2>{data.data.attributes.HizmetBaslik}</h2>
+          </div>
+          </div>
         <StudioBox />
         </div>
       </div>
@@ -88,7 +98,13 @@ const StudioRental = () => {
 <VideoArea />
 <SSS />
           </div>
-          <div className="col-lg-6">
+          <div className="col-lg-6 ymFormArea">
+            <div className="HeaderArea">
+            <div class="FormTitle">
+            <h2 class="smalltitle">STÜDYO KİRALAMA</h2>
+            <h2>Hızlı İletişim</h2>
+            </div>
+            </div>
          <Form />
       
           </div>
