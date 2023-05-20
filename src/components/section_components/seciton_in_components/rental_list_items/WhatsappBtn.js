@@ -1,20 +1,23 @@
 import React from 'react';
-import whatsappIcon from 'http://localhost:1337/uploads/wp_svg_d169bff9e1.svg'; // WhatsApp ikonunun dosya yolunu buraya ekleyin
 import useFetch from "../../../../hooks/useFetch";
+
+const locabase = "http://localhost:1337";
 const WhatsAppButton = () => {
-    const { isLoading, error, data } = useFetch(
-        "http://localhost:1337/api/fixed-whatsapp-btn"
-      );
-      if (isLoading) return <h1>Yükleniyor...</h1>;
-      if (error) return <h1>Hata: {error.message}</h1>;
+  const { isLoading, error, data } = useFetch("http://localhost:1337/api/fixed-whatsapp-btn?populate=*");
+
+  if (isLoading) return <h1>Yükleniyor...</h1>;
+  if (error) return <h1>Hata: {error.message}</h1>;
+
   const handleButtonClick = () => {
-    window.location.href = 'https://wa.me/1234567890'; // WhatsApp numarasını buraya ekleyin
+    if (data && data.data && data.data.attributes && data.data.attributes.Whatsapphref) {
+      window.open(data.data.attributes.Whatsapphref, '_blank');
+    }
   };
 
   return (
-    <div className="whatsapp-button">
+    <div className="whatsapp-button" key={data.id}>
       <button onClick={handleButtonClick}>
-      <img src={whatsappIcon} alt="WhatsApp" />
+        <img src={locabase + data.data.attributes.WhatsappIcon.data.attributes.url} alt="WhatsApp" />
       </button>
     </div>
   );

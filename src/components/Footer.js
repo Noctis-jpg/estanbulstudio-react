@@ -1,6 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useFetch from '../hooks/useFetch';
+import Whatsapp from '../components/section_components/seciton_in_components/rental_list_items/WhatsappBtn';
+import Tel from '../components/section_components/seciton_in_components/rental_list_items/TelBtn';
 import {
   faFacebook,
   faTwitter,
@@ -92,7 +94,8 @@ const Footer = () => {
           </div>
     
       </div>
-      
+      <Whatsapp />
+      <Tel />
     </section>
   );
 };
