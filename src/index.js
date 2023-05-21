@@ -1,16 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AppRouter from './routers/AppRouter';
-import { BrowserRouter } from "react-router-dom";
 import './styles/main.scss';
 
-//  window.localBase = 'http://localhost:1337';
+const root = document.getElementById('root');
 
-// console.log(window.localBase);
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
- 
-
-
-root.render(<BrowserRouter> <AppRouter /> </BrowserRouter>);
-
+ReactDOM.render(
+  <BrowserRouter>
+    <AppRouter />
+  </BrowserRouter>,
+  root
+);
