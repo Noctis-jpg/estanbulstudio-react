@@ -9,11 +9,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import HomePageAboutRightOne from '../section_components/seciton_in_components/HomePageAboutRightOne';
 import HomePageAboutRightTwo from '../section_components/seciton_in_components/HomePageAboutRighTwo';
 
-const locabase = "http://localhost:1337";
+const locabase = "https://strapi-app-angd.onrender.com/";
 
 const AboutHome = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/about-homes?populate=*"
+    "https://strapi-app-angd.onrender.com/api/about-homes?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -72,7 +72,7 @@ const AboutHome = () => {
                     <Link to={item.attributes.LeftPictureLink}>
                       <img
                         className="img-fluid Ust"
-                        src={locabase + item.attributes.LeftPicture.data[0].attributes.url}
+                        src={item.attributes.LeftPicture.data[0].attributes.url}
                         alt={item.attributes.LeftPictureHead}
                       />
                    

@@ -23,7 +23,7 @@ import Form from "../components/section_components/seciton_in_components/RentalF
 import { Helmet } from "react-helmet";
 const StudioRental = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/rental-studio"
+    "https://strapi-app-angd.onrender.com/api/rental-studio"
   );
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;

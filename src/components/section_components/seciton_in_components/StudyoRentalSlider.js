@@ -9,7 +9,7 @@ const locabase = "http://localhost:1337";
 
 const StudyoRentalSlider = () => {
     const { isLoading, error, data } = useFetch(
-        "http://localhost:1337/api/studyo-rental-carousels?populate=*"
+        "https://strapi-app-angd.onrender.com/api/studyo-rental-carousels?populate=*"
         
       );
     
@@ -57,7 +57,7 @@ const StudyoRentalSlider = () => {
                 >
                   <img
                     className="img-fluid RentalSlide"
-                    src={locabase + item.attributes.RentalCarousel.data[0].attributes.url}
+                    src={item.attributes.RentalCarousel.data[0].attributes.url}
                     
                     
                   ></img>

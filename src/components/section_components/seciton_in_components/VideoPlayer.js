@@ -5,7 +5,7 @@ import VideoPlayerText from "./VideoPlayerText";
 const locabase = "http://localhost:1337";
 const VideoPlayer = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/footer-top-video?populate=*"
+    "https://strapi-app-angd.onrender.com/api/footer-top-video?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -16,7 +16,7 @@ const VideoPlayer = () => {
       <div className="player-wrapper" key={data.id}>
         <ReactPlayer
           className="react-player"
-          url={locabase + data.data.attributes.VideoorPhoto.data.attributes.url}
+          url={data.data.attributes.VideoorPhoto.data.attributes.url}
           width="100%"
           height="100%"
           loop={true}

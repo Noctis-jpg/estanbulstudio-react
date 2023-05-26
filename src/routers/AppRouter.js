@@ -19,10 +19,10 @@ const AppRouter = () => {
     <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/portfolio" element={<Portfolio />} />
-    <Route path="/studyo-kiralama" element={<StudioRental />} />
-    <Route path="/about" element={<AboutPage />} />
-    <Route path="/fuacreative-agency" element={<FuaCreative />} />
-    <Route path="/contact" element={<ContactPage />} />
+    <Route path="/studyo-kirala" element={<StudioRental />} />
+    <Route path="/hakkimizda" element={<AboutPage />} />
+    <Route path="/backstage" element={<FuaCreative />} />
+    <Route path="/iletisim" element={<ContactPage />} />
   </Routes> 
 
   

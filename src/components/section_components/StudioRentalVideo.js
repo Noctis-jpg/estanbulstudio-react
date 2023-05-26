@@ -8,7 +8,7 @@ const locabase = "http://localhost:1337";
 
 const StudioRentalVideo = () => {
     const { isLoading, error, data } = useFetch(
-        "http://localhost:1337/api/rental-page-video-areas?populate=*"
+        "https://strapi-app-angd.onrender.com/api/rental-page-video-areas?populate=*"
       );
     
       if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -53,7 +53,7 @@ const StudioRentalVideo = () => {
 <div className="player-wrapper">
         <ReactPlayer
           className="react-player"
-          url={locabase + item.attributes.videoarea.data.attributes.url}
+          url={item.attributes.videoarea.data.attributes.url}
           width="100%"
           height="100%"
           controls

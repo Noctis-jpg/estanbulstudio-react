@@ -17,7 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/footer"
+    "https://strapi-app-angd.onrender.com/api/footer"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

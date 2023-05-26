@@ -2,7 +2,7 @@ import React from 'react'
 import useFetch from "../../../../hooks/useFetch";
 const OneListHead = () => {
     const { isLoading, error, data } = useFetch(
-        "http://localhost:1337/api/one-list-head"
+        "https://strapi-app-angd.onrender.com/api/one-list-head"
       );
     
       if (isLoading) return <h1>Yükleniyor...</h1>;

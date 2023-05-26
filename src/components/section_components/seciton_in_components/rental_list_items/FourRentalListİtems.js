@@ -3,7 +3,7 @@ import useFetch from "../../../../hooks/useFetch"
 
 const FourRentalListİtems = () => {
     const { isLoading, error, data } = useFetch(
-        "http://localhost:1337/api/four-rental-listitems"
+        "https://strapi-app-angd.onrender.com/api/four-rental-listitems"
       );
     
       if (isLoading) return <h1>Yükleniyor...</h1>;

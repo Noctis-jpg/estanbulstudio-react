@@ -4,7 +4,7 @@ import Button from "../../globamcomponents/Button";
 
 const VideoPlayerText = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/footer-top-video?populate=*"
+    "https://strapi-app-angd.onrender.com/api/footer-top-video?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

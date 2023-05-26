@@ -5,7 +5,7 @@ const locabase = "http://localhost:1337";
 
 const Rentalbox = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/kiralama-boxes?populate=*"
+    "https://strapi-app-angd.onrender.com/api/kiralama-boxes?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -23,7 +23,7 @@ const Rentalbox = () => {
             <div className="Imgmy">
               <img
                 className="img-fluid"
-                src={locabase + item.attributes.Boximage.data.attributes.url}
+                src={item.attributes.Boximage.data.attributes.url}
                 alt=""
                 srcset=""
               />

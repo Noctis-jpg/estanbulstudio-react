@@ -15,7 +15,7 @@ const locabase = "http://localhost:1337";
 
 const HomePage = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/home-page-main-sliders?populate=*"
+    "https://strapi-app-angd.onrender.com/api/home-page-main-sliders?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -71,7 +71,7 @@ const HomePage = () => {
                 >
                   <img
                     className="img-fluid myHomeSlideimg"
-                    src={locabase + item.attributes.mainSlider.data[0].attributes.formats.large.url}
+                    src={item.attributes.mainSlider.data[0].attributes.url}
                   ></img>
                   <h1 className="PictureText">{item.attributes.SlideText}</h1>
                   <div className="Slidelayer"></div>

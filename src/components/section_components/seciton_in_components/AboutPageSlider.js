@@ -5,11 +5,11 @@ import { Pagination } from "swiper";
 import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 
-const locabase = "http://localhost:1337";
+const locabase = "https://strapi-app-angd.onrender.com/";
 
 const AboutPageSlider = () => {
     const { isLoading, error, data } = useFetch(
-        "http://localhost:1337/api/about-page-carousels?populate=*"
+        "https://strapi-app-angd.onrender.com/api/about-page-carousels?populate=*"
         
       );
     
@@ -57,7 +57,7 @@ const AboutPageSlider = () => {
                 >
                   <img
                     className="img-fluid myHomeSlideimg"
-                    src={locabase + item.attributes.AboutCarousel.data[0].attributes.formats.large.url}
+                    src={item.attributes.AboutCarousel.data[0].attributes.url}
                     
                     
                   ></img>

@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 const AboutPage = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/about-page-slogan-area"
+    "https://strapi-app-angd.onrender.com/api/about-page-slogan-area"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

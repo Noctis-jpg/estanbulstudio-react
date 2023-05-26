@@ -12,7 +12,7 @@ const locabase = "http://localhost:1337";
 
 const FuaCreative = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/tabs-estanbuls?populate=*"
+    "https://strapi-app-angd.onrender.com/api/tabs-estanbuls?populate=*"
   );
 
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
@@ -55,8 +55,8 @@ const FuaCreative = () => {
     (img) => {
       if (img.attributes.url) {
         return {
-          original: locabase + img.attributes.url,
-          thumbnail: locabase + img.attributes.url,
+          original: img.attributes.url,
+          thumbnail:img.attributes.url,
           alt: data.data[selectedTabIndex].attributes.Baslik,
         };
       }
@@ -100,7 +100,7 @@ const FuaCreative = () => {
             >
             <img
             className="img-fluid myHomeSlideimg"
-            src={locabase + img.attributes.url}
+            src={img.attributes.url}
             alt={item.attributes.Baslik}
             />
             <h2>{item.attributes.Baslik}</h2>
@@ -109,7 +109,7 @@ const FuaCreative = () => {
          {item.attributes.VideoAreaTabs &&
   item.attributes.VideoAreaTabs.data &&
   item.attributes.VideoAreaTabs.data.map((video) => {
-    const videoUrl = locabase + video.attributes.url;
+    const videoUrl = video.attributes.url;
     return (
       <div className="col-lg-3 col-6 my-class" key={video.id} onClick={() => openModal(videoUrl)}>
         <div className="player-wrapper">

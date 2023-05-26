@@ -7,10 +7,10 @@ import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/pagination";
 
-const locabase = "http://localhost:1337";
+const locabase = "https://strapi-app-angd.onrender.com/";
 const HomePageAboutRightOne = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/about-homes?populate=*"
+    "https://strapi-app-angd.onrender.com/api/about-homes?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -61,7 +61,7 @@ const HomePageAboutRightOne = () => {
             <img
               className="img-fluid Ust"
               src={
-                locabase + item.attributes.rightPicture.data[0].attributes.url
+                item.attributes.rightPicture.data[0].attributes.url
               }
             ></img>
             <div className="LeftHeading">

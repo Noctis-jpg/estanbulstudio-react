@@ -15,7 +15,7 @@ export default function Header() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/header-menus"
+    "https://strapi-app-angd.onrender.com/api/header-menus"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

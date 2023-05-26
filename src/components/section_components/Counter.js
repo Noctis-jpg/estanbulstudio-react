@@ -9,7 +9,7 @@ import CounterHook from "../../hooks/CounterHook"
 const locabase = "http://localhost:1337";
 const Counter = () => {
   const { isLoading, error, data } = useFetch(
-    "http://localhost:1337/api/abouts?populate=*"
+    "https://strapi-app-angd.onrender.com/api/abouts?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -65,7 +65,7 @@ const Counter = () => {
                   <div className="IconImg">
                     <img
                       className="img-fluid"
-                      src={locabase + item.attributes.Icon.data.attributes.url}
+                      src={item.attributes.Icon.data.attributes.url}
                     ></img>
                   </div>
                   <div className="Number">
