@@ -14,7 +14,7 @@ const AboutPage = () => {
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;
   return (
-    <section className="PageContact OtherPage">
+    <section className="PageContact OtherPage O_sH">
       <Helmet>
         <title>Hakkımızda</title>
       </Helmet>

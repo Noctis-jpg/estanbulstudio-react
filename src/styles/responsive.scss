@@ -12,72 +12,82 @@ $FontsizeP: 15px;
 
 @media only screen and (max-width: 1500px) and (min-width: 1043px) {
     body {
-   .PageContact{
-    .HeadingPage{
-        padding: 3rem 0;
-        h1{
-            font-size: 2rem;
-        }
-        span{
-            font-size: 1.2rem;
-            line-height: 2.5;
-        }
-    }
-   } 
-        .headerGorseli{
-            height: 30vh;
+        .PageContact {
+            .HeadingPage {
+                padding: 3rem 0;
 
-            .headerBaslik{
-                h1{
-                    text-align: center;
-                    padding-bottom:2rem;
-                
+                h1 {
+                    font-size: 2rem;
+                }
+
+                span {
+                    font-size: 1.2rem;
+                    line-height: 2.5;
                 }
             }
         }
+
+        .headerGorseli {
+            height: 30vh;
+
+            .headerBaslik {
+                h1 {
+                    text-align: center;
+                    padding-bottom: 2rem;
+
+                }
+            }
+        }
+
         .PageCreative {
-            .TabsButtonContent{
-                .allTabs-ym{
+            .TabsButtonContent {
+                .allTabs-ym {
                     font-size: 20px;
                 }
             }
-        } 
-        .HomePage{
-            .AboutHome{
-                .pad-0{
-    padding: 15px;
+        }
+
+        .HomePage {
+            .AboutHome {
+                .pad-0 {
+                    padding: 15px;
                 }
             }
-        }  
-         .FooterTop{
-            .Contact{
-                .ButtonDiv{
+        }
+
+        .FooterTop {
+            .Contact {
+                .ButtonDiv {
                     width: 15%;
                 }
             }
-         }  
-    .ymBefore{
-
-        &::before{
-            height: 37%;
-            bottom: 14px;
         }
-        .CounterHome{
-            width: 890px;
 
-            .IconBox{
-                .IconImg{
-                    img{
-                        width: 55px;
+        .ymBefore {
+
+            &::before {
+                height: 37%;
+                bottom: 14px;
+            }
+
+            .CounterHome {
+                width: 890px;
+
+                .IconBox {
+                    .IconImg {
+                        img {
+                            width: 55px;
+                        }
                     }
                 }
             }
         }
-    } 
+
         #root {
-            .HomePage{
+            .HomePage {
                 padding: 0;
             }
+
             .RoutesMain {
                 .CapsulLogoandNav {
 
@@ -87,9 +97,9 @@ $FontsizeP: 15px;
                         align-items: center;
                         justify-content: center;
 
-                        img{
+                        img {
                             top: -20px;
-    position: relative;
+                            position: relative;
                         }
                     }
 
@@ -331,9 +341,107 @@ $FontsizeP: 15px;
 
 @media screen and (max-width:720px) {
     body {
-        .padrl{
+       .PageContact{
+        .contactContainer {
+            margin-top: 2rem;
+        }
+        .HeadingPage{
+            h1{
+                font-size: 2rem;
+                color: $yellowcolor;
+                margin: 2rem 0;
+            }
+            span{
+                font-size: 1rem;
+                line-height: 2rem;
+             
+            }
+        }
+        .contactContainer {
+            .FormCapsul{
+                padding: 0rem 0.5rem;
+                padding-bottom: 2rem;
+            }
+        }
+       } 
+        .PageStudioRental {
+            .ymFormArea {
+
+                padding: 1rem 0.5rem;
+
+                button {
+                    line-height: 2;
+                    width: 55%;
+                    margin-top: 0rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .VideoAndFormArea {
+                .RentalPageVideoSlide {
+                    .swiper-button-prev {
+                        left: 10%;
+                    }
+
+                    .swiper-button-next {
+                        left: -10%;
+                    }
+                }
+            }
+        }
+
+        .FreeConsRight {
+            .myH100 {
+                .LeftMenu {
+                    .modal-body {
+                        .MainNav {
+                            a {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .O_sH {
+            .OtherPageSlide {
+                .ymOtherPageSlide {
+                    height: max-content !important;
+                }
+            }
+
+            .OtherPageSloganArea {
+                padding-bottom: 2rem;
+                margin-top: 4rem;
+
+                h1 {
+                    font-size: 35px;
+                }
+
+            }
+
+            .TextArea {
+                padding: 1rem 0;
+                margin: 0;
+
+                p {
+                    font-size: 18px !important;
+                    padding: 10px;
+                    text-align: start;
+                    line-height: 30px;
+                }
+            }
+
+            .col-lg-12 {
+                padding: 0;
+            }
+        }
+
+        .padrl {
             padding: 0;
         }
+
         #root {
             .RoutesMain {
                 .CapsulLogoandNav {
@@ -451,11 +559,13 @@ $FontsizeP: 15px;
 
         .marEsta {
             margin-top: 5rem !important;
+
             .MainBox {
                 height: auto;
 
             }
         }
+
         .colAft {
             position: relative;
             margin-top: 5rem;

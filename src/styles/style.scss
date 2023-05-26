@@ -33,34 +33,39 @@ body {
     overflow-x: hidden;
     background-color: $bgcolorBlack;
 
-.whatsapp-button{
-    button{
-        position:fixed; bottom:30px; right:20px; width:50px; z-index:999;
+    .whatsapp-button {
+        button {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            width: 50px;
+            z-index: 999;
 
-        img{
-            width:100%;
+            img {
+                width: 100%;
+            }
         }
     }
-}
 
-.Tel-button{
-    button{
-        position: fixed;
-        bottom: 30px;
-        left: 20px;
-        width: 50px;
-        height: 50px;
-        z-index: 999;
-        background-color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img{
-            width: 35px;
+    .Tel-button {
+        button {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            z-index: 999;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 35px;
+            }
         }
     }
-}
 
 
     p {
@@ -883,6 +888,7 @@ body {
         position: relative;
         padding: 0;
         display: none;
+
         &::before {
             position: absolute;
             content: "";
@@ -1139,6 +1145,7 @@ body {
                 padding: 1.5rem 0;
                 position: relative;
                 padding-left: 1rem;
+
                 &::before {
                     content: "";
                     top: 10px;
@@ -1580,30 +1587,35 @@ body {
         .pad-0 {
             padding: 0;
         }
-        .Ekipman{
+
+        .Ekipman {
             display: flex;
             align-items: center;
             justify-content: center;
             padding-top: 2rem;
             margin-top: 3rem;
-            h2{
+
+            h2 {
                 font-size: 35px;
                 color: $yellowcolor;
                 font-weight: 600;
             }
         }
-        .Hizmet{
+
+        .Hizmet {
             display: flex;
             align-items: center;
             justify-content: center;
             padding-top: 3rem;
             margin-top: 3rem;
-            h2{
+
+            h2 {
                 font-size: 35px;
                 color: $yellowcolor;
                 font-weight: 600;
             }
         }
+
         .colAft {
             position: relative;
             margin-top: 5rem;
@@ -1611,7 +1623,7 @@ body {
             overflow-y: scroll;
 
 
-            
+
             &::after {
                 content: "";
                 position: absolute;
@@ -1648,21 +1660,27 @@ body {
                 }
             }
         }
-/* Kaydırma çubuğu */
-.colAft::-webkit-scrollbar {
-    width: 5px; /* Kaydırma çubuğunun genişliği */
-  }
-  
-  /* Kaydırma çubuğu izi */
-  .colAft::-webkit-scrollbar-thumb {
-    background-color: $yellowcolor; /* Kaydırma çubuğu rengi */
-    border-radius: 4px; /* Kaydırma çubuğu köşe yarıçapı */
-  }
-  
-  /* Kaydırma çubuğu arka planı */
-  .colAft::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Kaydırma çubuğu arka plan rengi */
-  }
+
+        /* Kaydırma çubuğu */
+        .colAft::-webkit-scrollbar {
+            width: 5px;
+            /* Kaydırma çubuğunun genişliği */
+        }
+
+        /* Kaydırma çubuğu izi */
+        .colAft::-webkit-scrollbar-thumb {
+            background-color: $yellowcolor;
+            /* Kaydırma çubuğu rengi */
+            border-radius: 4px;
+            /* Kaydırma çubuğu köşe yarıçapı */
+        }
+
+        /* Kaydırma çubuğu arka planı */
+        .colAft::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+            /* Kaydırma çubuğu arka plan rengi */
+        }
+
         .marEsta {
             margin-top: 5rem;
 
@@ -1711,6 +1729,7 @@ body {
                 justify-content: center;
                 flex-direction: column;
                 padding-bottom: 2rem;
+
                 .swiper-wrapper {
                     .swiper-slide {
                         width: 100%;
@@ -1816,12 +1835,15 @@ body {
                         }
                     }
                 }
-                .card{
+
+                .card {
                     margin-top: 1rem;
-                    .card-header{
+
+                    .card-header {
                         padding: 1rem;
-                        h5{
-                            button{
+
+                        h5 {
+                            button {
                                 color: black;
                                 display: flex;
                                 align-items: center;
@@ -1859,18 +1881,21 @@ body {
 
             .formrow {
                 margin-bottom: 2rem;
-                .form-label{
+
+                .form-label {
                     font-size: 14px;
                     font-weight: 600;
                 }
-                .switchDiv{
+
+                .switchDiv {
                     margin-top: 1.5rem;
                 }
-                input{
+
+                input {
                     padding: 0.5rem;
                 }
             }
-            
+
             button {
                 border: 1px solid #191919;
                 width: 30%;
@@ -1880,11 +1905,12 @@ body {
                 font-weight: bold;
                 font-size: 16;
                 border-radius: 10px;
+
                 &:hover {
                     background-color: transparent;
                     border-color: #191919;
                     color: #191919;
-                    
+
                 }
             }
         }
@@ -1913,29 +1939,29 @@ body {
     .btn-link.active {
         font-weight: bold;
         font-size: 18px;
-      }
-      
-      .collapse {
+    }
+
+    .collapse {
         transition: height 0.3s ease;
-      }
-      
-      .show.collapsing {
+    }
+
+    .show.collapsing {
         visibility: visible;
-      }
-      
-      .show.collapse {
+    }
+
+    .show.collapse {
         height: auto;
-      }
+    }
 
 
-      // Switch css
-      .switchDiv {
+    // Switch css
+    .switchDiv {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
-      }
-      
-      .switchDiv .form-check-label {
+    }
+
+    .switchDiv .form-check-label {
         margin-left: 10px;
         position: relative;
         margin-left: 0;
@@ -1948,13 +1974,13 @@ body {
         font-weight: 500;
         height: 26px;
         cursor: pointer;
-      }
-      
-      .switchDiv .form-check-input {
+    }
+
+    .switchDiv .form-check-input {
         display: none;
-      }
-      
-      .switchDiv .form-check-label:before {
+    }
+
+    .switchDiv .form-check-label:before {
         content: '';
         position: absolute;
         top: 0;
@@ -1964,9 +1990,9 @@ body {
         background-color: #191919;
         border-radius: 30px;
         transition: background-color 0.3s;
-      }
-      
-      .switchDiv .form-check-label:after {
+    }
+
+    .switchDiv .form-check-label:after {
         content: '';
         position: absolute;
         top: 2px;
@@ -1977,27 +2003,36 @@ body {
         border-radius: 50%;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s;
-      }
-      
-      .switchDiv .form-check-input:checked+.form-check-label:before {
-        background-color: #191919; /* Değiştirebilirsiniz */
-      }
-      
-      .switchDiv .form-check-input:checked+.form-check-label:after {
+    }
+
+    .switchDiv .form-check-input:checked+.form-check-label:before {
+        background-color: #191919;
+        /* Değiştirebilirsiniz */
+    }
+
+    .switchDiv .form-check-input:checked+.form-check-label:after {
         transform: translateX(30px);
         background-color: $yellowcolor !important;
-      }
-      
-      
+    }
+
+
     //   .switchDiv .form-check-input:focus+.form-check-label:before {
     //     box-shadow: 0px 0px 3px $yellowcolor; /* Değiştirebilirsiniz */
     //   }
-      
+
     //   .switchDiv .form-check-input:focus+.form-check-label:after {
     //     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2), 0px 0px 3px $graycolor; /* Değiştirebilirsiniz */
     //   }
-      .form-switch{
+    .form-switch {
         padding-left: 0;
-      }      
-      
+    }
+
+
+    .O_sH {
+        .OtherPageSlide {
+            .ymOtherPageSlide {
+                height: max-content !important;
+            }
+        }
+    }
 }
