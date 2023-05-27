@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-4 d-flex align-items-center">
              <div className="estanbulimg">
-              <img width="40%" className="img-fluid" src="http://localhost:1337/uploads/Estanbul_Studyo_4a55841c70.png?updated_at=2023-03-23T22:14:35.455Z"></img>
+              <img width="100%" className="img-fluid" src="https://res.cloudinary.com/djwwoxcek/image/upload/v1685179123/thumbnail_Estanbul_Studyo_4a55841c70_df5744752c.png"></img>
             </div> 
           </div>
           <div className="col-lg-4 pad0">

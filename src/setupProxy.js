@@ -1,10 +1,9 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
-module.exports = function(app) {
+module.exports = (app) => {
   app.use(
-    '/api',
-    createProxyMiddleware({
-      target: 'https://strapi-app-angd.onrender.com', // API'nizin adresini buraya yazın
+    createProxyMiddleware("/api/", {
+      target: "https://strapi-app-angd.onrender.com",
       changeOrigin: true,
     })
   );
