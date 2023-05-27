@@ -2,7 +2,7 @@
   "name": "fuastudio-devym",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://strapi-app-angd.onrender.com",
+  "proxy": "https://strapi-app-angd.onrender.com",
   "homepage": "https://seoajansi.ist/estanbul-studio/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -32,7 +32,7 @@
     "react-modal-video": "^2.0.0",
     "react-player": "^2.12.0",
     "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-scroll": "^1.8.9",
     "react-tabs": "^6.0.0",
     "request": "^2.88.2",
