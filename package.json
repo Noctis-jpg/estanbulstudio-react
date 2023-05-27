@@ -2,8 +2,7 @@
   "name": "fuastudio-devym",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://strapi-app-angd.onrender.com",
-  "homepage": "https://seoajansi.ist/estanbul-studio/",
+  "homepage": "/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
