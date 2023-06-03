@@ -17,7 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   const { isLoading, error, data } = useFetch(
-    "https://strapi-app-angd.onrender.com/api/footer"
+    "http://37.148.211.78:1337/api/footer"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-4 d-flex align-items-center">
              <div className="estanbulimg">
-              <img width="100%" className="img-fluid" src="https://res.cloudinary.com/djwwoxcek/image/upload/v1685179123/thumbnail_Estanbul_Studyo_4a55841c70_df5744752c.png"></img>
+              <img width="100%" className="img-fluid" src="https://res.cloudinary.com/djwwoxcek/image/upload/v1685733572/Estanbul_Studyo_1_c983ba05b1_8cdb0d4f00.png?updated_at=2023-06-02T19:19:32.977Z"></img>
             </div> 
           </div>
           <div className="col-lg-4 pad0">

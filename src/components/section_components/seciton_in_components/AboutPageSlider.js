@@ -9,7 +9,7 @@ const locabase = "https://strapi-app-angd.onrender.com/";
 
 const AboutPageSlider = () => {
     const { isLoading, error, data } = useFetch(
-        "https://strapi-app-angd.onrender.com/api/about-page-carousels?populate=*"
+        "http://37.148.211.78:1337/api/about-page-carousels?populate=*"
         
       );
     

@@ -9,7 +9,7 @@ import CounterHook from "../../hooks/CounterHook"
 const locabase = "http://localhost:1337";
 const Counter = () => {
   const { isLoading, error, data } = useFetch(
-    "https://strapi-app-angd.onrender.com/api/abouts?populate=*"
+    "http://37.148.211.78:1337/api/abouts?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

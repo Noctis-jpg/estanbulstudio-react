@@ -15,7 +15,7 @@ export default function Header() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { isLoading, error, data } = useFetch(
-    "https://strapi-app-angd.onrender.com/api/header-menus"
+    "http://37.148.211.78:1337/api/header-menus"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -30,7 +30,7 @@ export default function Header() {
           <div className="Logo d-flex justify-content-center align-items-center">
             <img
               className="img-fluid"
-              src="https://res.cloudinary.com/djwwoxcek/image/upload/v1685179123/thumbnail_Estanbul_Studyo_4a55841c70_df5744752c.png"
+              src="https://res.cloudinary.com/djwwoxcek/image/upload/v1685733572/Estanbul_Studyo_1_c983ba05b1_8cdb0d4f00.png?updated_at=2023-06-02T19:19:32.977Z"
             ></img>
           </div>
         </div>

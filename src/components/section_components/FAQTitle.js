@@ -2,7 +2,7 @@ import React from 'react'
 import useFetch from "../../hooks/useFetch"
 const FAQTitle = () => {
     const { isLoading, error, data } = useFetch(
-        "https://strapi-app-angd.onrender.com/api/rental-studio-sss-header"
+        "http://37.148.211.78:1337/api/rental-studio-sss-header"
       );
     
       if (isLoading) return <h1>Yükleniyor...</h1>;
