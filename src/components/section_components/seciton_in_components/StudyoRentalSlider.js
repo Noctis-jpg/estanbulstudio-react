@@ -9,7 +9,7 @@ const locabase = "http://localhost:1337";
 
 const StudyoRentalSlider = () => {
     const { isLoading, error, data } = useFetch(
-        "http://37.148.211.78:1337/api/studyo-rental-carousels?populate=*"
+        "https://strapproject.net/api/studyo-rental-carousels?populate=*"
         
       );
     

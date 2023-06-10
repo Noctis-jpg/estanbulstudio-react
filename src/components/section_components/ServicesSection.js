@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Link } from 'react-router-dom';
 const ServicesSection = () => {
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/card-serviss"
+    "https://strapproject.net/api/card-serviss"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

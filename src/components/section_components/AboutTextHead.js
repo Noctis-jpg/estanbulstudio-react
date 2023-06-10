@@ -2,7 +2,7 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 const AboutTextHead = () => {
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/about-text-heads"
+    "https://strapproject.net/api/about-text-heads"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

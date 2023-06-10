@@ -3,7 +3,7 @@ import useFetch from "../../../../hooks/useFetch";
 
 const locabase = "http://localhost:1337";
 const WhatsAppButton = () => {
-  const { isLoading, error, data } = useFetch("http://37.148.211.78:1337/api/fixed-whatsapp-btn?populate=*");
+  const { isLoading, error, data } = useFetch("https://strapproject.net/api/fixed-whatsapp-btn?populate=*");
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;

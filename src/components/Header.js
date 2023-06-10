@@ -15,7 +15,7 @@ export default function Header() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/header-menus"
+    "https://strapproject.net/api/header-menus"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

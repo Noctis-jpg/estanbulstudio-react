@@ -8,7 +8,7 @@ const locabase = "http://localhost:1337";
 
 const StudioRentalVideo = () => {
     const { isLoading, error, data } = useFetch(
-        "http://37.148.211.78:1337/api/rental-page-video-areas?populate=*"
+        "https://strapproject.net/api/rental-page-video-areas?populate=*"
       );
     
       if (isLoading) return <h1>Yükleniyor...</h1>;

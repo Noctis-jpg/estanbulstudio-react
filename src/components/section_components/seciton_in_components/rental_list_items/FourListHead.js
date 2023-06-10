@@ -3,7 +3,7 @@ import useFetch from "../../../../hooks/useFetch";
 const FourListHead = () => {
 
     const { isLoading, error, data } = useFetch(
-        "http://37.148.211.78:1337/api/four-list-head"
+        "https://strapproject.net/api/four-list-head"
       );
     
       if (isLoading) return <h1>Yükleniyor...</h1>;

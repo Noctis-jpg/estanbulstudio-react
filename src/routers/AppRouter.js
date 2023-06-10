@@ -17,7 +17,7 @@ const AppRouter = () => {
     <Headers></Headers>
 
     <Routes>
-    <Route path="/" element={<HomePage />} />
+    <Route path="/new-estanbul" element={<HomePage />} />
     <Route path="/portfolio" element={<Portfolio />} />
     <Route path="/studyo-kirala" element={<StudioRental />} />
     <Route path="/hakkimizda" element={<AboutPage />} />

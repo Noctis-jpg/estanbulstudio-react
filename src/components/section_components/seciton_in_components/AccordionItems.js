@@ -8,7 +8,7 @@ import FAQtitle from "../../section_components/FAQTitle";
 
 const AccordionComponent = () => {
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/accordions"
+    "https://strapproject.net/api/accordions"
   );
 
   const [activeKey, setActiveKey] = useState(null);

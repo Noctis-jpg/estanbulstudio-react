@@ -3,7 +3,7 @@ import useFetch from "../../../../hooks/useFetch"
 
 const OneRentalListİtems = () => {
     const { isLoading, error, data } = useFetch(
-        "http://37.148.211.78:1337/api/one-rental-listitems"
+        "https://strapproject.net/api/one-rental-listitems"
       );
     
       if (isLoading) return <h1>Yükleniyor...</h1>;

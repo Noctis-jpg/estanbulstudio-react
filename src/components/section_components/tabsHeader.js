@@ -6,7 +6,7 @@ import useFetch from "../../hooks/useFetch";
 const TabsHeader = ({setSelectedTabIndex, selectedTabIndex }) => {
 
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/tabs-categories?populate=*"
+    "https://strapproject.net/api/tabs-categories?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

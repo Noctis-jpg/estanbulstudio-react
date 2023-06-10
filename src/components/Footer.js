@@ -17,7 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/footer"
+    "https://strapproject.net/api/footer"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

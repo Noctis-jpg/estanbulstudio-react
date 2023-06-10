@@ -5,7 +5,7 @@ const locabase = "http://localhost:1337";
 
 const Rentalbox = () => {
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/kiralama-boxes?populate=*"
+    "https://strapproject.net/api/kiralama-boxes?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;

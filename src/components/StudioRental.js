@@ -23,7 +23,7 @@ import Form from "../components/section_components/seciton_in_components/RentalF
 import { Helmet } from "react-helmet";
 const StudioRental = () => {
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/rental-studio"
+    "https://strapproject.net/api/rental-studio"
   );
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;

@@ -13,7 +13,7 @@ const locabase = "https://strapi-app-angd.onrender.com/";
 
 const AboutHome = () => {
   const { isLoading, error, data } = useFetch(
-    "http://37.148.211.78:1337/api/about-homes?populate=*"
+    "https://strapproject.net/api/about-homes?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
