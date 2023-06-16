@@ -17,7 +17,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   const { isLoading, error, data } = useFetch(
-    "https://strapproject.net/api/footer"
+    "https://strapproject.net/api/footer?populate=*"
   );
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -28,8 +28,8 @@ const Footer = () => {
         <div className="verticalLine"></div>
         <div className="row">
           <div className="col-lg-4 d-flex align-items-center">
-             <div className="estanbulimg">
-              <img width="100%" className="img-fluid" src="https://res.cloudinary.com/djwwoxcek/image/upload/v1685733572/Estanbul_Studyo_1_c983ba05b1_8cdb0d4f00.png?updated_at=2023-06-02T19:19:32.977Z"></img>
+             <div className="estanbulimg" key={data.id}>
+              <img width="100%" className="img-fluid" src={data.data.attributes.logo.data.attributes.url}></img>
             </div> 
           </div>
           <div className="col-lg-4 pad0">

@@ -1,11 +1,10 @@
-$whitecolor : #fffc;
+$whitecolor : rgba(0, 0, 0, 0.8);
 $graycolor :#a0a0a0;
 $maincolor : #12a19a;
 $blackcolor : black;
 $yellowcolor : #ffc107;
 $bgcolorBlack : #191919;
-$FontFamily :'Poppins',
-sans-serif;
+$FontFamily :'Source Sans Pro', sans-serif;
 $FontsizeH1 : 35px;
 $FontsizeH2 :30px;
 $FontsizeP: 15px;
@@ -19,7 +18,7 @@ $FontsizeP: 15px;
         @content;
     }
 }
-
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
 body {
     // .padrl{
     //     padding: 0 35rem;
@@ -31,7 +30,7 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    background-color: $bgcolorBlack;
+    // background-color: $bgcolorBlack;
 
     .whatsapp-button {
         button {
@@ -60,7 +59,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-
+            border: 2px solid;
             img {
                 width: 35px;
             }
@@ -69,7 +68,8 @@ body {
 
 
     p {
-        font-size: 15px !important;
+        font-size: 18px !important;
+        line-height: 1.8;
     }
 
     .collapse {
@@ -135,7 +135,7 @@ body {
                     text-align: center;
                     background: #fff;
                     position: absolute;
-                    right: 90px;
+                    right: 0px;
                     padding: 1rem 0;
                 }
             }
@@ -165,7 +165,7 @@ body {
         .HomePage {
             padding: 0;
             position: relative;
-            padding: 0 90px;
+            // padding: 0 90px;
 
             .container-fluid {
                 padding: 0;
@@ -543,7 +543,7 @@ body {
                 position: absolute;
                 bottom: 0;
                 z-index: 99;
-                background-color: $yellowcolor;
+                background-color: #000000;
                 width: 15%;
                 display: flex;
                 align-items: center;
@@ -688,16 +688,22 @@ body {
 
                 .PictureText {
                     position: absolute;
-                    font-size: 3rem;
-                    bottom: -20px;
+                    font-size: 85px;
+                    /* bottom: -20px; */
                     letter-spacing: 5px;
-                    opacity: 0;
-                    transition: .3s ease-in-out;
+                    opacity: 1;
+                    transition: 0.3s ease-in-out;
                     font-weight: bold;
                     cursor: pointer;
-                    // color: $yellowcolor;
-                    z-index: 9;
-                    display: none;
+                    z-index: 9999;
+                    top: 0;
+                    left: 4%;
+                    width: 44%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    color: white;
                 }
 
                 .Slidelayer {
@@ -731,18 +737,18 @@ body {
                     }
                 }
 
-                .PictureText {
-                    position: absolute;
-                    font-size: 3rem;
-                    bottom: -20px;
-                    letter-spacing: 5px;
-                    opacity: 1 !important;
-                    transition: .3s ease-in-out;
-                    font-weight: bold;
-                    cursor: pointer;
-                    color: $yellowcolor;
-                    z-index: 9;
-                }
+                // .PictureText {
+                //     position: absolute;
+                //     font-size: 3rem;
+                //     bottom: -20px;
+                //     letter-spacing: 5px;
+                //     opacity: 1 !important;
+                //     transition: .3s ease-in-out;
+                //     font-weight: bold;
+                //     cursor: pointer;
+                //     color: $yellowcolor;
+                //     z-index: 9;
+                // }
             }
 
             .swiper-pagination {
@@ -770,24 +776,24 @@ body {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            padding: 3rem 0;
-            background-color: $bgcolorBlack;
-            margin-bottom: 3rem;
-
+            padding: 6rem 0;
+            background-color: #000000;
+            margin-bottom: 0rem;
+            margin-top: 4rem;
             h6 {
-                color: $graycolor;
+                color: #fff;
                 font-size: 14px;
                 line-height: 1em;
                 letter-spacing: .10em;
                 font-weight: 600;
-                padding-top: 3rem;
+                padding-top: 0rem;
             }
 
             h2 {
                 margin-top: 1rem;
                 font-weight: 700;
                 text-transform: uppercase;
-                color: $whitecolor;
+                color: #fff;
                 font-size: $FontsizeH1;
                 line-height: 1em;
                 letter-spacing: .10em;
@@ -1029,7 +1035,7 @@ body {
             }
 
             .svg-inline--fa {
-                color: white;
+
                 font-size: 17px;
                 margin: 1rem .5rem;
 
@@ -1059,7 +1065,7 @@ body {
                 font-size: 15px;
 
                 .svg-inline--fa {
-                    color: white;
+         
                     font-size: 18px;
                     margin-right: 1rem;
 
@@ -1428,7 +1434,7 @@ body {
             padding: 3rem 0;
 
             p {
-                color: white;
+                color: #000000;
                 font-size: 20px;
                 margin: 1.5rem 0;
             }
@@ -1662,7 +1668,7 @@ body {
 
                     li {
                         font-size: 15px;
-                        color: white;
+                        color: #000000;
                         margin: 1rem 0;
 
                     }
@@ -1706,13 +1712,13 @@ body {
                 .text {
                     h4 {
                         font-size: 22px;
-                        color: $whitecolor;
+                        color: #000000;
                         font-weight: 600;
                         margin-bottom: 1rem;
                     }
 
                     p {
-                        color: white;
+                        color: #000000;
                         font-size: 15px;
                         line-height: 2;
                     }
@@ -1721,7 +1727,7 @@ body {
                 .Imgmy {
                     position: absolute;
                     top: -45px;
-                    background-color: #191919;
+                    background-color: #ffffff;
                 }
             }
         }
@@ -1892,7 +1898,7 @@ body {
                 margin-bottom: 2rem;
 
                 .form-label {
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: 600;
                 }
 

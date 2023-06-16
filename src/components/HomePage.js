@@ -10,6 +10,9 @@ import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css/pagination";
 import { Helmet } from "react-helmet";
 import ScrollButton from '../components/section_components/seciton_in_components/ScrollButton';
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+
 const locabase = "http://localhost:1337";
 
 
@@ -33,7 +36,7 @@ const HomePage = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12 ymRelative">
-            <Swiper
+            <Swiper navigation={true} modules={[Navigation]}
               autoplay={{
                 delay: 10500,
                 pauseOnMouseEnter: true,
@@ -41,7 +44,7 @@ const HomePage = () => {
               }}
               className="HomeSlide"
               pagination={{ type: "fraction" }}
-              modules={[Pagination]}
+              modules={[Pagination, Navigation]}
               spaceBetween={30}
               slidesPerView={1}
               grabCursor={true}

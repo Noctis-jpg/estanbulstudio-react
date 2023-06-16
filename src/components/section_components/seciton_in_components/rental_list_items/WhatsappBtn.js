@@ -3,6 +3,8 @@ import useFetch from "../../../../hooks/useFetch";
 
 const locabase = "http://localhost:1337";
 const WhatsAppButton = () => {
+  const currentPageUrl = window.location.href;
+
   const { isLoading, error, data } = useFetch("https://strapproject.net/api/fixed-whatsapp-btn?populate=*");
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
@@ -10,7 +12,8 @@ const WhatsAppButton = () => {
 
   const handleButtonClick = () => {
     if (data && data.data && data.data.attributes && data.data.attributes.Whatsapphref) {
-      window.open(data.data.attributes.Whatsapphref, '_blank');
+      const whatsappUrl = data.data.attributes.Whatsapphref + encodeURIComponent(currentPageUrl);
+      window.open(whatsappUrl, '_blank');
     }
   };
 
