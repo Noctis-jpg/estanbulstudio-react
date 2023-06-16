@@ -1,13 +1,9 @@
 import React from "react";
-import SwiperCore, { Autoplay } from "swiper";
-import "swiper/css/pagination";
-import { Link } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
-import { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/pagination";
+import ReactPlayer from "react-player";
 
 const locabase = "https://strapi-app-angd.onrender.com/";
+
 const HomePageAboutRightOne = () => {
   const { isLoading, error, data } = useFetch(
     "https://strapproject.net/api/about-homes?populate=*"
@@ -15,62 +11,29 @@ const HomePageAboutRightOne = () => {
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;
-  SwiperCore.use([Autoplay]);
+
   console.log(data);
 
   return (
-    <div>
-      <Swiper
-        autoplay={{
-          delay: 10500,
-          pauseOnMouseEnter: true,
-          disableOnInteraction: false,
-        }}
-        className="RightThreePicture"
-        pagination={{ type: "fraction" }}
-        modules={[Pagination]}
-        spaceBetween={30}
-        slidesPerView={1}
-        grabCursor={true}
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-          },
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 1,
-          },
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 1,
-          },
-          1200: {
-            slidesPerView: 1,
-          },
-          1500: {
-            slidesPerView: 1,
-          },
-
-          1600: {
-            slidesPerView: 1,
-          },
-        }}
-      >
-        {data.data.map((item) => (
-          <SwiperSlide className="RightThreePictureSlide GlobalPictureSlide" key={item.id}>
-            <img
-              className="img-fluid Ust"
-              src={
-                item.attributes.RightPicture2.data[0].attributes.url
-              }
-            ></img>
-            <div className="LeftHeading">
-              <h2>{item.attributes.RightPictureHead2}</h2>
-              <p>{item.attributes.RightPictureText2}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="RightThreePicture">
+      {data.data.map((item) => (
+        <div
+          className="RightThreePictureSlide GlobalPictureSlide"
+          key={item.id}
+        >
+          <ReactPlayer
+            className="video-player"
+            url={item.attributes.RightPicture2.data.attributes.url}
+            controls={true}
+            width="100%"
+            height="auto"
+          />
+          <div className="LeftHeading">
+            <h2>{item.attributes.RightPictureHead2}</h2>
+            <p>{item.attributes.RightPictureText2}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
