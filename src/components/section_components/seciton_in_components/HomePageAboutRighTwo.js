@@ -24,9 +24,11 @@ const HomePageAboutRightOne = () => {
           <ReactPlayer
             className="video-player"
             url={item.attributes.RightPicture2.data.attributes.url}
-            controls={true}
             width="100%"
             height="auto"
+            loop={true}
+            playing={true}
+            controls={true}
           />
           <div className="LeftHeading">
             <h2>{item.attributes.RightPictureHead2}</h2>

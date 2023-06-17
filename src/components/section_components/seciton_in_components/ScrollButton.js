@@ -15,7 +15,7 @@ class ButtonComponent extends React.Component {
           duration={100}
         >
           <button>
-            KEŞFEDİN <FontAwesomeIcon className="frameYm" icon={faCircleArrowDown} />
+             <FontAwesomeIcon className="frameYm" icon={faCircleArrowDown} />
           </button>
         </Link>
       </div>

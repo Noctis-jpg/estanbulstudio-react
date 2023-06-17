@@ -27,9 +27,12 @@ const StudyoRentalSlider = () => {
               className="OtherPageSlide"
               pagination={{ type: "fraction" }}
               modules={[Pagination]}
-              spaceBetween={30}
+              spaceBetween={10}
               slidesPerView={3}
               grabCursor={true}
+              centeredSlides={true}
+              roundLengths={true}
+              loop={true}
               breakpoints={{
                 320: {
                   slidesPerView: 1,
@@ -40,7 +43,7 @@ const StudyoRentalSlider = () => {
                 },
                 // when window width is >= 768px
                 768: {
-                  slidesPerView: 1,
+                  slidesPerView: 2,
                 },
                 1500: {
                   slidesPerView: 3,

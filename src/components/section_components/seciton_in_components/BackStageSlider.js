@@ -6,12 +6,11 @@ import SwiperCore, { Autoplay } from "swiper";
 import { Navigation } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+const locabase = "http://localhost:1337";
 
-const locabase = "https://strapi-app-angd.onrender.com/";
-
-const AboutPageSlider = () => {
+const BackStageSlider = () => {
     const { isLoading, error, data } = useFetch(
-        "https://strapproject.net/api/about-page-carousels?populate=*"
+        "https://strapproject.net/api/backstage-carousels?populate=*"
         
       );
     
@@ -19,7 +18,7 @@ const AboutPageSlider = () => {
       if (error) return <h1>Hata: {error.message}</h1>;
       SwiperCore.use([Autoplay]);
   return (
-    <div>
+    <div className="HeroRental">
                     <Swiper navigation={true} modules={[Navigation]}
               autoplay={{
                 delay: 10500,
@@ -30,8 +29,11 @@ const AboutPageSlider = () => {
               pagination={{ type: "fraction" }}
               modules={[Pagination, Navigation]}
               spaceBetween={10}
-              slidesPerView={1}
+              slidesPerView={3}
               grabCursor={true}
+              centeredSlides={true}
+              roundLengths={true}
+              loop={true}
               breakpoints={{
                 320: {
                   slidesPerView: 1,
@@ -42,10 +44,10 @@ const AboutPageSlider = () => {
                 },
                 // when window width is >= 768px
                 768: {
-                  slidesPerView: 1,
+                  slidesPerView: 2,
                 },
                 1500: {
-                  slidesPerView: 1,
+                  slidesPerView: 3,
                 },
               }}
 
@@ -58,8 +60,8 @@ const AboutPageSlider = () => {
                   key={item.id}
                 >
                   <img
-                    className="img-fluid myHomeSlideimg"
-                    src={item.attributes.AboutCarousel.data[0].attributes.url}
+                    className="img-fluid RentalSlide"
+                    src={item.attributes.BackstageCarousel.data[0].attributes.url}
                     
                     
                   ></img>
@@ -72,4 +74,4 @@ const AboutPageSlider = () => {
 
 }
 
-export default AboutPageSlider
+export default BackStageSlider

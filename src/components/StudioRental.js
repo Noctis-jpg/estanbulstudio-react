@@ -20,6 +20,9 @@ import VideoArea from "../components/section_components/StudioRentalVideo";
 import SSS from "../components/section_components/seciton_in_components/AccordionItems";
 
 import Form from "../components/section_components/seciton_in_components/RentalForm";
+
+import RentalSlogan from "./section_components/seciton_in_components/RentalSlogan";
+
 import { Helmet } from "react-helmet";
 const StudioRental = () => {
   const { isLoading, error, data } = useFetch(
@@ -40,7 +43,8 @@ const StudioRental = () => {
         </div>
       </div>
       <div className="container">
-        <div className="row">
+        < RentalSlogan/>
+        <div className="row d-none" >
           <div className="col-lg-12">
           <div className="Ekipman" key={data.id}>
             <h2>{data.data.attributes.RentalStudioSlideAltiBaslik}</h2>
@@ -81,17 +85,6 @@ const StudioRental = () => {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="row">
-        <div className="col-lg-12">
-          <div className="Hizmet" key={data.id}>
-            <h2>{data.data.attributes.HizmetBaslik}</h2>
-          </div>
-          </div>
-        <StudioBox />
-        </div>
-      </div>
-
       <div className="container VideoAndFormArea">
         <div className="row">
           <div className="col-lg-6">
@@ -110,6 +103,18 @@ const StudioRental = () => {
           </div>
         </div>
       </div>
+      <div className="container">
+        <div className="row">
+        <div className="col-lg-12">
+          <div className="Hizmet" key={data.id}>
+            <h2>{data.data.attributes.HizmetBaslik}</h2>
+          </div>
+          </div>
+        <StudioBox />
+        </div>
+      </div>
+
+
 
     </section>
   );

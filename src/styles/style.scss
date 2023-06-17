@@ -4,7 +4,7 @@ $maincolor : #12a19a;
 $blackcolor : black;
 $yellowcolor : #ffc107;
 $bgcolorBlack : #191919;
-$FontFamily :'Source Sans Pro', sans-serif;
+$FontFamily :'Oxygen', sans-serif;
 $FontsizeH1 : 35px;
 $FontsizeH2 :30px;
 $FontsizeP: 15px;
@@ -18,7 +18,48 @@ $FontsizeP: 15px;
         @content;
     }
 }
-@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.colorYellowbtn{
+    background-color: #ffc107;
+
+    &:hover{
+        background-color: #d7a920;
+    }
+}
+.rowym{
+    margin: 3rem 0;
+    padding-bottom: 3.5rem;
+
+    .AboutPageimg{
+        overflow: hidden;
+        border-radius: 10px;
+
+        img{
+            transition: .5s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+// @import url('https://fonts.cdnfonts.com/css/source-sans-pro');
 body {
     // .padrl{
     //     padding: 0 35rem;
@@ -26,7 +67,7 @@ body {
 
     margin: 0 auto;
     padding: 0;
-    font-family: $FontFamily;
+    font-family: $FontFamily !important;
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -68,7 +109,7 @@ body {
 
 
     p {
-        font-size: 18px !important;
+        font-size: 16px !important;
         line-height: 1.8;
     }
 
@@ -541,15 +582,10 @@ body {
 
             .Discover {
                 position: absolute;
-                bottom: 0;
+                bottom: 140px;
                 z-index: 99;
-                background-color: #000000;
-                width: 15%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 1.3rem;
                 cursor: pointer;
+                left: 5%;
 
                 a {
 
@@ -567,7 +603,7 @@ body {
                             top: 0;
                             animation-iteration-count: infinite;
                             margin-left: 1.5rem;
-
+                            font-size: 30px;
                             @include keyframes(frameDownDiscover) {
                                 0% {
                                     top: 0;
@@ -697,13 +733,15 @@ body {
                     cursor: pointer;
                     z-index: 9999;
                     top: 0;
-                    left: 4%;
-                    width: 44%;
+                    left: 5%;
+                    width: 60%;
                     height: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: start;
                     color: white;
+                    text-transform: uppercase;
+                    line-height: 1.4;
                 }
 
                 .Slidelayer {
@@ -777,8 +815,9 @@ body {
             justify-content: center;
             flex-direction: column;
             padding: 6rem 0;
-            background-color: #000000;
-            margin-bottom: 0rem;
+            // background-color: #000000;
+background: rgb(255,193,7);
+background: radial-gradient(circle, rgba(255,193,7,1) 0%, rgba(255,193,7,1) 15%, rgba(0,0,0,1) 100%);            margin-bottom: 0rem;
             margin-top: 4rem;
             h6 {
                 color: #fff;
@@ -794,7 +833,7 @@ body {
                 font-weight: 700;
                 text-transform: uppercase;
                 color: #fff;
-                font-size: $FontsizeH1;
+                font-size: 45px;
                 line-height: 1em;
                 letter-spacing: .10em;
             }
@@ -881,7 +920,31 @@ body {
             // .pad-0 {
             //     height: 100%; 
             // }
+.SlideAltiText{
 
+    width: 60%;
+    margin-bottom: 2rem;
+
+    h2{
+    font-size: 55px;
+    font-weight: 800;
+    margin: 1.5rem 0;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        width: 15%;
+        height: 5px;
+        background-color: #000000;
+        left: 0;
+    }
+    }
+    p{
+        font-weight: 400;
+        text-align: justify;
+    }
+}
             .RightTwoPicture {
                 .Ust {
                     margin-bottom: 1rem;
@@ -1019,7 +1082,7 @@ body {
     .FooterNew {
         padding-top: 2.5rem;
         position: relative;
-
+background-color: #000000;
         // &::after{
         //     background-repeat: no-repeat;
         //     top: 22%;
@@ -1050,14 +1113,15 @@ body {
             }
 
             .FooterText {
-                color: $whitecolor;
-                font-size: 15px;
+                // color: $whitecolor;
+                color: #fff;
+                font-size: 15px !important;
                 margin-bottom: 1rem;
                 width: 65%;
             }
 
             .svg-inline--fa {
-
+                color: #fff;
                 font-size: 17px;
                 margin: 1rem .5rem;
 
@@ -1083,11 +1147,12 @@ body {
 
             .FooterIcon {
                 margin-top: 1rem;
-                color: $whitecolor;
-                font-size: 15px;
+                color: #fff;
+                // color: $whitecolor;
+                font-size: 15px !important;
 
                 .svg-inline--fa {
-         
+                    color: #fff;
                     font-size: 18px;
                     margin-right: 1rem;
 
@@ -1104,7 +1169,8 @@ body {
                     gap: 5%;
 
                     li {
-                        color: $whitecolor;
+                        color: #fff;
+                        // color: $whitecolor;
                         font-size: 13px;
                         font-weight: 400;
                     }
@@ -1123,7 +1189,8 @@ body {
                 text-align: center;
 
                 span {
-                    color: $whitecolor;
+                    // color: $whitecolor;
+                    color: #fff;
                     font-size: 13px;
                     letter-spacing: 1.2px;
                 }
@@ -1183,7 +1250,7 @@ body {
                 &::before {
                     content: "";
                     top: 10px;
-                    background-color: $yellowcolor;
+                    background-color:#000000 ;
                     width: 70px;
                     height: 5px;
                     position: absolute;
@@ -1314,7 +1381,7 @@ body {
             }
 
             .allTabs-ym {
-                color: white;
+                color: black;
                 font-size: 25px;
                 font-weight: 500;
                 position: relative;
@@ -1430,11 +1497,34 @@ body {
     }
 
     .OtherPage {
+        .rentalSlogancol{
+                padding-top: 3rem;
+    padding-bottom: 0;
+
+        .RentalSlogan{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h2{
+font-size: 55px;
+    font-weight: 800;
+    margin: 1.5rem 0;
+    position: relative;
+
+            }
+            p{
+font-weight: 400;
+    text-align: justify;
+        width: 60%;
+            }
+        }
+        }
         .OtherPageSloganArea {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 6rem 0;
+            padding-top:5rem;
             position: relative;
 
 
@@ -1459,8 +1549,8 @@ body {
         }
 
         .TextArea {
-            padding: 3rem 0;
-
+            padding: 0rem 0;
+            text-align: justify;
             p {
                 color: #000000;
                 font-size: 20px;
@@ -1471,7 +1561,7 @@ body {
         .OtherPageSlide {
             .ymOtherPageSlide {
                 position: relative;
-                height: 600px;
+                height: 700px;
 
                 &::after {
                     content: "";
@@ -1649,9 +1739,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding-top: 3rem;
-            margin-top: 3rem;
-
+            padding: 2.5rem;
             h2 {
                 font-size: 35px;
                 color: $yellowcolor;
@@ -1725,7 +1813,8 @@ body {
         }
 
         .marEsta {
-            margin-top: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
             .MainBox {
                 border: 1px solid rgba(255, 193, 7, 0.7098039216);
@@ -1756,6 +1845,7 @@ body {
                     position: absolute;
                     top: -45px;
                     background-color: #ffffff;
+                    padding: 0 1rem;
                 }
             }
         }
@@ -1793,7 +1883,7 @@ body {
                     top: auto;
                     width: 40px;
                     height: 40px;
-                    background-color: white;
+                    background-color: rgb(0, 0, 0);
                     font-weight: bolder;
                     position: relative;
 
@@ -1899,10 +1989,11 @@ body {
         }
 
         .ymFormArea {
-            background-color: white;
-            padding: 2rem 3.5rem;
-            box-shadow: 0px 3px 10px #BABAB9, 0px 0px 4px #ffffff;
-
+    background-color: white;
+    padding: 2rem 3.5rem;
+    box-shadow: 0px 0px 3px #BABAB9, 0px 0px 3px #ffffff;
+    margin-bottom: 3rem;
+    border-radius: 10px;
             .HeaderArea {
                 margin: 2.5rem 0;
 
@@ -2073,9 +2164,9 @@ body {
 
     .O_sH {
         .OtherPageSlide {
-            .ymOtherPageSlide {
-                height: max-content !important;
-            }
+            // .ymOtherPageSlide {
+            //     height: max-content !important;
+            // }
         }
     }
 }

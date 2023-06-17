@@ -8,6 +8,7 @@ import { Modal, Button } from "react-bootstrap";
 import ModalImage from "react-modal-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
+import BackStageSlider from "./section_components/seciton_in_components/BackStageSlider";
 const locabase = "http://localhost:1337";
 
 const FuaCreative = () => {
@@ -66,17 +67,17 @@ const FuaCreative = () => {
 
 
   return (
-    <section className="PageCreative">
+    <section className="PageCreative PageStudioRental OtherPage">
       <Helmet>
         <title>Backstage</title>
       </Helmet>
-      <section className="headerGorseli">
-        <div className="headerBaslik">
-          <div className="container">
-            <h1>BACKSTAGE</h1>
+      <div className="container-fluid padrl">
+        <div className="row">
+          <div className="col-lg-12 pad-0">
+            <BackStageSlider />
           </div>
         </div>
-      </section>
+      </div>
       <div className="container">
         <div className="TabsButtonContent">
           <TabsHeader

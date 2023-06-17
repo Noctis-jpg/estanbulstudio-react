@@ -12,6 +12,7 @@ $FontsizeP: 15px;
 
 @media only screen and (max-width: 1500px) and (min-width: 1043px) {
     body {
+
         .PageContact {
             .HeadingPage {
                 padding: 3rem 0;
@@ -86,6 +87,18 @@ $FontsizeP: 15px;
         #root {
             .HomePage {
                 padding: 0;
+                .HomeSlide{
+                    .swiper-slide{
+                        .PictureText{
+                            font-size: 60px;
+                            font-weight: 800;
+                            text-shadow: none;
+                            letter-spacing: -1px;
+                            margin-bottom: 20px;
+                        }
+                        
+                    }
+                }
             }
 
             .RoutesMain {
@@ -484,6 +497,7 @@ $FontsizeP: 15px;
                         .PictureText {
                             opacity: 1;
                             color: $whitecolor;
+                            
                         }
                     }
 
