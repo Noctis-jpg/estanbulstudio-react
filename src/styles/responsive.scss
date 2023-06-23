@@ -416,7 +416,16 @@ $FontsizeP: 15px;
                 }
             }
         }
-
+        .OtherPage{
+            .rentalSlogancol{
+                .RentalSlogan{
+                    p{
+                        width: 100%;
+                    }
+                   
+                }
+            }
+        }
         .O_sH {
             .OtherPageSlide {
                 .ymOtherPageSlide {
@@ -481,7 +490,11 @@ $FontsizeP: 15px;
         .HomePage {
             padding: 10px !important;
             padding-top: 0 !important;
-
+.AboutHome{
+    .SlideAltiText{
+        width: 100%;
+    }
+}
             .HomeSlide {
                 width: 100%;
                 height: 100%;
@@ -572,7 +585,7 @@ $FontsizeP: 15px;
 
 
         .marEsta {
-            margin-top: 5rem !important;
+            margin-top: 1rem !important;
 
             .MainBox {
                 height: auto;

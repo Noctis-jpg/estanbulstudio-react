@@ -817,8 +817,9 @@ body {
             padding: 6rem 0;
             // background-color: #000000;
 background: rgb(255,193,7);
-background: radial-gradient(circle, rgba(255,193,7,1) 0%, rgba(255,193,7,1) 15%, rgba(0,0,0,1) 100%);            margin-bottom: 0rem;
-            margin-top: 4rem;
+background: radial-gradient(circle, rgb(202, 193, 171) 0%, rgb(114 114 112) 20%, rgb(0, 0, 0) 75%);
+         margin-bottom: 0rem;
+            margin-top: 2rem;
             h6 {
                 color: #fff;
                 font-size: 14px;
@@ -1274,7 +1275,7 @@ background-color: #000000;
     }
 
     .FooterTop {
-        margin-top: 5rem;
+        margin-top: 4rem;
 
         .pad-0 {
             padding: 0;
@@ -1324,7 +1325,7 @@ background-color: #000000;
             flex-direction: column;
 
             .Text {
-                color: $whitecolor;
+                color: #fff;
                 font-size: $FontsizeH1;
                 font-weight: 600;
             }
@@ -1817,7 +1818,7 @@ font-weight: 400;
     padding-bottom: 4rem;
 
             .MainBox {
-                border: 1px solid rgba(255, 193, 7, 0.7098039216);
+                border: 3px solid rgba(255, 193, 7, 0.7098039216);
                 transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
                 padding: 50px 20px 15px 20px;
                 border-radius: 2px 2px 2px 2px;
