@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import useFetch from "../hooks/useFetch";
-import TabsHeader from "../components/section_components/tabsHeader";
-import "react-tabs/style/react-tabs.css";
-import ReactPlayer from "react-player";
 import { Modal, Button } from "react-bootstrap";
+import ReactPlayer from "react-player";
 import ModalImage from "react-modal-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import BackStageSlider from "./section_components/seciton_in_components/BackStageSlider";
+import useFetch from "../hooks/useFetch";
+
 const locabase = "http://localhost:1337";
 
 const FuaCreative = () => {
@@ -16,7 +15,6 @@ const FuaCreative = () => {
     "https://strapproject.net/api/tabs-estanbuls?populate=*"
   );
 
-  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
@@ -24,10 +22,10 @@ const FuaCreative = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   useEffect(() => {
-    if (data && data.data && data.data[selectedTabIndex]) {
+    if (data && data.data && data.data[0]) {
       setImagesLoaded(true);
     }
-  }, [data, selectedTabIndex]);
+  }, [data]);
 
   if (isLoading) return <h1>Yükleniyor...</h1>;
   if (error) return <h1>Hata: {error.message}</h1>;
@@ -52,19 +50,18 @@ const FuaCreative = () => {
     setLightboxOpen(false);
   };
 
-  const images = data.data[selectedTabIndex].attributes.myTabsContentimg.data.map(
-    (img) => {
+  const images = data.data[0].attributes.myTabsContentimg.data
+    .map((img) => {
       if (img.attributes.url) {
         return {
           original: img.attributes.url,
-          thumbnail:img.attributes.url,
-          alt: data.data[selectedTabIndex].attributes.Baslik,
+          thumbnail: img.attributes.url,
+          alt: data.data[0].attributes.Baslik,
         };
       }
       return null;
-    }
-  ).filter((img) => img !== null);
-
+    })
+    .filter((img) => img !== null);
 
   return (
     <section className="PageCreative PageStudioRental OtherPage">
@@ -78,98 +75,68 @@ const FuaCreative = () => {
           </div>
         </div>
       </div>
-      <div className="container">
-        <div className="TabsButtonContent">
-          <TabsHeader
-            setSelectedTabIndex={setSelectedTabIndex}
-            selectedTabIndex={selectedTabIndex}
-          />
-        </div>
-        {data.data.map((item, index) => (
-          <div
-            className="row"
-            style={{
-              display: selectedTabIndex === index ? "flex" : "none",
-            }}
-            key={item.id}
-            >
-            {item.attributes.myTabsContentimg.data.map((img, imgIndex) => (
-            <div
-            className="col-lg-3 col-6 my-class"
-            key={img.id}
-            onClick={() => openLightbox(imgIndex)}
-            >
-            <img
-            className="img-fluid myHomeSlideimg"
-            src={img.attributes.url}
-            alt={item.attributes.Baslik}
-            />
-            <h2>{item.attributes.Baslik}</h2>
+      <div className="container-fluid">
+        <div className="row">
+          {data.data[0].attributes.myTabsContentimg.data.map((img, imgIndex) => (
+            <div className="col-lg-4 col-6 my-class" key={img.id} onClick={() => openLightbox(imgIndex)}>
+              <img className="img-fluid myHomeSlideimg" src={img.attributes.url} alt={data.data[0].attributes.Baslik} />
+              <h2>{data.data[0].attributes.Baslik}</h2>
             </div>
-            ))}
-         {item.attributes.VideoAreaTabs &&
-  item.attributes.VideoAreaTabs.data &&
-  item.attributes.VideoAreaTabs.data.map((video) => {
-    const videoUrl = video.attributes.url;
-    return (
-      <div className="col-lg-3 col-6 my-class" key={video.id} onClick={() => openModal(videoUrl)}>
-        <div className="player-wrapper">
-          <div className="play-button" onClick={() => openModal(videoUrl)}>
-          <FontAwesomeIcon icon={faPlayCircle} className="play-icon" /> {/* Play butonu */}
-          </div>
-          <ReactPlayer
-            className="react-player"
-            url={videoUrl}
-            width="100%"
-            height="100%"
-            loop={false}
-            muted={false}
-            playing={false}
-          />
-          <div className="LayerVideo"></div>
+          ))}
+          {data.data[0].attributes.VideoAreaTabs &&
+            data.data[0].attributes.VideoAreaTabs.data &&
+            data.data[0].attributes.VideoAreaTabs.data.map((video) => {
+              const videoUrl = video.attributes.url;
+              return (
+                <div className="col-lg-4 col-6 my-class" key={video.id} onClick={() => openModal(videoUrl)}>
+                  <div className="player-wrapper">
+                    <div className="play-button" onClick={() => openModal(videoUrl)}>
+                      <FontAwesomeIcon icon={faPlayCircle} className="play-icon" /> {/* Play butonu */}
+                    </div>
+                    <ReactPlayer
+                      className="react-player"
+                      url={videoUrl}
+                      width="100%"
+                      height="100%"
+                      loop={false}
+                      muted={false}
+                      playing={false}
+                    />
+                    <div className="LayerVideo"></div>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </div>
-    );
-  })}
-            </div>
-            ))}
-            <Modal show={showModal} onHide={closeModal} size="lg">
-            <Modal.Body>
-            <ReactPlayer
-                       className="react-player"
-                       url={currentVideoUrl}
-                       width="100%"
-                       height="100%"
-                       loop={false}
-          
-                       playing={true}
-                       controls={true}
-                     />
-            </Modal.Body>
-            <Modal.Footer>
-            <Button variant="secondary" onClick={closeModal}>
+      <Modal show={showModal} onHide={closeModal} size="lg">
+        <Modal.Body>
+          <ReactPlayer className="react-player" url={currentVideoUrl} width="100%" height="100%" loop={false} playing={true} controls={true} />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={closeModal}>
             Kapat
-            </Button>
-            </Modal.Footer>
-            </Modal>
-            {lightboxOpen && selectedImageIndex !== null && (
-  <div className="lightbox-container" onClick={closeLightbox}>
-    <ModalImage
-      className="lightbox-image"
-      hideDownload={true}
-      showRotate={false}
-      small={images[selectedImageIndex].thumbnail}
-      large={images[selectedImageIndex].original}
-      alt={images[selectedImageIndex].alt}
-      onClose={closeLightbox}
-      withZoom={true} // Zoom özelliğini modal içinde etkinleştirir
-      imageBackgroundColor="#fff" // Görüntü arkaplan rengini belirler
-    />
-  </div>
-)}
-            </div>
-            </section>
-            );
-            };
-            
-            export default FuaCreative;
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      {lightboxOpen && selectedImageIndex !== null && (
+        <div className="lightbox-container" onClick={closeLightbox}>
+          <ModalImage
+            className="lightbox-image"
+            hideDownload={true}
+            showRotate={false}
+            small={images[selectedImageIndex].thumbnail}
+            large={images[selectedImageIndex].original}
+            alt={images[selectedImageIndex].alt}
+            onClose={closeLightbox}
+            withZoom={true} // Zoom özelliğini modal içinde etkinleştirir
+            imageBackgroundColor="#fff" // Görüntü arkaplan rengini belirler
+            style={{ maxWidth: "90vw", maxHeight: "90vh" }} // Add this style to limit the maximum dimensions
+          />
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default FuaCreative;

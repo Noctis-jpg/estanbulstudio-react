@@ -1623,6 +1623,9 @@ font-weight: 400;
                     object-fit: cover;
                     overflow: hidden;
                 }
+                .myHomeSlideimg{
+                    width: 100%;
+                }
             }
         }
     }
@@ -2213,4 +2216,22 @@ font-weight: 400;
             // }
         }
     }
+    .lightbox-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+      }
+      
+      .lightbox-image {
+        max-width: 90vw !important;
+        max-height: 85vh !important;
+        cursor: pointer;
+      }
 }
