@@ -15,7 +15,7 @@ const RentalForm = () => {
     } else {
       try {
         const formData = new FormData(form);
-        const response = await fetch('http://localhost:8000/api/send-email', {
+        const response = await fetch('http://localhost:3000/api/send-email', {
           method: 'POST',
           body: formData,
         });
@@ -46,6 +46,7 @@ const RentalForm = () => {
     }
     setValidated(true);
   };
+
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>

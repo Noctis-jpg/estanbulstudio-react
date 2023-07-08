@@ -7,8 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import BackStageSlider from "./section_components/seciton_in_components/BackStageSlider";
 import useFetch from "../hooks/useFetch";
+import Masonry from "react-masonry-css";
+import GlobalBtn from "../components/globamcomponents/InstaBtn";
+
 
 const locabase = "http://localhost:1337";
+
+
 
 const FuaCreative = () => {
   const { isLoading, error, data } = useFetch(
@@ -63,6 +68,12 @@ const FuaCreative = () => {
     })
     .filter((img) => img !== null);
 
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 2,
+    700: 1
+  };
+
   return (
     <section className="PageCreative PageStudioRental OtherPage">
       <Helmet>
@@ -76,9 +87,13 @@ const FuaCreative = () => {
         </div>
       </div>
       <div className="container-fluid">
-        <div className="row">
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="my-masonry-grid row"
+          columnClassName="my-masonry-grid_column"
+        >
           {data.data[0].attributes.myTabsContentimg.data.map((img, imgIndex) => (
-            <div className="col-lg-4 col-6 my-class" key={img.id} onClick={() => openLightbox(imgIndex)}>
+            <div className="my-class my-masonry-grid_column" key={img.id} onClick={() => openLightbox(imgIndex)}>
               <img className="img-fluid myHomeSlideimg" src={img.attributes.url} alt={data.data[0].attributes.Baslik} />
               <h2>{data.data[0].attributes.Baslik}</h2>
             </div>
@@ -88,10 +103,10 @@ const FuaCreative = () => {
             data.data[0].attributes.VideoAreaTabs.data.map((video) => {
               const videoUrl = video.attributes.url;
               return (
-                <div className="col-lg-4 col-6 my-class" key={video.id} onClick={() => openModal(videoUrl)}>
+                <div className="my-class my-masonry-grid_column" key={video.id} onClick={() => openModal(videoUrl)}>
                   <div className="player-wrapper">
                     <div className="play-button" onClick={() => openModal(videoUrl)}>
-                      <FontAwesomeIcon icon={faPlayCircle} className="play-icon" /> {/* Play butonu */}
+                      <FontAwesomeIcon icon={faPlayCircle} className="play-icon" />
                     </div>
                     <ReactPlayer
                       className="react-player"
@@ -107,7 +122,7 @@ const FuaCreative = () => {
                 </div>
               );
             })}
-        </div>
+        </Masonry>
       </div>
       <Modal show={showModal} onHide={closeModal} size="lg">
         <Modal.Body>
@@ -129,12 +144,19 @@ const FuaCreative = () => {
             large={images[selectedImageIndex].original}
             alt={images[selectedImageIndex].alt}
             onClose={closeLightbox}
-            withZoom={true} // Zoom özelliğini modal içinde etkinleştirir
-            imageBackgroundColor="#fff" // Görüntü arkaplan rengini belirler
-            style={{ maxWidth: "90vw", maxHeight: "90vh" }} // Add this style to limit the maximum dimensions
+            withZoom={true}
+            imageBackgroundColor="#fff"
+            style={{ maxWidth: "90vw", maxHeight: "90vh" }}
           />
         </div>
       )}
+      <div className="BtnCreact">
+<GlobalBtn
+  className="custom-button"
+  text="Instagram"
+  link="https://www.instagram.com/estanbulstudyo/"
+/>
+</div>
     </section>
   );
 };
