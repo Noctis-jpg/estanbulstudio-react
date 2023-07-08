@@ -8,7 +8,7 @@ const Slogan = () => {
       if (isLoading) return <h1>Yükleniyor...</h1>;
       if (error) return <h1>Hata: {error.message}</h1>;
   return (
-    <div className="container-fluid">
+    <div className="container-fluid d-none">
             <div className="verticalLine"></div>
     <div className="row">
       <div className="col-lg-12">

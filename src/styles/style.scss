@@ -9,6 +9,40 @@ $FontsizeH1 : 35px;
 $FontsizeH2 :30px;
 $FontsizeP: 15px;
 
+.slider-text{
+    position: absolute;
+    width: 50%;
+    height: 75% !important;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    left: 7%;
+    color: black;
+    flex-direction: column;
+    justify-content: center;
+
+    h2{
+        font-weight: 600;
+        font-size: 70px;
+        line-height: 110px;
+     
+        font-weight: 800;
+        text-shadow: none;
+        letter-spacing: -1px;
+  
+    
+    }
+    p{
+        font-size: 25px !important;
+   
+        font-weight: 300;
+        text-shadow: none;
+        line-height: 41px;
+        letter-spacing: 1px;
+        margin-bottom: 0px;
+    }
+}
+
 @mixin animate($animation, $duration, $method, $times) {
     animation: $animation $duration $method $times;
 }
@@ -810,7 +844,8 @@ body {
         }
 
         .TextSlogan {
-            display: flex;
+            display: none;
+            visibility: hidden;
             align-items: center;
             justify-content: center;
             flex-direction: column;
@@ -916,17 +951,25 @@ background: radial-gradient(circle, rgb(202, 193, 171) 0%, rgb(114 114 112) 20%,
 
 
         .AboutHome {
-            padding-top: 5rem;
+            padding-top: 3rem;
             padding-bottom: 10rem;
+            padding-left: 10rem;
+            padding-right: 10rem;
             // .pad-0 {
             //     height: 100%; 
             // }
+            .ymMiddle{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 .SlideAltiText{
 
-    width: 60%;
+    width: 75%;
     margin-bottom: 2rem;
 
     h2{
+        text-align: center;
     font-size: 55px;
     font-weight: 800;
     margin: 1.5rem 0;
@@ -935,9 +978,9 @@ background: radial-gradient(circle, rgb(202, 193, 171) 0%, rgb(114 114 112) 20%,
         content: "";
         position: absolute;
         bottom: -15px;
-        width: 15%;
-        height: 5px;
-        background-color: #000000;
+        width: 100%;
+        height: 1px;
+        background-color: #cdc8c8;
         left: 0;
     }
     }
@@ -1562,7 +1605,7 @@ font-weight: 400;
         .OtherPageSlide {
             .ymOtherPageSlide {
                 position: relative;
-                height: 700px;
+                // height: 700px;
 
                 &::after {
                     content: "";

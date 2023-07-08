@@ -1,6 +1,5 @@
 import React from "react";
 import useFetch from "../../../hooks/useFetch";
-import ReactPlayer from "react-player";
 
 const locabase = "https://strapi-app-angd.onrender.com/";
 
@@ -21,14 +20,10 @@ const HomePageAboutRightOne = () => {
           className="RightTwoPictureSlide GlobalPictureSlide"
           key={item.id}
         >
-          <ReactPlayer
-            className="video-player"
-            url={item.attributes.rightPicture.data.attributes.url}
-            width="100%"
-            height="auto"
-            loop={true}
-            playing={true}
-            controls={true}
+          <img
+            className="image"
+            src={item.attributes.rightPicture.data.attributes.url}
+            alt=""
           />
           <div className="LeftHeading">
             <h2>{item.attributes.RightPictureHead}</h2>

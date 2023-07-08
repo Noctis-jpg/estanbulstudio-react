@@ -8,7 +8,7 @@ const Bizkimiz = () => {
       if (isLoading) return <h1>Yükleniyor...</h1>;
       if (error) return <h1>Hata: {error.message}</h1>;
   return (
-    <div className='col-lg-12'>
+    <div className='col-lg-12 ymMiddle'>
     <div className='SlideAltiText' key={data.id}>
       <h2>{data.data.attributes.BizkimizBaslik}</h2>
       <p>{data.data.attributes.BizkimizYazi}</p>

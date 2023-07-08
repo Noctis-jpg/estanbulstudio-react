@@ -90,7 +90,7 @@ $FontsizeP: 15px;
                 .HomeSlide{
                     .swiper-slide{
                         .PictureText{
-                            font-size: 60px;
+                            font-size: 45px;
                             font-weight: 800;
                             text-shadow: none;
                             letter-spacing: -1px;
@@ -354,6 +354,14 @@ $FontsizeP: 15px;
 
 @media screen and (max-width:720px) {
     body {
+        .slider-text{
+            width: 90%;
+    height: 100% !important;
+    h2{
+        font-size: 45px;
+    line-height: 70px;
+    }
+        }
        .PageContact{
         .contactContainer {
             margin-top: 2rem;
@@ -375,6 +383,9 @@ $FontsizeP: 15px;
                 padding: 0rem 0.5rem;
                 padding-bottom: 2rem;
             }
+        }
+        .myHomeSlideimg{
+            object-fit: cover;
         }
        } 
         .PageStudioRental {
@@ -429,13 +440,13 @@ $FontsizeP: 15px;
         .O_sH {
             .OtherPageSlide {
                 .ymOtherPageSlide {
-                    height: max-content !important;
+                    height: 500px !important;
                 }
             }
 
             .OtherPageSloganArea {
-                padding-bottom: 2rem;
-                margin-top: 4rem;
+                padding-bottom: 0rem;
+                margin-top: 1rem;
 
                 h1 {
                     font-size: 35px;
@@ -491,8 +502,31 @@ $FontsizeP: 15px;
             padding: 10px !important;
             padding-top: 0 !important;
 .AboutHome{
+    padding-left: 0;
+    padding-right:0 ;
+    padding-bottom: 0rem;
     .SlideAltiText{
         width: 100%;
+    }
+    .LeftPicture{
+        .LeftPictureSlide{
+            height: auto !important;
+            .react-player{
+                video{
+                    position: relative;
+                    padding: 3rem 0;
+                }
+            }
+        }
+    }
+    .Global{
+        position: relative;
+        .LeftHeading{
+            position: relative;
+        }
+    }
+    .RightTwoPicture{
+        padding-bottom: 1rem;
     }
 }
             .HomeSlide {
@@ -547,7 +581,7 @@ $FontsizeP: 15px;
                 justify-content: center;
                 flex-direction: column;
                 padding: 3rem 0;
-
+            
                 h6 {
                     color: #848484;
                     font-size: 12px;
@@ -884,6 +918,8 @@ $FontsizeP: 15px;
 
             .AboutHome {
                 padding-top: 3rem;
+
+
             }
 
             .ymRelative {
