@@ -44,5 +44,5 @@ app.post('/api/send-email', (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Sunucu çalışıyor...');
+  console.log('Sunucu çalışıyor...'); 
 });
