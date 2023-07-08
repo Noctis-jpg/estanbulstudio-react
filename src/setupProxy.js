@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 module.exports = (app) => {
   app.use(
     createProxyMiddleware("/api/", {
-      target: "https://strapi-app-angd.onrender.com",
+      target: "http://localhost:4000/",
       changeOrigin: true,
     })
   );
