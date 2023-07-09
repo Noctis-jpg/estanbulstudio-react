@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 
 const RentalForm = () => {
   const [validated, setValidated] = useState(false);
-  const baseUrl = "http://localhost:4000";
+  const baseUrl = "http://localhost:4000/";
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -35,7 +35,7 @@ const RentalForm = () => {
           message: message,
         };
 
-        const response = await fetch(`${baseUrl}/api/send-email`, {
+        const response = await fetch(`${baseUrl}api/send-email`, {
           method: 'POST',
           headers: {
             Accept: "application/json",

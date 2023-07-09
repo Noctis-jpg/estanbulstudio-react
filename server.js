@@ -1,66 +1,29 @@
-const express = require('express');
+const express = require("express");
+const dotenv = require("dotenv");
+const emailRoutes = require("./routes/emailRoutes");
+
 const app = express();
-const port = process.env.PORT || 8000; // Sunucu için kullanılacak port numarasını belirleyin
-const path = require('path');
-const nodemailer = require('nodemailer');
-const emailRoutes = require('./src/api/send-email');
-app.use(express.json());
+dotenv.config();
 
-// React uygulamanızın üretim versiyonunu sunmak için bir route tanımlayın
-app.use(express.static(path.join(__dirname, 'client/build')));
+const cors = require("cors");
+const corsOptions = {
+  origin: "*",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
 
-// E-posta gönderme endpoint'i
-app.post('/api/send-email', async (req, res) => {
-  const { name, email, phone, select, switch1, switch2, switch3, switch4, message } = req.body;
+app.use(cors()); // Use this after the variable declaration
 
-  try {
-    // E-posta göndermek için bir taşıyıcı oluşturun
-    let transporter = nodemailer.createTransport({
-      service: 'Gmail', // E-posta sağlayıcınıza göre değiştirin
-      auth: {
-        user: 'your-email@gmail.com', // E-posta adresinizi ve şifrenizi girin
-        pass: 'your-password',
-      },
-    });
+app.use(express.json()); // tell the server to accept the json data from frontend
 
-    // E-posta içeriğini oluşturun
-    let mailOptions = {
-      from: 'your-email@gmail.com', // Gönderenin e-posta adresi
-      to: 'recipient@example.com', // Alıcının e-posta adresi
-      subject: 'Contact Form Message', // E-posta konusu
-      html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Estimated Rental Hour:</strong> ${select}</p>
-        <p><strong>Photographer/Producer Support:</strong> ${switch1 ? 'Open' : 'Closed'}</p>
-        <p><strong>Video Camera and Equipment:</strong> ${switch2 ? 'Open' : 'Closed'}</p>
-        <p><strong>Photography Camera and Equipment:</strong> ${switch3 ? 'Open' : 'Closed'}</p>
-        <p><strong>All Equipment:</strong> ${switch4 ? 'Open' : 'Closed'}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `,
-    };
+//Signup and login
+app.use("/email", emailRoutes);
 
-    // E-posta gönderme işlemini gerçekleştirin
-    await transporter.sendMail(mailOptions);
-
-    res.status(200).json({ success: true, message: 'E-posta gönderildi' });
-  } catch (error) {
-    console.error('E-posta gönderilemedi:', error);
-    res.status(500).json({ success: false, message: 'E-posta gönderilemedi' });
-  }
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
-// Diğer Express rotalarını buraya ekleyebilirsiniz
-
-// Tüm istekleri React uygulamanızın üzerine yönlendirin
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });
-
-app.use('/api/send-mail', emailRoutes);
-
-// Sunucuyu dinlemeye başlayın
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });

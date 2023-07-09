@@ -1,32 +1,38 @@
 const express = require('express');
-const dotenv = require("dotenv");
+const dotenv = require('dotenv');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
+
 dotenv.config();
-
-
 const app = express();
 app.use(express.json());
-app.use(cors({
-  origin: 'http://localhost:3000', // React uygulamasının URL'sini buraya ekleyin
-}));
 
-app.post('/api/send-email', async (req, res) => {
+const corsOptions = {
+  origin: '*',
+  credentials: true,
+  optionSuccessStatus: 200,
+};
+
+app.use(cors());
+app.use(express.json());
+
+const sendEmail = async (req, res) => {
   try {
     const { name, email, phone, select, switch1, switch2, switch3, switch4, message } = req.body;
 
     let transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
+      host: "smtp.gmail.com",
+      port: "587",
+      secure: false,
       auth: {
-        user: process.env.SMTP_MAIL,
-        pass: process.env.SMTP_PASSWORD,
+        user: "yunusmaden25@gmail.com",
+        pass: "gurnepscpknevmkn",
       },
     });
 
     let mailOptions = {
-      from: process.env.SMTP_MAIL,
-      to: process.env.TO_EMAIL,
+      from: "yunusmaden25@gmail.com",
+      to: "yunusewis@outlook.com",
       subject: 'Nodemailer Test',
       html: `
         <h1>Test</h1>
@@ -49,8 +55,10 @@ app.post('/api/send-email', async (req, res) => {
     console.error('E-posta gönderilemedi:', err);
     res.status(500).send('E-posta gönderilemedi.');
   }
-});
+};
 
-app.listen(3000, () => {
+app.post('/api/send-email', sendEmail);
+
+app.listen(4000, () => {
   console.log('Sunucu çalışıyor...');
 });
